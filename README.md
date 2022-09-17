@@ -1,1 +1,1 @@
-# BoAaP
+# BoAaP is repo for BSUIR
