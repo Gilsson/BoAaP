@@ -1,0 +1,3 @@
+/home/gilsson/CLionProjects/AnotherAnotherLab_3/1exercise/cmake-build-debug/CMakeFiles/1exercise.dir
+/home/gilsson/CLionProjects/AnotherAnotherLab_3/1exercise/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/gilsson/CLionProjects/AnotherAnotherLab_3/1exercise/cmake-build-debug/CMakeFiles/rebuild_cache.dir
