@@ -11,7 +11,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "F:/Projects/Another_Another_AnotherLab(4)/13Exercise/cmake-build-debug"
+			"value" : "F:/Projects/BoAaP/Another_Another_AnotherLab(4)/13Exercise/cmake-build-debug"
 		},
 		{
 			"name" : "13Exercise_IS_TOP_LEVEL",
@@ -35,7 +35,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "F:/Projects/Another_Another_AnotherLab(4)/13Exercise"
+			"value" : "F:/Projects/BoAaP/Another_Another_AnotherLab(4)/13Exercise"
 		},
 		{
 			"name" : "CMAKE_AR",
@@ -75,7 +75,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "f:/Projects/Another_Another_AnotherLab(4)/13Exercise/cmake-build-debug"
+			"value" : "f:/Projects/BoAaP/Another_Another_AnotherLab(4)/13Exercise/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -551,7 +551,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "F:/Projects/Another_Another_AnotherLab(4)/13Exercise"
+			"value" : "F:/Projects/BoAaP/Another_Another_AnotherLab(4)/13Exercise"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",

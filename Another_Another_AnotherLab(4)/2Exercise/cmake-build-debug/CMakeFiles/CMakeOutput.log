@@ -21,7 +21,7 @@ Compilation of the C compiler identification source "CMakeCCompilerId.c" produce
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.obj"
 
-The C compiler identification is MSVC, found in "F:/Projects/Another_Another_AnotherLab(4)/2Exercise/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdC/CMakeCCompilerId.exe"
+The C compiler identification is MSVC, found in "F:/Projects/BoAaP/Another_Another_AnotherLab(4)/2Exercise/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdC/CMakeCCompilerId.exe"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.33.31629/bin/Hostx86/x86/cl.exe 
@@ -45,21 +45,21 @@ Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" p
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.obj"
 
-The CXX compiler identification is MSVC, found in "F:/Projects/Another_Another_AnotherLab(4)/2Exercise/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdCXX/CMakeCXXCompilerId.exe"
+The CXX compiler identification is MSVC, found in "F:/Projects/BoAaP/Another_Another_AnotherLab(4)/2Exercise/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdCXX/CMakeCXXCompilerId.exe"
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: F:/Projects/Another_Another_AnotherLab(4)/2Exercise/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: F:/Projects/BoAaP/Another_Another_AnotherLab(4)/2Exercise/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):F:/CLion 2022.2.1/bin/ninja/win/ninja.exe cmTC_b184c && [1/2] Building C object CMakeFiles\cmTC_b184c.dir\CMakeCCompilerABI.c.obj
-[2/2] Linking C executable cmTC_b184c.exe
+Run Build Command(s):F:/CLion 2022.2.1/bin/ninja/win/ninja.exe cmTC_cc20b && [1/2] Building C object CMakeFiles\cmTC_cc20b.dir\CMakeCCompilerABI.c.obj
+[2/2] Linking C executable cmTC_cc20b.exe
 
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: F:/Projects/Another_Another_AnotherLab(4)/2Exercise/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: F:/Projects/BoAaP/Another_Another_AnotherLab(4)/2Exercise/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):F:/CLion 2022.2.1/bin/ninja/win/ninja.exe cmTC_b5e9d && [1/2] Building CXX object CMakeFiles\cmTC_b5e9d.dir\CMakeCXXCompilerABI.cpp.obj
-[2/2] Linking CXX executable cmTC_b5e9d.exe
+Run Build Command(s):F:/CLion 2022.2.1/bin/ninja/win/ninja.exe cmTC_8a0aa && [1/2] Building CXX object CMakeFiles\cmTC_8a0aa.dir\CMakeCXXCompilerABI.cpp.obj
+[2/2] Linking CXX executable cmTC_8a0aa.exe
 
 
 

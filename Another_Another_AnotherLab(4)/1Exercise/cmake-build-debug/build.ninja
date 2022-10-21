@@ -39,7 +39,7 @@ include CMakeFiles\rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = F$:\Projects\Another_Another_AnotherLab(4)\1Exercise\cmake-build-debug\
+cmake_ninja_workdir = F$:\Projects\BoAaP\Another_Another_AnotherLab(4)\1Exercise\cmake-build-debug\
 # =============================================================================
 # Object build statements for EXECUTABLE target 1Exercise
 
@@ -49,7 +49,7 @@ cmake_ninja_workdir = F$:\Projects\Another_Another_AnotherLab(4)\1Exercise\cmake
 
 build cmake_object_order_depends_target_1Exercise: phony || CMakeFiles\1Exercise.dir
 
-build CMakeFiles\1Exercise.dir\main.cpp.obj: CXX_COMPILER__1Exercise_Debug F$:\Projects\Another_Another_AnotherLab(4)\1Exercise\main.cpp || cmake_object_order_depends_target_1Exercise
+build CMakeFiles\1Exercise.dir\main.cpp.obj: CXX_COMPILER__1Exercise_Debug F$:\Projects\BoAaP\Another_Another_AnotherLab(4)\1Exercise\main.cpp || cmake_object_order_depends_target_1Exercise
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
   OBJECT_DIR = CMakeFiles\1Exercise.dir
   OBJECT_FILE_DIR = CMakeFiles\1Exercise.dir
@@ -81,7 +81,7 @@ build 1Exercise.exe: CXX_EXECUTABLE_LINKER__1Exercise_Debug CMakeFiles\1Exercise
 # Utility command for edit_cache
 
 build CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D F:\Projects\Another_Another_AnotherLab(4)\1Exercise\cmake-build-debug && "F:\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D F:\Projects\BoAaP\Another_Another_AnotherLab(4)\1Exercise\cmake-build-debug && "F:\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -92,7 +92,7 @@ build edit_cache: phony CMakeFiles\edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D F:\Projects\Another_Another_AnotherLab(4)\1Exercise\cmake-build-debug && "F:\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SF:\Projects\Another_Another_AnotherLab(4)\1Exercise -BF:\Projects\Another_Another_AnotherLab(4)\1Exercise\cmake-build-debug"
+  COMMAND = cmd.exe /C "cd /D F:\Projects\BoAaP\Another_Another_AnotherLab(4)\1Exercise\cmake-build-debug && "F:\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SF:\Projects\BoAaP\Another_Another_AnotherLab(4)\1Exercise -BF:\Projects\BoAaP\Another_Another_AnotherLab(4)\1Exercise\cmake-build-debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -110,7 +110,7 @@ build 1Exercise: phony 1Exercise.exe
 # =============================================================================
 
 #############################################
-# Folder: F:/Projects/Another_Another_AnotherLab(4)/1Exercise/cmake-build-debug
+# Folder: F:/Projects/BoAaP/Another_Another_AnotherLab(4)/1Exercise/cmake-build-debug
 
 build all: phony 1Exercise.exe
 
