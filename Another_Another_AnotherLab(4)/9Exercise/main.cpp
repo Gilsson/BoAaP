@@ -90,7 +90,7 @@ int main() {
                   << "Number in the list is 7\n" << "TASK: We have 3-digit array of int. Define the largest(biggest sum of elements) diagonal the array\n";
         std::cout << "\n \t N is the size of our array. Input N.\n";
         int n;
-        std::cin >> n;
+        n = PrintNum();
         int ***cube = nullptr;
         cube = (int ***) malloc(n * sizeof(int **));
         for (int row = 0; row < n; ++row) {
