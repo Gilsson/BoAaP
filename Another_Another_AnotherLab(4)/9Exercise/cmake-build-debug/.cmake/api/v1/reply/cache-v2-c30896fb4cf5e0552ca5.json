@@ -2,7 +2,7 @@
 	"entries" : 
 	[
 		{
-			"name" : "3Exercise_BINARY_DIR",
+			"name" : "9Exercise_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -11,10 +11,10 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "F:/Projects/Another_Another_AnotherLab(4)/3Exercise/cmake-build-debug"
+			"value" : "F:/Projects/BoAaP/Another_Another_AnotherLab(4)/9Exercise/cmake-build-debug"
 		},
 		{
-			"name" : "3Exercise_IS_TOP_LEVEL",
+			"name" : "9Exercise_IS_TOP_LEVEL",
 			"properties" : 
 			[
 				{
@@ -26,7 +26,7 @@
 			"value" : "ON"
 		},
 		{
-			"name" : "3Exercise_SOURCE_DIR",
+			"name" : "9Exercise_SOURCE_DIR",
 			"properties" : 
 			[
 				{
@@ -35,7 +35,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "F:/Projects/Another_Another_AnotherLab(4)/3Exercise"
+			"value" : "F:/Projects/BoAaP/Another_Another_AnotherLab(4)/9Exercise"
 		},
 		{
 			"name" : "CMAKE_AR",
@@ -75,7 +75,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "f:/Projects/Another_Another_AnotherLab(4)/3Exercise/cmake-build-debug"
+			"value" : "f:/Projects/BoAaP/Another_Another_AnotherLab(4)/9Exercise/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -551,7 +551,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "F:/Projects/Another_Another_AnotherLab(4)/3Exercise"
+			"value" : "F:/Projects/BoAaP/Another_Another_AnotherLab(4)/9Exercise"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -563,7 +563,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "C:/Program Files (x86)/3Exercise"
+			"value" : "C:/Program Files (x86)/9Exercise"
 		},
 		{
 			"name" : "CMAKE_LINKER",
@@ -747,7 +747,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "3Exercise"
+			"value" : "9Exercise"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
