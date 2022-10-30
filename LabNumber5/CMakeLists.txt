@@ -6,13 +6,19 @@ set(CMAKE_CXX_STANDARD 14)
 set(SOURCE_FILES 1Task.cpp)
 
 add_library(myLib STATIC library.cpp library.h)
+add_library(myDynamicLib SHARED dynamicLibrary.cpp)
 add_executable(1Task 1Task.cpp)
-add_executable(1Task_lib 1Task.cpp)
+add_executable(1Task_lib 1Task.cpp library.cpp library.h)
 
 target_link_libraries(1Task_lib myLib)
 
+set_target_properties(myDynamicLib PROPERTIES SOVERSION 1)
+
+
 add_executable(Tests testexample.cpp)
-add_executable(2Task 2Task.cpp)
+add_executable(2Task_lib 2Task.cpp dynamicLibrary.cpp)
+target_link_libraries(2Task_lib test_library)
+
 add_executable(3Task 3Task.cpp)
 add_executable(4Task 4Task.cpp)
 

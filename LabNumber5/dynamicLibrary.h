@@ -1,6 +1,17 @@
-#ifndef UNTITLED_LIBRARY_H
-#define UNTITLED_LIBRARY_H
+#ifndef DYNAMIC_LIBRARY_H
+#define DYNAMIC_LIBRARY_H
 
-void hello();
+enum Exceptions
+{
+    LETTER_INPUT,
+    WRONG_TYPE_INPUT,
+    WRONG_SIGN_POSITION,
+    WRONG_POINT_POSITION,
+    INCORRECT_DATA,
+};
 
-#endif //UNTITLED_LIBRARY_H
+long double PrintNum(bool IsSizeInput);
+
+bool recursionCheck(double* arr, int start, int end);
+
+#endif //DYNAMIC_LIBRARY_H
