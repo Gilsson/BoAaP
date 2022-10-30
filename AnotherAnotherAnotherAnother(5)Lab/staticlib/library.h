@@ -1,0 +1,6 @@
+#ifndef STATICLIB_LIBRARY_H
+#define STATICLIB_LIBRARY_H
+
+void hello();
+
+#endif //STATICLIB_LIBRARY_H

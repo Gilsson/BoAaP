@@ -1,0 +1,5 @@
+/home/gilsson/clion-2022.2.4/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/gilsson/clion-2022.2.4/bin/ninja/linux/ninja -G Ninja -S /home/gilsson/BoAaP/AnotherAnotherAnotherAnother(5)Lab -B /home/gilsson/BoAaP/AnotherAnotherAnotherAnother(5)Lab/cmake-build-debug
+-- Configuring done
+CMake Error: CMake can not determine linker language for target: library
+-- Generating done
+CMake Generate step failed.  Build files cannot be regenerated correctly.

@@ -54,6 +54,10 @@ long long PrintNum()
             } else {
                 break;
             }
+            if(std::cin.peek() == ' ')
+            {
+                break;
+            }
             if (std::cin.peek() == '\n') {
                 break;
             }

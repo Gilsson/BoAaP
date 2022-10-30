@@ -2,7 +2,7 @@
 
 long double PrintNum()
 {
-    long long output = 0;
+    long double output = 0;
     bool Sign = true;                   // true = +, false = -
     while(true) {
         int size = 0;
@@ -21,42 +21,46 @@ long double PrintNum()
                     break;
                 }
             }
-            while ((input[i] < int('0') || input[i] > int('9')) && input[i] != int('.')) {
-                std::cout << "Wrong Input\n";
-                IsWrongInput = true;
-                break;
-            }
-            if (input[i] == int('.')) {
-                for (int j = 0; j < i; ++j) {
-                    if (input[j] == int('.')) {
-                        std::cout << "Wrong Input!\n";
-                        IsWrongInput = true;
+                while ((input[i] < int('0') || input[i] > int('9')) && input[i] != int('.')) {
+                    std::cout << "Wrong Input\n";
+                    IsWrongInput = true;
+                    break;
+                }
+                if (input[i] == int('.')) {
+                    for (int j = 0; j < i; ++j) {
+                        if (input[j] == int('.')) {
+                            std::cout << "Wrong Input!\n";
+                            IsWrongInput = true;
+                        }
                     }
                 }
-            }
-            if(PointIndex == -1) {
-                for (int j = 0; j <= size; ++j) {
-                    if (input[j] == int('.'))
-                        PointIndex = j;
-                }
-            }
-            /*if(PointIndex != -1) {
-                for (int j = PointIndex + 1; j <= size; ++j) {
-                    if (input[j] != int('0')) {
-                        std::cout << "Wrong input!\n";
-                        IsWrongInput = true;
-                        break;
+                if (PointIndex == -1) {
+                    for (int j = 0; j <= size; ++j) {
+                        if (input[j] == int('.'))
+                            PointIndex = j;
                     }
                 }
-            }*/
-            if (!IsWrongInput) {
-                ++size;
-            } else {
-                break;
-            }
-            if (std::cin.peek() == '\n') {
-                break;
-            }
+                /*if(PointIndex != -1) {
+                    for (int j = PointIndex + 1; j <= size; ++j) {
+                        if (input[j] != int('0')) {
+                            std::cout << "Wrong input!\n";
+                            IsWrongInput = true;
+                            break;
+                        }
+                    }
+                }*/
+                if (!IsWrongInput) {
+                    ++size;
+                } else {
+                    break;
+                }
+                if(std::cin.peek() == ' ')
+                {
+                    break;
+                }
+                if (std::cin.peek() == '\n') {
+                    break;
+                }
         }
         if(IsWrongInput)
         {
@@ -71,6 +75,10 @@ long double PrintNum()
                 for (int i = PointIndex - 1; i >= 0; --i) {
                     output += (input[i] - '0') * powl(10, PointIndex - i - 1);
                 }
+                for(int i = PointIndex + 1; i < size; ++i)
+                {
+                    output += (input[i] - '0') * powl(1 / 10.0, i - PointIndex);
+                }
             }else
             {
                 for (int i = size - 1; i >= 0; --i) {
@@ -84,8 +92,8 @@ long double PrintNum()
     return output;
 }
 
-int FindMax(int **matrix, size_t N);
-int FindMin(int **matrix, size_t N);
+int FindMax(long double **matrix, size_t N);
+int FindMin(long double **matrix, size_t N);
 
 int main() {
     while(true) {
@@ -93,10 +101,10 @@ int main() {
                   << "Number in the list is 7\n" << "TASK: Input an float matrix N x N and find scalar product of the row with the largest element on the column with the smallest element.\n";
         std::cout << "\n \t Input N(size of matrix).\n";
         int N;
-        std::cin >> N;
-        int **matrix = new int *[N];
+        N = PrintNum();
+        long double **matrix = new long double *[N];
         for (int count = 0; count < N; ++count) {
-            matrix[count] = new int[N];
+            matrix[count] = new long double[N];
         }
         std::cout << "\n \t \t Input elements of matrix(use Enter to separate each element): \n";
         for (int row = 0; row < N; ++row) {
@@ -138,7 +146,7 @@ int main() {
     return 0;
 }
 
-int FindMax(int **matrix, size_t N)
+int FindMax(long double **matrix, size_t N)
 {
     int MaxElement = -INT32_MAX;
     int Index = 0;
@@ -156,7 +164,7 @@ int FindMax(int **matrix, size_t N)
     return Index;
 }
 
-int FindMin(int** matrix, size_t N)
+int FindMin(long double** matrix, size_t N)
 {
     int MinElement = INT32_MAX;
     int Index = 0;

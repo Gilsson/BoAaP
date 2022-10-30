@@ -1,0 +1,26 @@
+"F:\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=F:/CLion 2022.2.1/bin/ninja/win/ninja.exe" -G Ninja -S F:\Projects\BoAaP\AnotherAnotherAnotherAnother(5)Lab -B F:\Projects\BoAaP\AnotherAnotherAnotherAnother(5)Lab\build
+-- The C compiler identification is MSVC 19.33.31629.0
+-- The CXX compiler identification is MSVC 19.33.31629.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.33.31629/bin/Hostx86/x86/cl.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.33.31629/bin/Hostx86/x86/cl.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+CMake Error: The current CMakeCache.txt directory F:/Projects/BoAaP/AnotherAnotherAnotherAnother(5)Lab/build/_deps/googletest-subbuild/CMakeCache.txt is different than the directory /home/gilsson/BoAaP/AnotherAnotherAnotherAnother(5)Lab/build/_deps/googletest-subbuild where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt
+
+CMake Error at F:/CLion 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/FetchContent.cmake:1076 (message):
+  CMake step for googletest failed: 1
+Call Stack (most recent call first):
+  F:/CLion 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/FetchContent.cmake:1217:EVAL:2 (__FetchContent_directPopulate)
+  F:/CLion 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/FetchContent.cmake:1217 (cmake_language)
+  F:/CLion 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/FetchContent.cmake:1260 (FetchContent_Populate)
+  CMakeLists.txt:20 (FetchContent_MakeAvailable)
+
+
+-- Configuring incomplete, errors occurred!
+See also "F:/Projects/BoAaP/AnotherAnotherAnotherAnother(5)Lab/build/CMakeFiles/CMakeOutput.log".

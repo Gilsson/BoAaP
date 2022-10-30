@@ -14,6 +14,8 @@ long long PrintNum()
             if (input[i] == 45) {
                 if (i == 0) {
                     Sign = false;
+                    input[i] = 0;
+                    i--;
                     continue;
                 } else {
                     std::cout << "Wrong Input\n";
@@ -55,7 +57,10 @@ long long PrintNum()
             } else {
                 break;
             }
-
+            if(std::cin.peek() == ' ')
+            {
+                break;
+            }
             if (std::cin.peek() == '\n') {
                 break;
             }
@@ -83,7 +88,11 @@ long long PrintNum()
             break;
         }
     }
+    if(Sign)
     return output;
+    else{
+        return -output;
+    }
 }
 
 

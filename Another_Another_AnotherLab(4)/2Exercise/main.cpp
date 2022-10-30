@@ -15,6 +15,8 @@ long long PrintNum()
             if (input[i] == 45) {
                 if (i == 0) {
                     Sign = false;
+                    input[i] = 0;
+                    i--;
                     continue;
                 } else {
                     std::cout << "Wrong Input\n";
@@ -27,6 +29,7 @@ long long PrintNum()
                 IsWrongInput = true;
                 break;
             }
+
             if (input[i] == int('.')) {
                 for (int j = 0; j < i; ++j) {
                     if (input[j] == int('.')) {
@@ -53,6 +56,10 @@ long long PrintNum()
             if (!IsWrongInput) {
                 ++size;
             } else {
+                break;
+            }
+            if(std::cin.peek() == ' ')
+            {
                 break;
             }
             if (std::cin.peek() == '\n') {
@@ -82,7 +89,11 @@ long long PrintNum()
             break;
         }
     }
-    return output;
+    if(Sign)
+        return output;
+    else{
+        return -output;
+    }
 }
 
 
@@ -100,7 +111,7 @@ int main() {
         {
             for(int column = 0; column < k; ++column)
             {
-                std::cin >> matrix[row][column];
+                matrix[row][column] = PrintNum();
             }
         }*/
         std::cout << "\n \t \t Elements of an array:\n";

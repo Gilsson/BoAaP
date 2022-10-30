@@ -1,4 +1,6 @@
 #include <iostream>
+#include <cmath>
+#include <limits>
 
 long long PrintNum()
 {
@@ -14,6 +16,8 @@ long long PrintNum()
             if (input[i] == 45) {
                 if (i == 0) {
                     Sign = false;
+                    input[i] = 0;
+                    i--;
                     continue;
                 } else {
                     std::cout << "Wrong Input\n";
@@ -26,6 +30,7 @@ long long PrintNum()
                 IsWrongInput = true;
                 break;
             }
+
             if (input[i] == int('.')) {
                 for (int j = 0; j < i; ++j) {
                     if (input[j] == int('.')) {
@@ -52,6 +57,10 @@ long long PrintNum()
             if (!IsWrongInput) {
                 ++size;
             } else {
+                break;
+            }
+            if(std::cin.peek() == ' ')
+            {
                 break;
             }
             if (std::cin.peek() == '\n') {
@@ -81,7 +90,11 @@ long long PrintNum()
             break;
         }
     }
-    return output;
+    if(Sign)
+        return output;
+    else{
+        return -output;
+    }
 }
 
 int main() {
