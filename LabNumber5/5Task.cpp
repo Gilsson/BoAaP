@@ -1,5 +1,4 @@
 #include <iostream>
-#include <iomanip>
 
 enum Exceptions
 {
@@ -58,7 +57,7 @@ long double PrintNum(bool IsSizeInput = false)
                             PointIndex = j;
                     }
                 }
-                if (PointIndex != -1 && IsSizeInput) {
+                if (PointIndex != -1) {
                     for (int j = PointIndex + 1; j <= size; ++j) {
                         if (input[j] != int('0')) {
                             throw WRONG_TYPE_INPUT;
@@ -86,7 +85,7 @@ long double PrintNum(bool IsSizeInput = false)
                     }
                 }
                 if(output < 2e18 || output > -2e18)
-                return output;
+                    return output;
             }
             else{
                 if(IsSizeInput) {
@@ -95,7 +94,7 @@ long double PrintNum(bool IsSizeInput = false)
                     }
                 }
                 if(output < 2e18 || output > -2e18)
-                return -output;
+                    return -output;
             }
         }catch(Exceptions err)
         {
@@ -157,69 +156,63 @@ long double PrintNum(bool IsSizeInput = false)
     }
 }
 
-int nullElements(long double** arr, const int N, const int M)
+auto fillEvenArray(long long** arr, int N, int M, int& newArrSize)
 {
+    auto newArray = new long long[(M / 2 + 1) * N];
     int count = 0;
-    for(int i = 0; i < N; ++i){
-        for(int j = 0; j < M; ++j){
-            if(arr[i][j] < 0.0000001 && arr[i][j] > -0.000001){
+    for(int j = 2; j < M; j+=2)
+    {
+        for(int i = 0; i < N; ++i)
+        {
+            if(arr[i][j] % 2 == 0)
+            {
+                newArray[count] = arr[i][j];
                 ++count;
-                std::cout << "Index of NULL: [" << i << "] [" << j <<"].\n";
             }
         }
     }
-    std::cout << "Number of NULL elements: " << count << "\n";
-    return count;
+    auto output = new long long[count];
+    for(int i = 0; i < count; ++i)
+    {
+        output[i] = newArray[i];
+    }
+    newArrSize = count;
+    return output;
 }
 
-auto reverseArray(long double** arr, int N, int M){
-    auto newArr = new long double*[N];
-    for(int i = 0; i < M; ++i){
-        newArr[i] = new long double[M];
+auto fillArray(int N, int M) {
+    auto array = new long long *[N];
+    for (int i = 0; i < N; ++i) {
+        array[i] = new long long[M];
     }
-    for(int i = 0; i < N; ++i) {
-        for (int j = 0; j < M; ++j)
-        {
-            newArr[N - 1 - i][M - 1 - j] = arr[i][j];
-        }
-    }
-    return newArr;
-}
-
-void showMatrix(long double** matrix, int N, int M)
-{
     for (int i = 0; i < N; ++i) {
         for (int j = 0; j < M; ++j) {
-            std::cout << std::setw(10) << matrix[i][j] << " ";
-        }
-        std::cout << '\n';
-    }
-    std::cout << '\n';
-}
-
-auto FillMatrix(int N, int M)
-{
-    auto array = new long double *[N];
-    for (int i = 0; i < N; ++i)
-    {
-        array[i] = new long double[M];
-    }
-    for(int i = 0; i < N; ++i){
-        for(int j = 0; j < M; ++j)
-        {
             array[i][j] = PrintNum();
         }
     }
     return array;
 }
 
-int main() {
+auto averageArray(long long* array, int N)
+{
+    long double sum = 0;
+    for(int i = 0; i < N; ++i)
+    {
+        sum += array[i];
+    }
+    long double average = sum / N;
+    std::cout << "Average of elements int the array is: " << average << "\n";
+    return average;
+}
+
+int main()
+{
     int N = 1, M = 1;
     N = PrintNum(true);
     M = PrintNum(true);
-    auto array = FillMatrix(N, M);
-    nullElements(array, N, M);
-    array = reverseArray(array, N, M);
-    showMatrix(array, N, M);
+    auto array = fillArray(N, M);
+    int newArrSize = 0;
+    auto vector = fillEvenArray(array, N, M, newArrSize);
+    long double average = averageArray(vector, newArrSize);
     return 0;
 }

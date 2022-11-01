@@ -343,6 +343,114 @@ build 4Task.exe: CXX_EXECUTABLE_LINKER__4Task_Debug CMakeFiles\4Task.dir\4Task.c
   TARGET_PDB = 4Task.pdb
 
 # =============================================================================
+# Object build statements for EXECUTABLE target 5Task
+
+
+#############################################
+# Order-only phony target for 5Task
+
+build cmake_object_order_depends_target_5Task: phony || CMakeFiles\5Task.dir
+
+build CMakeFiles\5Task.dir\5Task.cpp.obj: CXX_COMPILER__5Task_Debug F$:\Projects\BoAaP\LabNumber5\5Task.cpp || cmake_object_order_depends_target_5Task
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
+  OBJECT_DIR = CMakeFiles\5Task.dir
+  OBJECT_FILE_DIR = CMakeFiles\5Task.dir
+  TARGET_COMPILE_PDB = CMakeFiles\5Task.dir\
+  TARGET_PDB = 5Task.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target 5Task
+
+
+#############################################
+# Link the executable 5Task.exe
+
+build 5Task.exe: CXX_EXECUTABLE_LINKER__5Task_Debug CMakeFiles\5Task.dir\5Task.cpp.obj
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
+  LINK_FLAGS = /machine:X86 /debug /INCREMENTAL /subsystem:console
+  LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  OBJECT_DIR = CMakeFiles\5Task.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\5Task.dir\
+  TARGET_FILE = 5Task.exe
+  TARGET_IMPLIB = 5Task.lib
+  TARGET_PDB = 5Task.pdb
+
+# =============================================================================
+# Object build statements for EXECUTABLE target 6Task
+
+
+#############################################
+# Order-only phony target for 6Task
+
+build cmake_object_order_depends_target_6Task: phony || CMakeFiles\6Task.dir
+
+build CMakeFiles\6Task.dir\6Task.cpp.obj: CXX_COMPILER__6Task_Debug F$:\Projects\BoAaP\LabNumber5\6Task.cpp || cmake_object_order_depends_target_6Task
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
+  OBJECT_DIR = CMakeFiles\6Task.dir
+  OBJECT_FILE_DIR = CMakeFiles\6Task.dir
+  TARGET_COMPILE_PDB = CMakeFiles\6Task.dir\
+  TARGET_PDB = 6Task.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target 6Task
+
+
+#############################################
+# Link the executable 6Task.exe
+
+build 6Task.exe: CXX_EXECUTABLE_LINKER__6Task_Debug CMakeFiles\6Task.dir\6Task.cpp.obj
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
+  LINK_FLAGS = /machine:X86 /debug /INCREMENTAL /subsystem:console
+  LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  OBJECT_DIR = CMakeFiles\6Task.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\6Task.dir\
+  TARGET_FILE = 6Task.exe
+  TARGET_IMPLIB = 6Task.lib
+  TARGET_PDB = 6Task.pdb
+
+# =============================================================================
+# Object build statements for EXECUTABLE target 7Task
+
+
+#############################################
+# Order-only phony target for 7Task
+
+build cmake_object_order_depends_target_7Task: phony || CMakeFiles\7Task.dir
+
+build CMakeFiles\7Task.dir\7Task.cpp.obj: CXX_COMPILER__7Task_Debug F$:\Projects\BoAaP\LabNumber5\7Task.cpp || cmake_object_order_depends_target_7Task
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
+  OBJECT_DIR = CMakeFiles\7Task.dir
+  OBJECT_FILE_DIR = CMakeFiles\7Task.dir
+  TARGET_COMPILE_PDB = CMakeFiles\7Task.dir\
+  TARGET_PDB = 7Task.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target 7Task
+
+
+#############################################
+# Link the executable 7Task.exe
+
+build 7Task.exe: CXX_EXECUTABLE_LINKER__7Task_Debug CMakeFiles\7Task.dir\7Task.cpp.obj
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
+  LINK_FLAGS = /machine:X86 /debug /INCREMENTAL /subsystem:console
+  LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  OBJECT_DIR = CMakeFiles\7Task.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\7Task.dir\
+  TARGET_FILE = 7Task.exe
+  TARGET_IMPLIB = 7Task.lib
+  TARGET_PDB = 7Task.pdb
+
+# =============================================================================
 # Object build statements for EXECUTABLE target Test
 
 
@@ -783,6 +891,12 @@ build 3Task: phony 3Task.exe
 
 build 4Task: phony 4Task.exe
 
+build 5Task: phony 5Task.exe
+
+build 6Task: phony 6Task.exe
+
+build 7Task: phony 7Task.exe
+
 build Test: phony Test.exe
 
 build Tests: phony Tests.exe
@@ -815,7 +929,7 @@ build myLib: phony myLib.lib
 #############################################
 # Folder: F:/Projects/BoAaP/LabNumber5/cmake-build-debug
 
-build all: phony myLib.lib myDynamicLib.dll 1Task.exe 1Task_lib.exe Tests.exe 2Task_lib.exe 3Task.exe 4Task.exe Test.exe _deps\googletest-build\all
+build all: phony myLib.lib myDynamicLib.dll 1Task.exe 1Task_lib.exe Tests.exe 2Task_lib.exe 3Task.exe 4Task.exe 5Task.exe 6Task.exe 7Task.exe Test.exe _deps\googletest-build\all
 
 # =============================================================================
 

@@ -21,6 +21,9 @@ target_link_libraries(2Task_lib test_library)
 
 add_executable(3Task 3Task.cpp)
 add_executable(4Task 4Task.cpp)
+add_executable(5Task 5Task.cpp)
+add_executable(6Task 6Task.cpp)
+add_executable(7Task 7Task.cpp)
 
 include(FetchContent)
 FetchContent_Declare(
