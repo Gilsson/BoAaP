@@ -2,7 +2,7 @@
 #include <iostream>
 #include <iomanip>
 
-long double PrintNum()
+long double PrintNum(bool IsSizeInput = false)
 {
     while (true) {
         try{
@@ -43,13 +43,13 @@ long double PrintNum()
                             PointIndex = j;
                     }
                 }
-                if (PointIndex != -1) {
+                /*if (PointIndex != -1) {
                     for (int j = PointIndex + 1; j <= size; ++j) {
                         if (input[j] != int('0')) {
                             throw WRONG_TYPE_INPUT;
                         }
                     }
-                }
+                }*/
                 ++size;
                 if (std::cin.peek() == ' ') {
                     break;
@@ -71,15 +71,18 @@ long double PrintNum()
                 }
             }
             if(Sign) {
-                if (output < 2 || output > 10000) {
-                    throw INCORRECT_DATA;
+                if(IsSizeInput) {
+                    if (output < 2 || output > 10000) {
+                        throw INCORRECT_DATA;
+                    }
                 }
                 return output;
             }
             else{
-                if(-output < 2)
-                {
-                    throw INCORRECT_DATA;
+                if(IsSizeInput) {
+                    if (-output < 2) {
+                        throw INCORRECT_DATA;
+                    }
                 }
                 return -output;
             }

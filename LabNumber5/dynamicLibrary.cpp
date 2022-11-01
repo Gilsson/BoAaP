@@ -9,7 +9,7 @@ long double PrintNum(bool IsSizeInput = false)
             int size = 0;
             //bool IsWrongInput = false;
             long long PointIndex = -1;
-            long long buff = 113200132;
+            long long buff = 10132;
             long long output = 0;
             bool Sign = true;                   // true = +, false = -
             char *input = new char[buff];
@@ -93,6 +93,7 @@ long double PrintNum(bool IsSizeInput = false)
             {
                 std::cin >> wrongInput[i];
             }
+            delete [] wrongInput;
             switch (err) {
                 case (WRONG_TYPE_INPUT): {
                     std::cout << "Expected Int type.\n";

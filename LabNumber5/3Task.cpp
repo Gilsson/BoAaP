@@ -1,5 +1,5 @@
 #include <iostream>
-#include <iomanip>
+#include <stdio.h>
 
 enum Exceptions
 {
@@ -10,34 +10,38 @@ enum Exceptions
     INCORRECT_DATA,
 };
 
+
 long double PrintNum(bool IsSizeInput = false)
 {
     while (true) {
-        try{
             int size = 0;
-            //bool IsWrongInput = false;
             long long PointIndex = -1;
-            long long buff = 113200132;
+            long long buff = 10132;
             long long output = 0;
             bool Sign = true;                   // true = +, false = -
-            char *input = new char[buff];
-
+            char *input = new char[buff]{0};
+            scanf("%[^\n^' ']%*c", input);
+            try{
             for (int i = 0; i < buff; ++i) {
-                std::cin >> input[i];
-                if (input[i] == int('-') && Sign) {
-                    if (i == 0) {
-                        Sign = false;
-                        input[i] = 0;
-                        i--;
-                        continue;
-                    } else{
-                        throw WRONG_SIGN_POSITION;
-                    }
+                if (input[i] == ' ') {
+                    break;
                 }
+                if (input[i] == 0) {
+                    break;
+                }
+                    if (input[i] == int('-') && Sign) {
+                        if (i == 0) {
+                            Sign = false;
+                            input[i] = 0;
+                            i--;
+                            continue;
+                        } else {
+                            throw WRONG_SIGN_POSITION;
+                        }
+                    }
                 if ((input[i] < int('0') || input[i] > int('9')) && input[i] != int('.')) {
                     throw LETTER_INPUT;
                 }
-
                 if (input[i] == int('.')) {
                     for (int j = 0; j < i; ++j) {
                         if (input[j] == int('.')) {
@@ -59,13 +63,7 @@ long double PrintNum(bool IsSizeInput = false)
                     }
                 }*/
                 ++size;
-                if (std::cin.peek() == ' ') {
-                    break;
                 }
-                if (std::cin.peek() == '\n') {
-                    break;
-                }
-            }
             if (PointIndex != -1) {
                 for (long long i = PointIndex - 1; i >= 0; --i) {
                     output += (input[i] - '0') * powl(10, PointIndex - i - 1);
@@ -95,40 +93,38 @@ long double PrintNum(bool IsSizeInput = false)
                 return -output;
             }
         }catch(Exceptions err)
-        {
-            char* wrongInput = new char[1000];
-            for(int i = 0; std::cin.peek() != '\n'; ++i)
             {
-                std::cin >> wrongInput[i];
+                switch (err) {
+                    case (WRONG_TYPE_INPUT): {
+                        std::cerr << "Expected Int type.\n";
+                        break;
+                    }
+                    case (INCORRECT_DATA): {
+                        std::cerr << "Incorrect size.\n";
+                        break;
+                    }
+                    case (WRONG_POINT_POSITION): {
+                        std::cerr << "Incorrect point position.\n";
+                        break;
+                    }
+                    case (WRONG_SIGN_POSITION):
+                    {
+                        std::cerr << "Incorrect sign position.\n";
+                        break;
+                    }
+                    case (LETTER_INPUT):
+                    {
+                        std::cerr << "Expected number, not letters.\n";
+                        break;
+                    }
+                    default:
+                        break;
+                }
+                std::cerr << "Please, input the number one more time.\n";
+                char* wrongInput = new char[1000];
+                scanf("%[^\n^'']%*c", wrongInput);
+                delete [] wrongInput;
             }
-            switch (err) {
-                case (WRONG_TYPE_INPUT): {
-                    std::cout << "Expected Int type.\n";
-                    break;
-                }
-                case (INCORRECT_DATA): {
-                    std::cout << "Incorrect size.\n";
-                    break;
-                }
-                case (WRONG_POINT_POSITION): {
-                    std::cout << "Incorrect point position.\n";
-                    break;
-                }
-                case (WRONG_SIGN_POSITION):
-                {
-                    std::cout << "Incorrect sign position.\n";
-                    break;
-                }
-                case (LETTER_INPUT):
-                {
-                    std::cout << "Expected number, not letters.\n";
-                    break;
-                }
-                default:
-                    break;
-            }
-            std::cout << "Please, input the number one more time.\n";
-        }
     }
 }
 
@@ -153,6 +149,8 @@ long long *FillVector(long long **matrix, long long &vecSize) {
     try {
         auto *vector = new long long[vecSize];
         int newVecSize = 0;
+        if(vecSize <= 0)
+            throw vecSize;
         for (int i = 0, vectorCount = 0; i < vecSize; ++i) {
             if (matrix[i][i] != 0 && matrix[i][i] % 2 == 0) {
                 vector[vectorCount] = matrix[i][i];

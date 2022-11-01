@@ -152,6 +152,39 @@ bool recursionCheck(double* arr, int start, int end)
         return false;
 }
 
+long long *FillVector(long long **matrix, long long &vecSize) {
+    try {
+        auto *vector = new long long[vecSize];
+        int newVecSize = 0;
+        for (int i = 0, vectorCount = 0; i < vecSize; ++i) {
+            if (matrix[i][i] != 0 && matrix[i][i] % 2 == 0) {
+                vector[vectorCount] = matrix[i][i];
+                ++vectorCount;
+                newVecSize++;
+            }
+        }
+        if (newVecSize <= 0)
+            throw newVecSize;
+        auto *newVector = new long long[newVecSize];
+        for(int i = 0; i < newVecSize; ++i)
+        {
+            newVector[i] = vector[i];
+        }
+        vecSize = newVecSize;
+        return newVector;
+    }
+    catch (int err) {
+        std::cout << "Incorrect array size: " << err << '\n';
+        std::cout << "Try with another input!\n";
+        auto* newVec = new long long[vecSize];
+        for(int i = 0; i < vecSize; ++i){
+            newVec[i] = 0;
+        }
+        throw err;
+        return newVec;
+    }
+}
+
 TEST(example, example_Test) {
     EXPECT_THROW({
         try{
@@ -185,4 +218,36 @@ TEST(Task2_1, difficult_test)
     int n = 6;
     auto* arr = new double[n]{ 100, 100, 100, 100, 1000, 100};
     EXPECT_FALSE(recursionCheck(arr, 0, n - 1));
+}
+
+TEST(Task3, simple_test)
+{
+    int N = 3, K = 6;
+    auto matrix = new long long*[N];
+    for(int i = 0; i < 3; ++i){
+        matrix[i] = new long long[K];
+    }
+    for(int i = 0, count = 0; i < N; ++i)
+    {
+        for(int j = 0; j < K; ++j){
+            matrix[i][j] = count;
+            ++count;
+        }
+    }
+    long long vectorSize = 3;
+    EXPECT_NO_THROW(try{
+        FillVector(matrix, vectorSize);
+    }
+    catch(Exceptions err)
+    {
+        throw err;
+    });
+    vectorSize = 0;
+    EXPECT_THROW(FillVector(matrix, vectorSize), int);
+    vectorSize = 3;
+    long long* vector = new long long[1]{14};
+    //   0    1   2   3 4 5
+    //   6    7    8 9 10 11
+    //  11 12 13   14 (<- this) 15 16
+    EXPECT_EQ(*FillVector(matrix, vectorSize), *vector);
 }
