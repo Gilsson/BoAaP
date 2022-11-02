@@ -101,11 +101,11 @@ build CMakeFiles\myDynamicLib.dir\dynamicLibrary.cpp.obj: CXX_COMPILER__myDynami
 
 build myDynamicLib.dll myDynamicLib.lib: CXX_SHARED_LIBRARY_LINKER__myDynamicLib_Debug CMakeFiles\myDynamicLib.dir\dynamicLibrary.cpp.obj
   LANGUAGE_COMPILE_FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
-  LINK_FLAGS = /machine:X86 /debug /INCREMENTAL
+  LINK_FLAGS = /machine:X86 /debug /INCREMENTAL  /DEF:CMakeFiles\myDynamicLib.dir\.\exports.def
   LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = CMakeFiles\myDynamicLib.dir
   POST_BUILD = cd .
-  PRE_LINK = cd .
+  PRE_LINK = cmd.exe /C ""F:\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" -E __create_def F:\Projects\BoAaP\LabNumber5\cmake-build-debug\CMakeFiles\myDynamicLib.dir\.\exports.def F:\Projects\BoAaP\LabNumber5\cmake-build-debug\CMakeFiles\myDynamicLib.dir\.\exports.def.objs && cd F:\Projects\BoAaP\LabNumber5\cmake-build-debug"
   RESTAT = 1
   TARGET_COMPILE_PDB = CMakeFiles\myDynamicLib.dir\
   TARGET_FILE = myDynamicLib.dll
@@ -234,16 +234,9 @@ build Tests.exe: CXX_EXECUTABLE_LINKER__Tests_Debug CMakeFiles\Tests.dir\testexa
 #############################################
 # Order-only phony target for 2Task_lib
 
-build cmake_object_order_depends_target_2Task_lib: phony || CMakeFiles\2Task_lib.dir
+build cmake_object_order_depends_target_2Task_lib: phony || cmake_object_order_depends_target_myDynamicLib
 
 build CMakeFiles\2Task_lib.dir\2Task.cpp.obj: CXX_COMPILER__2Task_lib_Debug F$:\Projects\BoAaP\LabNumber5\2Task.cpp || cmake_object_order_depends_target_2Task_lib
-  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
-  OBJECT_DIR = CMakeFiles\2Task_lib.dir
-  OBJECT_FILE_DIR = CMakeFiles\2Task_lib.dir
-  TARGET_COMPILE_PDB = CMakeFiles\2Task_lib.dir\
-  TARGET_PDB = 2Task_lib.pdb
-
-build CMakeFiles\2Task_lib.dir\dynamicLibrary.cpp.obj: CXX_COMPILER__2Task_lib_Debug F$:\Projects\BoAaP\LabNumber5\dynamicLibrary.cpp || cmake_object_order_depends_target_2Task_lib
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
   OBJECT_DIR = CMakeFiles\2Task_lib.dir
   OBJECT_FILE_DIR = CMakeFiles\2Task_lib.dir
@@ -258,10 +251,10 @@ build CMakeFiles\2Task_lib.dir\dynamicLibrary.cpp.obj: CXX_COMPILER__2Task_lib_D
 #############################################
 # Link the executable 2Task_lib.exe
 
-build 2Task_lib.exe: CXX_EXECUTABLE_LINKER__2Task_lib_Debug CMakeFiles\2Task_lib.dir\2Task.cpp.obj CMakeFiles\2Task_lib.dir\dynamicLibrary.cpp.obj
+build 2Task_lib.exe: CXX_EXECUTABLE_LINKER__2Task_lib_Debug CMakeFiles\2Task_lib.dir\2Task.cpp.obj | myDynamicLib.lib || myDynamicLib.dll
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
   LINK_FLAGS = /machine:X86 /debug /INCREMENTAL /subsystem:console
-  LINK_LIBRARIES = test_library.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  LINK_LIBRARIES = myDynamicLib.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = CMakeFiles\2Task_lib.dir
   POST_BUILD = cd .
   PRE_LINK = cd .

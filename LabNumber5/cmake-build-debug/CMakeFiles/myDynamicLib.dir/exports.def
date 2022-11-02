@@ -1,0 +1,58 @@
+EXPORTS 
+	??_R0?AVbad_cast@std@@@8 	 DATA
+	??_R0?AVexception@std@@@8 	 DATA
+	??_R0?AW4Exceptions@@@8 	 DATA
+	?_OptionsStorage@?1??__local_stdio_scanf_options@@9@4_KA 	 DATA
+	?_Psave@?$_Facetptr@V?$ctype@D@std@@@std@@2PBVfacet@locale@2@B 	 DATA
+	??$?0AAPAV_Facet_base@std@@@?$_Compressed_pair@U?$default_delete@V_Facet_base@std@@@std@@PAV_Facet_base@2@$00@std@@QAE@U_Zero_then_variadic_args_t@1@AAPAV_Facet_base@1@@Z
+	??$?0U?$default_delete@V_Facet_base@std@@@std@@$0A@@?$unique_ptr@V_Facet_base@std@@U?$default_delete@V_Facet_base@std@@@2@@std@@QAE@PAV_Facet_base@1@@Z
+	??$?5DU?$char_traits@D@std@@@std@@YAAAV?$basic_istream@DU?$char_traits@D@std@@@0@AAV10@PAD@Z
+	??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z
+	??$_Istream_extract_into_buffer@DU?$char_traits@D@std@@@std@@YAAAV?$basic_istream@DU?$char_traits@D@std@@@0@AAV10@IPAD@Z
+	??$exchange@PAV_Facet_base@std@@$$T@std@@YAPAV_Facet_base@0@AAPAV10@$$QA$$T@Z
+	??$forward@AAPAV_Facet_base@std@@@std@@YAAAPAV_Facet_base@0@AAPAV10@@Z
+	??$pow@OH$0A@@@YAOOH@Z
+	??$use_facet@V?$ctype@D@std@@@std@@YAABV?$ctype@D@0@ABVlocale@0@@Z
+	??0_Sentry_base@?$basic_istream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z
+	??0_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z
+	??0bad_cast@std@@QAE@ABV01@@Z
+	??0bad_cast@std@@QAE@XZ
+	??0exception@std@@QAE@ABV01@@Z
+	??0exception@std@@QAE@QBDH@Z
+	??0sentry@?$basic_istream@DU?$char_traits@D@std@@@std@@QAE@AAV12@_N@Z
+	??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@AAV12@@Z
+	??1?$unique_ptr@V_Facet_base@std@@U?$default_delete@V_Facet_base@std@@@2@@std@@QAE@XZ
+	??1_Sentry_base@?$basic_istream@DU?$char_traits@D@std@@@std@@QAE@XZ
+	??1_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ
+	??1bad_cast@std@@UAE@XZ
+	??1exception@std@@UAE@XZ
+	??1locale@std@@QAE@XZ
+	??1sentry@?$basic_istream@DU?$char_traits@D@std@@@std@@QAE@XZ
+	??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ
+	??Bsentry@?$basic_istream@DU?$char_traits@D@std@@@std@@QBE_NXZ
+	??Bsentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QBE_NXZ
+	??R?$default_delete@V_Facet_base@std@@@std@@QBEXPAV_Facet_base@1@@Z
+	?FillElements@@YAXPAOH@Z
+	?PrintInfo@@YAXXZ
+	?PrintNum@@YAO_N@Z
+	?RecursionOutput@@YAX_N@Z
+	?RestartProgram@@YA_NXZ
+	?SizeInput@@YAXPADAAH@Z
+	?_Get_first@?$_Compressed_pair@U?$default_delete@V_Facet_base@std@@@std@@PAV_Facet_base@2@$00@std@@QAEAAU?$default_delete@V_Facet_base@std@@@2@XZ
+	?_Getfacet@locale@std@@QBEPBVfacet@12@I@Z
+	?_Throw_bad_cast@std@@YAXXZ
+	?__empty_global_delete@@YAXPAX@Z
+	?__empty_global_delete@@YAXPAXI@Z
+	?cbrt@@YAOO@Z
+	?eof@?$_Narrow_char_traits@DH@std@@SAHXZ
+	?eq_int_type@?$_Narrow_char_traits@DH@std@@SA_NABH0@Z
+	?length@?$_Narrow_char_traits@DH@std@@SAIQBD@Z
+	?pow@@YAOOO@Z
+	?recursionCheck@@YA_NPAOHH@Z
+	?release@?$unique_ptr@V_Facet_base@std@@U?$default_delete@V_Facet_base@std@@@2@@std@@QAEPAV_Facet_base@2@XZ
+	?to_char_type@?$_Narrow_char_traits@DH@std@@SADABH@Z
+	?what@exception@std@@UBEPBDXZ
+	__local_stdio_scanf_options
+	_vfscanf_l
+	powl
+	scanf

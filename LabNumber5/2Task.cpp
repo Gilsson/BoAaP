@@ -3,12 +3,17 @@
 
 int main()
 {
-    long long size = 0;
-    size = PrintNum(true);
-    auto* arr = new double[size];
-    for(long long i = 0; i < size; ++i)
+    PrintInfo();
+    while(true)
     {
-        arr[i] = PrintNum(false);
+    int size = 0;
+    SizeInput("array", size);
+    auto* arr = new long double[size];
+    FillElements(arr, size);
+    RecursionOutput(recursionCheck(arr, 0, size - 1));
+    if(RestartProgram())
+        break;
     }
-    std::cout << recursionCheck(arr, 0, size - 1);
+    system("pause");
+    return 0;
 }

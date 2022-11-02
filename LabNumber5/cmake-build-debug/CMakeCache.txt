@@ -295,6 +295,9 @@ LabNumber5_SOURCE_DIR:STATIC=F:/Projects/BoAaP/LabNumber5
 //Path to a library.
 TEST_LIBRARY:FILEPATH=F:/Projects/BoAaP/LabNumber5/cmake-build-debug/test_library.lib
 
+//The directory containing a CMake configuration file for dynamicLibrary.h.
+dynamicLibrary.h_DIR:PATH=dynamicLibrary.h_DIR-NOTFOUND
+
 //Value Computed by CMake
 gmock_BINARY_DIR:STATIC=F:/Projects/BoAaP/LabNumber5/cmake-build-debug/_deps/googletest-build/googlemock
 

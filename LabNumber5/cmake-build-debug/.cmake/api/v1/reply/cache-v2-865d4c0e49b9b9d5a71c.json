@@ -1610,6 +1610,18 @@
 			"value" : "GTest"
 		},
 		{
+			"name" : "dynamicLibrary.h_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for dynamicLibrary.h."
+				}
+			],
+			"type" : "PATH",
+			"value" : "dynamicLibrary.h_DIR-NOTFOUND"
+		},
+		{
 			"name" : "generated_dir",
 			"properties" : 
 			[

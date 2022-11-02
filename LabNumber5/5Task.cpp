@@ -8,6 +8,7 @@ enum Exceptions
     WRONG_POINT_POSITION,
     INCORRECT_DATA,
     EMPTY_STRING,
+    WRONG_SPACE_POSITION,
 };
 
 long double PrintNum(bool IsSizeInput = false)
@@ -19,15 +20,12 @@ long double PrintNum(bool IsSizeInput = false)
         long double output = 0;
         bool Sign = true;                   // true = +, false = -
         char *input = new char[buff]{0};
-        scanf("%[^\n^' ']%*c", input);
+        scanf("%[^\n]%*c", input);
         try{
             if(strlen(input) == 0) {
                 throw EMPTY_STRING;
             }
             for (int i = 0; i < buff; ++i) {
-                if (input[i] == ' ') {
-                    break;
-                }
                 if (input[i] == 0) {
                     break;
                 }
@@ -40,6 +38,10 @@ long double PrintNum(bool IsSizeInput = false)
                     } else {
                         throw WRONG_SIGN_POSITION;
                     }
+                }
+                if(input[i] == int(' '))
+                {
+                    throw WRONG_SPACE_POSITION;
                 }
                 if ((input[i] < int('0') || input[i] > int('9')) && input[i] != int('.')) {
                     throw LETTER_INPUT;
@@ -57,7 +59,7 @@ long double PrintNum(bool IsSizeInput = false)
                             PointIndex = j;
                     }
                 }
-                if (PointIndex != -1) {
+                if (PointIndex != -1 && IsSizeInput) {
                     for (int j = PointIndex + 1; j <= size; ++j) {
                         if (input[j] != int('0')) {
                             throw WRONG_TYPE_INPUT;
@@ -98,86 +100,79 @@ long double PrintNum(bool IsSizeInput = false)
             }
         }catch(Exceptions err)
         {
-            switch (err) {
-                case (WRONG_TYPE_INPUT): {
+            char *wrongInput = new char[1000];
+            char *temp = new char[1];
+            switch (err){
+                case (WRONG_TYPE_INPUT):
                     std::cerr << "Expected Int type.\n";
                     std::cerr << "Please, input the number one more time.\n";
-                    char* wrongInput = new char[1000];
                     scanf("%*[\n]", wrongInput);
-                    delete [] wrongInput;
                     break;
-                }
-                case (INCORRECT_DATA): {
+                case (INCORRECT_DATA):
                     std::cerr << "Incorrect size.\n";
                     std::cerr << "Please, input the number one more time.\n";
-                    char* wrongInput = new char[1000];
                     scanf("%*[\n]", wrongInput);
-                    delete [] wrongInput;
                     break;
-                }
-                case (WRONG_POINT_POSITION): {
+                case (WRONG_POINT_POSITION):
                     std::cerr << "Incorrect point position.\n";
                     std::cerr << "Please, input the number one more time.\n";
-                    char* wrongInput = new char[1000];
                     scanf("%*[\n]", wrongInput);
-                    delete [] wrongInput;
                     break;
-                }
                 case (WRONG_SIGN_POSITION):
-                {
                     std::cerr << "Incorrect sign position.\n";
                     std::cerr << "Please, input the number one more time.\n";
-                    char* wrongInput = new char[1000];
                     scanf("%*[\n]", wrongInput);
-                    delete [] wrongInput;
                     break;
-                }
                 case (LETTER_INPUT):
-                {
                     std::cerr << "Expected number, not letters.\n";
                     std::cerr << "Please, input the number one more time.\n";
-                    char* wrongInput = new char[1000];
                     scanf("%*[\n]", wrongInput);
-                    delete [] wrongInput;
                     break;
-                }
                 case (EMPTY_STRING):
-                {
                     std::cerr << "Empty string.\n";
                     std::cerr << "Please, input the number one more time.\n";
-                    char *temp = new char[1];
                     scanf("%*[\n]", temp);
                     break;
-                }
+                case (WRONG_SPACE_POSITION):
+                    std::cerr << "Expect only 1 number(wrong space position).\n";
+                    std::cerr << "Please, input the number one more time.\n";
+                    scanf("%*[\n]", wrongInput);
+                    break;
                 default:
                     break;
             }
+            delete[] temp;
+            delete[] wrongInput;
         }
     }
 }
 
-auto fillEvenArray(long long** arr, int N, int M, int& newArrSize)
+long long* fillEvenArray(long long** arr, int N, int M, int& newArrSize)
 {
-    auto newArray = new long long[(M / 2 + 1) * N];
-    int count = 0;
-    for(int j = 2; j < M; j+=2)
-    {
-        for(int i = 0; i < N; ++i)
-        {
-            if(arr[i][j] % 2 == 0)
-            {
-                newArray[count] = arr[i][j];
-                ++count;
+    while(true) {
+        auto newArray = new long long[(M / 2 + 1) * N];
+        int count = 0;
+        for (int j = 1; j < M; j += 2) {
+            for (int i = 0; i < N; ++i) {
+                if (arr[i][j] % 2 != 0) {
+                    newArray[count] = arr[i][j];
+                    ++count;
+                }
             }
         }
+        if (count != 0) {
+            auto output = new long long[count];
+            for (int i = 0; i < count; ++i) {
+                output[i] = newArray[i];
+            }
+            newArrSize = count;
+            return output;
+        }else{
+            std::cout << "There are no odd elements/even column in the matrix!\n";
+            std::cout << "Fill the matrix one more time!\n";
+            return nullptr;
+        }
     }
-    auto output = new long long[count];
-    for(int i = 0; i < count; ++i)
-    {
-        output[i] = newArray[i];
-    }
-    newArrSize = count;
-    return output;
 }
 
 auto fillArray(int N, int M) {
@@ -201,7 +196,7 @@ auto averageArray(long long* array, int N)
         sum += array[i];
     }
     long double average = sum / N;
-    std::cout << "Average of elements int the array is: " << average << "\n";
+    std::cout << "Average of elements in the array is: " << average << "\n";
     return average;
 }
 
@@ -211,8 +206,13 @@ int main()
     N = PrintNum(true);
     M = PrintNum(true);
     auto array = fillArray(N, M);
-    int newArrSize = 0;
+    int newArrSize = 1;
     auto vector = fillEvenArray(array, N, M, newArrSize);
+    while(vector == nullptr)
+    {
+        fillArray(N, M);
+        vector = fillEvenArray(array, N, M, newArrSize);
+    }
     long double average = averageArray(vector, newArrSize);
     return 0;
 }
