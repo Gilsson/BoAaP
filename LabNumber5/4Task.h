@@ -145,7 +145,7 @@ long double PrintNum(bool IsSizeInput = false)
                 case (EMPTY_STRING):
                     std::cerr << "Empty string.\n";
                     std::cerr << "Please, input the number one more time.\n";
-                    scanf("%*[\n]", temp);
+                    scanf("%*1[\n]", temp);
                     break;
                 case (WRONG_SPACE_POSITION):
                     std::cerr << "Expect only 1 number(wrong space position).\n";

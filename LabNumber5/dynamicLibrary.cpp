@@ -25,7 +25,6 @@ long double PrintNum(bool IsSizeInput = false)
                     if (i == 0) {
                         Sign = false;
                         input[i] = '0';
-                        i--;
                         continue;
                     } else {
                         throw WRONG_SIGN_POSITION;
@@ -80,7 +79,7 @@ long double PrintNum(bool IsSizeInput = false)
             }
             if(Sign) {
                 if(IsSizeInput) {
-                    if (output < 2 || output > 10000) {
+                    if (output < 1 || output > 10000) {
                         throw INCORRECT_DATA;
                     }
                 }
@@ -89,7 +88,7 @@ long double PrintNum(bool IsSizeInput = false)
             }
             else{
                 if(IsSizeInput) {
-                    if (-output < 2) {
+                    if (-output < 1) {
                         throw INCORRECT_DATA;
                     }
                 }

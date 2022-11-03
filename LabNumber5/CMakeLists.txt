@@ -40,7 +40,7 @@ set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
 # Now simply link against gtest or gtest_main as needed. Eg
-add_executable(Test testexample.cpp)
+add_executable(Test tests.cpp)
 target_link_libraries(Test gtest_main)
 add_test(NAME example_test COMMAND example)
 add_test(NAME simple_test COMMAND Task2)

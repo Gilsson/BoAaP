@@ -181,10 +181,10 @@ long long** FillMatrix(const long long N, const long long K)
 
 long long *FillVector(long long **matrix, long long &vecSize) {
     try {
-        auto *vector = new long long[vecSize];
         int newVecSize = 0;
         if(vecSize <= 0)
             throw vecSize;
+        auto *vector = new long long[vecSize];
         for (int i = 0, vectorCount = 0; i < vecSize; ++i) {
             if (matrix[i][i] != 0 && matrix[i][i] % 2 == 0) {
                 vector[vectorCount] = matrix[i][i];

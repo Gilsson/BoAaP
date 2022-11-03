@@ -1,4 +1,13 @@
 "F:\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=F:/CLion 2022.2.1/bin/ninja/win/ninja.exe" -G Ninja -S F:\Projects\BoAaP\LabNumber5 -B F:\Projects\BoAaP\LabNumber5\cmake-build-debug
 -- Configuring done
--- Generating done
--- Build files have been written to: F:/Projects/BoAaP/LabNumber5/cmake-build-debug
+CMake Error at CMakeLists.txt:43 (add_executable):
+  Cannot find source file:
+
+    tests.cpp
+
+
+CMake Error at CMakeLists.txt:43 (add_executable):
+  No SOURCES given to target: Test
+
+
+CMake Generate step failed.  Build files cannot be regenerated correctly.

@@ -416,7 +416,7 @@ build 8Task.exe: CXX_EXECUTABLE_LINKER__8Task_Debug CMakeFiles\8Task.dir\8Task.c
 
 build cmake_object_order_depends_target_Test: phony || cmake_object_order_depends_target_gtest cmake_object_order_depends_target_gtest_main
 
-build CMakeFiles\Test.dir\testexample.cpp.obj: CXX_COMPILER__Test_Debug F$:\Projects\BoAaP\LabNumber5\testexample.cpp || cmake_object_order_depends_target_Test
+build CMakeFiles\Test.dir\tests.cpp.obj: CXX_COMPILER__Test_Debug F$:\Projects\BoAaP\LabNumber5\tests.cpp || cmake_object_order_depends_target_Test
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd -std:c++14
   INCLUDES = -external:IF:\Projects\BoAaP\LabNumber5\cmake-build-debug\_deps\googletest-src\googletest\include -external:IF:\Projects\BoAaP\LabNumber5\cmake-build-debug\_deps\googletest-src\googletest -external:W0
   OBJECT_DIR = CMakeFiles\Test.dir
@@ -432,7 +432,7 @@ build CMakeFiles\Test.dir\testexample.cpp.obj: CXX_COMPILER__Test_Debug F$:\Proj
 #############################################
 # Link the executable Test.exe
 
-build Test.exe: CXX_EXECUTABLE_LINKER__Test_Debug CMakeFiles\Test.dir\testexample.cpp.obj | lib\gtest_main.lib lib\gtest.lib || lib\gtest.lib lib\gtest_main.lib
+build Test.exe: CXX_EXECUTABLE_LINKER__Test_Debug CMakeFiles\Test.dir\tests.cpp.obj | lib\gtest_main.lib lib\gtest.lib || lib\gtest.lib lib\gtest_main.lib
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
   LINK_FLAGS = /machine:X86 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = lib\gtest_main.lib  lib\gtest.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
