@@ -61,6 +61,9 @@ long long PrintNum(bool IsSizeInput)
                 ++size;
             }
             if (PointIndex != -1) {
+                if(Sign == false && size == 0){
+                    throw WRONG_SIGN_POSITION;
+                }
                 for (long long i = PointIndex - 1; i >= 0; --i) {
                     output += (input[i] - '0') * powl(10, PointIndex - i - 1);
                 }
@@ -68,6 +71,9 @@ long long PrintNum(bool IsSizeInput)
                     output += (input[i] - '0') * powl(1 / 10.0, i - PointIndex);
                 }
             } else {
+                if(Sign == false && size == 0){
+                    throw WRONG_SIGN_POSITION;
+                }
                 for (long long i = size - 1; i >= 0; --i) {
                     output += (input[i] - '0') * powl(10, size - i - 1);
                 }

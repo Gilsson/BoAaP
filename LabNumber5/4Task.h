@@ -1,7 +1,24 @@
-#include "dynamicLibrary.h"
-#include <Windows.h>
+//
+// Created by Gilsson on 11/3/2022.
+//
+
+#ifndef LABNUMBER5_4TASK_H
+#define LABNUMBER5_4TASK_H
 
 #include <iostream>
+#include <iomanip>
+#include <Windows.h>
+
+enum Exceptions
+{
+    LETTER_INPUT,
+    WRONG_TYPE_INPUT,
+    WRONG_SIGN_POSITION,
+    WRONG_POINT_POSITION,
+    INCORRECT_DATA,
+    EMPTY_STRING,
+    WRONG_SPACE_POSITION,
+};
 
 long double PrintNum(bool IsSizeInput = false)
 {
@@ -25,7 +42,6 @@ long double PrintNum(bool IsSizeInput = false)
                     if (i == 0) {
                         Sign = false;
                         input[i] = '0';
-                        i--;
                         continue;
                     } else {
                         throw WRONG_SIGN_POSITION;
@@ -80,7 +96,7 @@ long double PrintNum(bool IsSizeInput = false)
             }
             if(Sign) {
                 if(IsSizeInput) {
-                    if (output < 2 || output > 10000) {
+                    if (output < 1 || output > 10000) {
                         throw INCORRECT_DATA;
                     }
                 }
@@ -89,7 +105,7 @@ long double PrintNum(bool IsSizeInput = false)
             }
             else{
                 if(IsSizeInput) {
-                    if (-output < 2) {
+                    if (-output < 1) {
                         throw INCORRECT_DATA;
                     }
                 }
@@ -129,7 +145,7 @@ long double PrintNum(bool IsSizeInput = false)
                 case (EMPTY_STRING):
                     std::cerr << "Empty string.\n";
                     std::cerr << "Please, input the number one more time.\n";
-                    scanf("%*1[\n]", temp);
+                    scanf("%*[\n]", temp);
                     break;
                 case (WRONG_SPACE_POSITION):
                     std::cerr << "Expect only 1 number(wrong space position).\n";
@@ -139,53 +155,66 @@ long double PrintNum(bool IsSizeInput = false)
                 default:
                     break;
             }
-            delete[] temp;
             delete[] wrongInput;
         }
     }
 }
 
-bool recursionCheck(long double* arr, int start, int end)
+void nullElements(long double** arr, const int N, const int M)
 {
-    if(end - start > 1){
-         {
-            if (recursionCheck(arr, start, start + (end - start + 1) / 3 - 1)) {
-                return true;
+    int count = 0;
+    for(int i = 0; i < N; ++i){
+        for(int j = 0; j < M; ++j){
+            if(arr[i][j] < 0.0000001 && arr[i][j] > -0.000001){
+                ++count;
+                std::cout << "Index of NULL: [" << i << "] [" << j <<"].\n";
             }
-            if(recursionCheck(arr, start + (end - start + 1) / 3, end))
-            {
-                return true;
-            }
-            else return false;
         }
     }
-    else if (cbrt(pow(arr[start], 2) + 2) < 10 || cbrt(pow(arr[end], 2) + 2) < 10 ) {
-        return true;
-    }else
-        return false;
+    std::cout << "Number of NULL elements: " << count << "\n";
 }
 
-void RecursionOutput(bool output)
+auto reverseArray(long double** arr, int N, int M){
+    auto newArr = new long double*[N];
+    for(int i = 0; i < N; ++i){
+        newArr[i] = new long double[M];
+    }
+    for(int i = 0; i < N; ++i) {
+        for (int j = 0; j < M; ++j)
+        {
+            newArr[N - 1 - i][M - 1 - j] = arr[i][j];
+        }
+    }
+    return newArr;
+}
+
+void showMatrix(long double** matrix, int N, int M)
 {
-    if(output)
-        std::cout << "There are at least one element in the array, which is suitable!\n";
-    else
-        std::cout << "There are no elements in the array, which is suitable!\n";
+    for (int i = 0; i < N; ++i) {
+        for (int j = 0; j < M; ++j) {
+            std::cout << std::setw(10) << matrix[i][j] << " ";
+        }
+        std::cout << '\n';
+    }
+    std::cout << '\n';
 }
 
 void PrintInfo()
 {
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 3);
-    std::cout << "SECOND EXERCISE(number 7 in the list):\n"
-                 "For given array with size N\n"
-                 "Fill array, according to the formula\n"
+    std::cout << "FOURTH EXERCISE:\n"
+                 "Create two-digit real-type matrix A of size N x K.\n"
+                 "Input elements from the keyboard.\n"
+                 "Found NULL elements in the matrix. Count them and print their indexes.\n"
+                 "Reverse the elements of the matrix and print on the screen.\n"
                  "Was created by: ";
     std::cout << "Anton Gulis\n";
     std::cout << "To start the program, type ";
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 4);
     std::cout << "Enter.\n";
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 2);
-    while(true) {
+    while(true)
+    {
         char *temp = new char[1]{0};
         scanf("%[^\n]%*c", temp);
         if(strlen(temp) == 0) {
@@ -207,32 +236,51 @@ bool RestartProgram(){
     scanf("%*1[\n]", temp2);
     if(*temp != 'y' && *temp != 'Y')
     {
+        system("cls");
         return true;
     }
     return false;
 }
 
-void SizeInput(char* str, int& N)
+void SizeInput(char* str, int& N, int& K)
 {
-    std::cout << "Print size of the " << str << ": \n";
+    std::cout << "Size of the " << str << ": ";
+    std::cout << "\nPrint the number of row:\n";
     N = PrintNum(true);
+    std::cout << "\nPrint the number of columns:\n";
+    K = PrintNum(true);
 }
 
-void FillElements(long double* arr, int N)
+long double** FillMatrix(const long long N, const long long K)
 {
-    for(int i = 0; i < N; ++i) {
-        std::cout << "Print [" << i << "] element of array\n";
-        arr[i] = PrintNum(false);
+    auto** matrix = new long double * [N];
+    for(int i = 0; i < N; ++i)
+    {
+        matrix[i] = new long double [K];
     }
+    for(int i = 0; i < N; ++i){
+        for(int j = 0; j < K; ++j)
+        {
+            std::cout << "Print [" << i << "][" << j << "] element of matrix\n";
+            matrix[i][j] = PrintNum(false);
+        }
+    }
+    return matrix;
 }
-void TaskSolve() {
-    while (true) {
-        int size = 0;
-        SizeInput("array", size);
-        auto *arr = new long double[size];
-        FillElements(arr, size);
-        RecursionOutput(recursionCheck(arr, 0, size - 1));
-        if (RestartProgram())
+
+void SolveTask()
+{
+    while(true) {
+        int N = 1, M = 1;
+        SizeInput("matrix", N, M);
+        auto array = FillMatrix(N, M);
+        nullElements(array, N, M);
+        array = reverseArray(array, N, M);
+        showMatrix(array, N, M);
+        if(RestartProgram())
             break;
     }
 }
+
+
+#endif //LABNUMBER5_4TASK_H

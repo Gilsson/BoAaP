@@ -1,7 +1,24 @@
-#include "dynamicLibrary.h"
-#include <Windows.h>
+//
+// Created by Gilsson on 11/3/2022.
+//
+
+#ifndef LABNUMBER5_5TASK_H
+#define LABNUMBER5_5TASK_H
 
 #include <iostream>
+#include <Windows.h>
+#include <stdio.h>
+
+enum Exceptions
+{
+    LETTER_INPUT,
+    WRONG_TYPE_INPUT,
+    WRONG_SIGN_POSITION,
+    WRONG_POINT_POSITION,
+    INCORRECT_DATA,
+    EMPTY_STRING,
+    WRONG_SPACE_POSITION,
+};
 
 long double PrintNum(bool IsSizeInput = false)
 {
@@ -25,7 +42,6 @@ long double PrintNum(bool IsSizeInput = false)
                     if (i == 0) {
                         Sign = false;
                         input[i] = '0';
-                        i--;
                         continue;
                     } else {
                         throw WRONG_SIGN_POSITION;
@@ -145,47 +161,63 @@ long double PrintNum(bool IsSizeInput = false)
     }
 }
 
-bool recursionCheck(long double* arr, int start, int end)
+long long* fillEvenArray(long long** arr, int N, int M, int& newArrSize)
 {
-    if(end - start > 1){
-         {
-            if (recursionCheck(arr, start, start + (end - start + 1) / 3 - 1)) {
-                return true;
+    while(true) {
+        auto newArray = new long long[(M / 2 + 1) * N];
+        int count = 0;
+        for (int j = 1; j < M; j += 2) {
+            for (int i = 0; i < N; ++i) {
+                if (arr[i][j] % 2 != 0) {
+                    newArray[count] = arr[i][j];
+                    ++count;
+                }
             }
-            if(recursionCheck(arr, start + (end - start + 1) / 3, end))
-            {
-                return true;
+        }
+        if (count != 0) {
+            auto output = new long long[count];
+            for (int i = 0; i < count; ++i) {
+                output[i] = newArray[i];
             }
-            else return false;
+            newArrSize = count;
+            return output;
+        }else{
+            std::cout << "There are no odd elements/even column in the matrix!\n";
+            std::cout << "Fill the matrix one more time!\n";
+            return nullptr;
         }
     }
-    else if (cbrt(pow(arr[start], 2) + 2) < 10 || cbrt(pow(arr[end], 2) + 2) < 10 ) {
-        return true;
-    }else
-        return false;
 }
 
-void RecursionOutput(bool output)
+
+auto averageArray(long long* array, int N)
 {
-    if(output)
-        std::cout << "There are at least one element in the array, which is suitable!\n";
-    else
-        std::cout << "There are no elements in the array, which is suitable!\n";
+    long double sum = 0;
+    for(int i = 0; i < N; ++i)
+    {
+        sum += array[i];
+    }
+    long double average = sum / N;
+    std::cout << "Average of elements in the array is: " << average << "\n";
+    return average;
 }
 
 void PrintInfo()
 {
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 3);
-    std::cout << "SECOND EXERCISE(number 7 in the list):\n"
-                 "For given array with size N\n"
-                 "Fill array, according to the formula\n"
+    std::cout << "FIFTH EXERCISE:\n"
+                 "Create two-digit integer-type matrix A of size N x K.\n"
+                 "Input elements from the keyboard.\n"
+                 "Create the array from the odd elements in the even columns.\n"
+                 "Count the average of the elements.\n"
                  "Was created by: ";
     std::cout << "Anton Gulis\n";
     std::cout << "To start the program, type ";
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 4);
     std::cout << "Enter.\n";
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 2);
-    while(true) {
+    while(true)
+    {
         char *temp = new char[1]{0};
         scanf("%[^\n]%*c", temp);
         if(strlen(temp) == 0) {
@@ -207,32 +239,55 @@ bool RestartProgram(){
     scanf("%*1[\n]", temp2);
     if(*temp != 'y' && *temp != 'Y')
     {
+        system("cls");
         return true;
     }
     return false;
 }
 
-void SizeInput(char* str, int& N)
+void SizeInput(char* str, int& N, int& K)
 {
-    std::cout << "Print size of the " << str << ": \n";
+    std::cout << "Size of the " << str << ": ";
+    std::cout << "\nPrint the number of row:\n";
     N = PrintNum(true);
+    std::cout << "\nPrint the number of columns:\n";
+    K = PrintNum(true);
 }
 
-void FillElements(long double* arr, int N)
+long long** FillMatrix(const long long N, const long long K)
 {
-    for(int i = 0; i < N; ++i) {
-        std::cout << "Print [" << i << "] element of array\n";
-        arr[i] = PrintNum(false);
+    auto** matrix = new long long * [N];
+    for(int i = 0; i < N; ++i)
+    {
+        matrix[i] = new long long [K];
     }
+    for(int i = 0; i < N; ++i){
+        for(int j = 0; j < K; ++j)
+        {
+            std::cout << "Print [" << i << "][" << j << "] element of matrix\n";
+            matrix[i][j] = PrintNum(false);
+        }
+    }
+    return matrix;
 }
-void TaskSolve() {
-    while (true) {
-        int size = 0;
-        SizeInput("array", size);
-        auto *arr = new long double[size];
-        FillElements(arr, size);
-        RecursionOutput(recursionCheck(arr, 0, size - 1));
-        if (RestartProgram())
+
+void SolveTask()
+{
+    while(true) {
+        int N = 1, M = 1;
+        SizeInput("matrix", N, M);
+        auto array = FillMatrix(N, M);
+        int newArrSize = 1;
+        auto vector = fillEvenArray(array, N, M, newArrSize);
+        while(vector == nullptr)
+        {
+            SizeInput("matrix", N, M);
+            FillMatrix(N, M);
+            vector = fillEvenArray(array, N, M, newArrSize);
+        }
+        long double average = averageArray(vector, newArrSize);
+        if(RestartProgram())
             break;
     }
 }
+#endif //LABNUMBER5_5TASK_H
