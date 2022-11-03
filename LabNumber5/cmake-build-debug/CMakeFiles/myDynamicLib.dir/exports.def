@@ -38,6 +38,7 @@ EXPORTS
 	?RecursionOutput@@YAX_N@Z
 	?RestartProgram@@YA_NXZ
 	?SizeInput@@YAXPADAAH@Z
+	?TaskSolve@@YAXXZ
 	?_Get_first@?$_Compressed_pair@U?$default_delete@V_Facet_base@std@@@std@@PAV_Facet_base@2@$00@std@@QAEAAU?$default_delete@V_Facet_base@std@@@2@XZ
 	?_Getfacet@locale@std@@QBEPBVfacet@12@I@Z
 	?_Throw_bad_cast@std@@YAXXZ

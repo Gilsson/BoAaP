@@ -142,25 +142,15 @@ long double PrintNum(bool IsSizeInput = false)
 bool recursionCheck(long double* arr, int start, int end)
 {
     if(end - start > 1){
-        if(end / 3 != 0) {
-            if (recursionCheck(arr, start, start + end / 3 - 1)) {
+         {
+            if (recursionCheck(arr, start, start + (end - start + 1) / 3 - 1)) {
                 return true;
             }
-            if(recursionCheck(arr, start + end / 3, end))
+            if(recursionCheck(arr, start + (end - start + 1) / 3, end))
             {
                 return true;
             }
             else return false;
-        }
-        else {
-            if (recursionCheck(arr, start, start + end / 3)) {
-                return true;
-            }
-
-            if (recursionCheck(arr, start + end / 3 + 1, end)) {
-                return true;
-            } else
-                return false;
         }
     }
     else if (cbrt(pow(arr[start], 2) + 2) < 10 || cbrt(pow(arr[end], 2) + 2) < 10 ) {
@@ -227,5 +217,16 @@ void FillElements(long double* arr, int N)
     for(int i = 0; i < N; ++i) {
         std::cout << "Print [" << i << "] element of array\n";
         arr[i] = PrintNum(false);
+    }
+}
+void TaskSolve() {
+    while (true) {
+        int size = 0;
+        SizeInput("array", size);
+        auto *arr = new long double[size];
+        FillElements(arr, size);
+        RecursionOutput(recursionCheck(arr, 0, size - 1));
+        if (RestartProgram())
+            break;
     }
 }

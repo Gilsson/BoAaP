@@ -30,4 +30,5 @@ int orderAddition()
 int main()
 {
     orderAddition();
+    return 0;
 }

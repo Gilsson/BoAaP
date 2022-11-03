@@ -1,5 +1,6 @@
 #include <iostream>
 #include <iomanip>
+#include <Windows.h>
 
 enum Exceptions
 {
@@ -203,7 +204,60 @@ auto FillMatrix(int N, int M)
     return array;
 }
 
+void PrintInfo()
+{
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 3);
+    std::cout << "THIRD EXERCISE:\n"
+                 "Create two-digit matrix A of size N x K.\n"
+                 "Input elements from the keyboard.\n"
+                 "Create dynamic array from the elements, located on the main diagonal of matrix\n"
+                 "and that are even. Count the multiply of elements in array.\n"
+                 "Was created by: ";
+    std::cout << "Anton Gulis\n";
+    std::cout << "To start the program, type ";
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 4);
+    std::cout << "Enter.\n";
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 2);
+    while(true)
+    {
+        char *temp = new char[1]{0};
+        scanf("%[^\n]%*c", temp);
+        if(strlen(temp) == 0) {
+            char* temp2 = new char[1];
+            scanf("%*1[\n]", temp2);
+            return;
+        }
+    }
+}
+
+bool RestartProgram(){
+    char* temp = new char[1];
+    std::cout << "To repeat the program, type";
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 4);
+    std::cout << " Y:\n" ;
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 2);
+    std::cin >> temp;
+    char* temp2 = new char[1];
+    scanf("%*1[\n]", temp2);
+    if(*temp != 'y' && *temp != 'Y')
+    {
+        system("cls");
+        return true;
+    }
+    return false;
+}
+
+void SizeInput(char* str, int& N, int& K)
+{
+    std::cout << "Size of the " << str << ": ";
+    std::cout << "\nPrint the number of row:\n";
+    N = PrintNum(true);
+    std::cout << "\nPrint the number of columns:\n";
+    K = PrintNum(true);
+}
+
 int main() {
+
     int N = 1, M = 1;
     N = PrintNum(true);
     M = PrintNum(true);

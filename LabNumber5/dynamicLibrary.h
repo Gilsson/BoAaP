@@ -1,6 +1,8 @@
 #ifndef DYNAMIC_LIBRARY_H
 #define DYNAMIC_LIBRARY_H
 
+#include "cmake-build-debug/mydynamiclib_export.h"
+
 enum Exceptions
 {
     LETTER_INPUT,
@@ -12,17 +14,19 @@ enum Exceptions
     WRONG_SPACE_POSITION,
 };
 
-long double PrintNum(bool IsSizeInput);
+MYDYNAMICLIB_EXPORT long double PrintNum(bool IsSizeInput);
 
-bool recursionCheck(long double* arr, int start, int end);
+MYDYNAMICLIB_EXPORT bool recursionCheck(long double* arr, int start, int end);
 
-void PrintInfo();
+MYDYNAMICLIB_EXPORT void PrintInfo();
 
-bool RestartProgram();
+MYDYNAMICLIB_EXPORT bool RestartProgram();
 
-void SizeInput(char* str, int& N);
+MYDYNAMICLIB_EXPORT void SizeInput(char* str, int& N);
 
-void RecursionOutput(bool output);
+MYDYNAMICLIB_EXPORT void RecursionOutput(bool output);
 
-void FillElements(long double* arr, int N);
+MYDYNAMICLIB_EXPORT void FillElements(long double* arr, int N);
+
+MYDYNAMICLIB_EXPORT void TaskSolve();
 #endif //DYNAMIC_LIBRARY_H

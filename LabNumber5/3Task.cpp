@@ -1,5 +1,7 @@
 #include <iostream>
+#include <iomanip>
 #include <stdio.h>
+#include <Windows.h>
 
 enum Exceptions
 {
@@ -8,37 +10,40 @@ enum Exceptions
     WRONG_SIGN_POSITION,
     WRONG_POINT_POSITION,
     INCORRECT_DATA,
+    EMPTY_STRING,
+    WRONG_SPACE_POSITION,
 };
 
-
-long double PrintNum(bool IsSizeInput = false)
-{
+long double PrintNum(bool IsSizeInput) {
     while (true) {
-            int size = 0;
-            long long PointIndex = -1;
-            long long buff = 10132;
-            long long output = 0;
-            bool Sign = true;                   // true = +, false = -
-            char *input = new char[buff]{0};
-            scanf("%[^\n^' ']%*c", input);
-            try{
+        int size = 0;
+        long long PointIndex = -1;
+        long long buff = 10132;
+        long double output = 0;
+        bool Sign = true;                   // true = +, false = -
+        char *input = new char[buff]{0};
+        scanf("%[^\n]%*c", input);
+        try {
+            if (strlen(input) == 0) {
+                throw EMPTY_STRING;
+            }
             for (int i = 0; i < buff; ++i) {
-                if (input[i] == ' ') {
-                    break;
-                }
                 if (input[i] == 0) {
                     break;
                 }
-                    if (input[i] == int('-') && Sign) {
-                        if (i == 0) {
-                            Sign = false;
-                            input[i] = 0;
-                            i--;
-                            continue;
-                        } else {
-                            throw WRONG_SIGN_POSITION;
-                        }
+                if (input[i] == int('-')) {
+                    if (i == 0) {
+                        Sign = false;
+                        input[i] = '0';
+                        i--;
+                        continue;
+                    } else {
+                        throw WRONG_SIGN_POSITION;
                     }
+                }
+                if (input[i] == int(' ')) {
+                    throw WRONG_SPACE_POSITION;
+                }
                 if ((input[i] < int('0') || input[i] > int('9')) && input[i] != int('.')) {
                     throw LETTER_INPUT;
                 }
@@ -55,15 +60,15 @@ long double PrintNum(bool IsSizeInput = false)
                             PointIndex = j;
                     }
                 }
-                /*if (PointIndex != -1) {
+                if (PointIndex != -1 && IsSizeInput) {
                     for (int j = PointIndex + 1; j <= size; ++j) {
                         if (input[j] != int('0')) {
                             throw WRONG_TYPE_INPUT;
                         }
                     }
-                }*/
-                ++size;
                 }
+                ++size;
+            }
             if (PointIndex != -1) {
                 for (long long i = PointIndex - 1; i >= 0; --i) {
                     output += (input[i] - '0') * powl(10, PointIndex - i - 1);
@@ -76,55 +81,70 @@ long double PrintNum(bool IsSizeInput = false)
                     output += (input[i] - '0') * powl(10, size - i - 1);
                 }
             }
-            if(Sign) {
-                if(IsSizeInput) {
+            if (Sign) {
+                if (IsSizeInput) {
                     if (output < 2 || output > 10000) {
                         throw INCORRECT_DATA;
                     }
                 }
-                return output;
-            }
-            else{
-                if(IsSizeInput) {
+                if (output < 2e18 || output > -2e18)
+                    return output;
+            } else {
+                if (IsSizeInput) {
                     if (-output < 2) {
                         throw INCORRECT_DATA;
                     }
                 }
-                return -output;
+                if (output < 2e18 || output > -2e18)
+                    return -output;
             }
-        }catch(Exceptions err)
-            {
-                switch (err) {
-                    case (WRONG_TYPE_INPUT): {
-                        std::cerr << "Expected Int type.\n";
-                        break;
-                    }
-                    case (INCORRECT_DATA): {
-                        std::cerr << "Incorrect size.\n";
-                        break;
-                    }
-                    case (WRONG_POINT_POSITION): {
-                        std::cerr << "Incorrect point position.\n";
-                        break;
-                    }
-                    case (WRONG_SIGN_POSITION):
-                    {
-                        std::cerr << "Incorrect sign position.\n";
-                        break;
-                    }
-                    case (LETTER_INPUT):
-                    {
-                        std::cerr << "Expected number, not letters.\n";
-                        break;
-                    }
-                    default:
-                        break;
-                }
-                std::cerr << "Please, input the number one more time.\n";
-                char* wrongInput = new char[1000];
-                scanf("%[^\n^'']%*c", wrongInput);
-                delete [] wrongInput;
+        } catch (Exceptions err) {
+            char *wrongInput = new char[1000];
+            char *temp = new char[1];
+            SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 4);
+            switch (err) {
+                case (WRONG_TYPE_INPUT):
+                    std::cerr << "Expected Int type.\n";
+                    std::cerr << "Please, input the number one more time.\n";
+                    scanf("%*[\n]", wrongInput);
+                    break;
+                case (INCORRECT_DATA):
+                    std::cerr << "Incorrect size.\n";
+                    std::cerr << "Please, input the number one more time.\n";
+                    scanf("%*[\n]", wrongInput);
+                    break;
+                case (WRONG_POINT_POSITION):
+                    std::cerr << "Incorrect point position.\n";
+                    std::cerr << "Please, input the number one more time.\n";
+                    scanf("%*[\n]", wrongInput);
+                    break;
+                case (WRONG_SIGN_POSITION):
+                    std::cerr << "Incorrect sign position.\n";
+                    std::cerr << "Please, input the number one more time.\n";
+                    scanf("%*[\n]", wrongInput);
+                    break;
+                case (LETTER_INPUT):
+                    std::cerr << "Expected number, not letters.\n";
+                    std::cerr << "Please, input the number one more time.\n";
+                    scanf("%*[\n]", wrongInput);
+                    break;
+                case (EMPTY_STRING):
+                    std::cerr << "Empty string.\n";
+                    std::cerr << "Please, input the number one more time.\n";
+                    scanf("%*1[\n]", temp);
+                    break;
+                case (WRONG_SPACE_POSITION):
+                    std::cerr << "Expect only 1 number(wrong space position).\n";
+                    std::cerr << "Please, input the number one more time.\n";
+                    scanf("%*[\n]", wrongInput);
+                    break;
+                default:
+                    break;
             }
+            SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 2);
+
+            delete[] wrongInput;
+        }
     }
 }
 
@@ -138,7 +158,8 @@ long long** FillMatrix(const long long N, const long long K)
     for(int i = 0; i < N; ++i){
        for(int j = 0; j < K; ++j)
        {
-           matrix[i][j] = PrintNum();
+           std::cout << "Print [" << i << "][" << j << "] element of matrix\n";
+           matrix[i][j] = PrintNum(false);
        }
     }
     return matrix;
@@ -182,28 +203,90 @@ long long *FillVector(long long **matrix, long long &vecSize) {
 
 void showVector(long long* vector, size_t vecSize)
 {
+    std::cout << "Array from the main diagonal:\n";
     long long multiply = 1;
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 4);
     for(int i = 0; i < vecSize; ++i)
     {
-        std::cout << vector[i] << " ";
+        std::cout << std::setw(4) << vector[i] << " ";
         multiply *= vector[i];
     }
     std::cout << std::endl;
-    std::cout << "Multiply of elements of array: " << multiply;
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 2);
+    std::cout << "Multiply of elements in the array: ";
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 4);
+    std::cout << multiply;
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 2);
     std::cout << std::endl;
 }
 
+void PrintInfo()
+{
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 3);
+    std::cout << "THIRD EXERCISE:\n"
+                 "Create two-digit matrix A of size N x K.\n"
+                 "Input elements from the keyboard.\n"
+                 "Create dynamic array from the elements, located on the main diagonal of matrix\n"
+                 "and that are even. Count the multiply of elements in array.\n"
+                 "Was created by: ";
+    std::cout << "Anton Gulis\n";
+    std::cout << "To start the program, type ";
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 4);
+    std::cout << "Enter.\n";
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 2);
+    while(true)
+    {
+        char *temp = new char[1]{0};
+        scanf("%[^\n]%*c", temp);
+        if(strlen(temp) == 0) {
+            char* temp2 = new char[1];
+            scanf("%*1[\n]", temp2);
+            return;
+        }
+    }
+}
+
+bool RestartProgram(){
+    char* temp = new char[1];
+    std::cout << "To repeat the program, type";
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 4);
+    std::cout << " Y:\n" ;
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 2);
+    std::cin >> temp;
+    char* temp2 = new char[1];
+    scanf("%*1[\n]", temp2);
+    if(*temp != 'y' && *temp != 'Y')
+    {
+        return true;
+    }
+    return false;
+}
+
+void SizeInput(char* str, int& N, int& K)
+{
+    std::cout << "Size of the " << str << ": ";
+    std::cout << "\nPrint the number of row:\n";
+    N = PrintNum(true);
+    std::cout << "\nPrint the number of columns:\n";
+    K = PrintNum(true);
+}
 
 int main()
 {
-    long long N = 0, K = 0;
-    N = PrintNum(true);
-    K = PrintNum(true);
-    long long** matrix = nullptr;
-    matrix = FillMatrix(N, K);
-    long long vecSize = N <= K ? N : K;
-    long long* newVector = nullptr;
-    newVector = FillVector(matrix, vecSize);
-    showVector(newVector, vecSize);
+    PrintInfo();
+    while(true)
+    {
+        int N = 0, K = 0;
+        SizeInput("matrix", N, K);
+        long long **matrix = nullptr;
+        matrix = FillMatrix(N, K);
+        long long vecSize = N <= K ? N : K;
+        long long *newVector = nullptr;
+        newVector = FillVector(matrix, vecSize);
+        showVector(newVector, vecSize);
+        if(RestartProgram())
+            break;
+    }
+    system("pause");
     return 0;
 }

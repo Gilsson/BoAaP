@@ -21,12 +21,14 @@ enum Exceptions
 };
 
 
-long double PrintNum(bool IsSizeInput = false);
+long long PrintNum(bool IsSizeInput = false);
 
 void SizeInput(char* str, int& N);
 
 bool RestartProgram();
 
 void PrintInfo();
+
+void SolveTask();
 
 #endif //STATICLIB_LIBRARY_H

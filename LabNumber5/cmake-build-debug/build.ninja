@@ -50,7 +50,7 @@ cmake_ninja_workdir = F$:\Projects\BoAaP\LabNumber5\cmake-build-debug\
 build cmake_object_order_depends_target_myLib: phony || CMakeFiles\myLib.dir
 
 build CMakeFiles\myLib.dir\library.cpp.obj: CXX_COMPILER__myLib_Debug F$:\Projects\BoAaP\LabNumber5\library.cpp || cmake_object_order_depends_target_myLib
-  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd -std:c++14
   OBJECT_DIR = CMakeFiles\myLib.dir
   OBJECT_FILE_DIR = CMakeFiles\myLib.dir
   TARGET_COMPILE_PDB = CMakeFiles\myLib.dir\myLib.pdb
@@ -85,7 +85,7 @@ build cmake_object_order_depends_target_myDynamicLib: phony || CMakeFiles\myDyna
 
 build CMakeFiles\myDynamicLib.dir\dynamicLibrary.cpp.obj: CXX_COMPILER__myDynamicLib_Debug F$:\Projects\BoAaP\LabNumber5\dynamicLibrary.cpp || cmake_object_order_depends_target_myDynamicLib
   DEFINES = -DmyDynamicLib_EXPORTS
-  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd -std:c++14
   OBJECT_DIR = CMakeFiles\myDynamicLib.dir
   OBJECT_FILE_DIR = CMakeFiles\myDynamicLib.dir
   TARGET_COMPILE_PDB = CMakeFiles\myDynamicLib.dir\
@@ -113,42 +113,6 @@ build myDynamicLib.dll myDynamicLib.lib: CXX_SHARED_LIBRARY_LINKER__myDynamicLib
   TARGET_PDB = myDynamicLib.pdb
 
 # =============================================================================
-# Object build statements for EXECUTABLE target 1Task
-
-
-#############################################
-# Order-only phony target for 1Task
-
-build cmake_object_order_depends_target_1Task: phony || CMakeFiles\1Task.dir
-
-build CMakeFiles\1Task.dir\1Task.cpp.obj: CXX_COMPILER__1Task_Debug F$:\Projects\BoAaP\LabNumber5\1Task.cpp || cmake_object_order_depends_target_1Task
-  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
-  OBJECT_DIR = CMakeFiles\1Task.dir
-  OBJECT_FILE_DIR = CMakeFiles\1Task.dir
-  TARGET_COMPILE_PDB = CMakeFiles\1Task.dir\
-  TARGET_PDB = 1Task.pdb
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target 1Task
-
-
-#############################################
-# Link the executable 1Task.exe
-
-build 1Task.exe: CXX_EXECUTABLE_LINKER__1Task_Debug CMakeFiles\1Task.dir\1Task.cpp.obj
-  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
-  LINK_FLAGS = /machine:X86 /debug /INCREMENTAL /subsystem:console
-  LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
-  OBJECT_DIR = CMakeFiles\1Task.dir
-  POST_BUILD = cd .
-  PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\1Task.dir\
-  TARGET_FILE = 1Task.exe
-  TARGET_IMPLIB = 1Task.lib
-  TARGET_PDB = 1Task.pdb
-
-# =============================================================================
 # Object build statements for EXECUTABLE target 1Task_lib
 
 
@@ -158,14 +122,14 @@ build 1Task.exe: CXX_EXECUTABLE_LINKER__1Task_Debug CMakeFiles\1Task.dir\1Task.c
 build cmake_object_order_depends_target_1Task_lib: phony || cmake_object_order_depends_target_myLib
 
 build CMakeFiles\1Task_lib.dir\1Task.cpp.obj: CXX_COMPILER__1Task_lib_Debug F$:\Projects\BoAaP\LabNumber5\1Task.cpp || cmake_object_order_depends_target_1Task_lib
-  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd -std:c++14
   OBJECT_DIR = CMakeFiles\1Task_lib.dir
   OBJECT_FILE_DIR = CMakeFiles\1Task_lib.dir
   TARGET_COMPILE_PDB = CMakeFiles\1Task_lib.dir\
   TARGET_PDB = 1Task_lib.pdb
 
 build CMakeFiles\1Task_lib.dir\library.cpp.obj: CXX_COMPILER__1Task_lib_Debug F$:\Projects\BoAaP\LabNumber5\library.cpp || cmake_object_order_depends_target_1Task_lib
-  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd -std:c++14
   OBJECT_DIR = CMakeFiles\1Task_lib.dir
   OBJECT_FILE_DIR = CMakeFiles\1Task_lib.dir
   TARGET_COMPILE_PDB = CMakeFiles\1Task_lib.dir\
@@ -192,42 +156,6 @@ build 1Task_lib.exe: CXX_EXECUTABLE_LINKER__1Task_lib_Debug CMakeFiles\1Task_lib
   TARGET_PDB = 1Task_lib.pdb
 
 # =============================================================================
-# Object build statements for EXECUTABLE target Tests
-
-
-#############################################
-# Order-only phony target for Tests
-
-build cmake_object_order_depends_target_Tests: phony || CMakeFiles\Tests.dir
-
-build CMakeFiles\Tests.dir\testexample.cpp.obj: CXX_COMPILER__Tests_Debug F$:\Projects\BoAaP\LabNumber5\testexample.cpp || cmake_object_order_depends_target_Tests
-  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
-  OBJECT_DIR = CMakeFiles\Tests.dir
-  OBJECT_FILE_DIR = CMakeFiles\Tests.dir
-  TARGET_COMPILE_PDB = CMakeFiles\Tests.dir\
-  TARGET_PDB = Tests.pdb
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target Tests
-
-
-#############################################
-# Link the executable Tests.exe
-
-build Tests.exe: CXX_EXECUTABLE_LINKER__Tests_Debug CMakeFiles\Tests.dir\testexample.cpp.obj
-  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
-  LINK_FLAGS = /machine:X86 /debug /INCREMENTAL /subsystem:console
-  LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
-  OBJECT_DIR = CMakeFiles\Tests.dir
-  POST_BUILD = cd .
-  PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\Tests.dir\
-  TARGET_FILE = Tests.exe
-  TARGET_IMPLIB = Tests.lib
-  TARGET_PDB = Tests.pdb
-
-# =============================================================================
 # Object build statements for EXECUTABLE target 2Task_lib
 
 
@@ -237,7 +165,7 @@ build Tests.exe: CXX_EXECUTABLE_LINKER__Tests_Debug CMakeFiles\Tests.dir\testexa
 build cmake_object_order_depends_target_2Task_lib: phony || cmake_object_order_depends_target_myDynamicLib
 
 build CMakeFiles\2Task_lib.dir\2Task.cpp.obj: CXX_COMPILER__2Task_lib_Debug F$:\Projects\BoAaP\LabNumber5\2Task.cpp || cmake_object_order_depends_target_2Task_lib
-  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd -std:c++14
   OBJECT_DIR = CMakeFiles\2Task_lib.dir
   OBJECT_FILE_DIR = CMakeFiles\2Task_lib.dir
   TARGET_COMPILE_PDB = CMakeFiles\2Task_lib.dir\
@@ -273,7 +201,7 @@ build 2Task_lib.exe: CXX_EXECUTABLE_LINKER__2Task_lib_Debug CMakeFiles\2Task_lib
 build cmake_object_order_depends_target_3Task: phony || CMakeFiles\3Task.dir
 
 build CMakeFiles\3Task.dir\3Task.cpp.obj: CXX_COMPILER__3Task_Debug F$:\Projects\BoAaP\LabNumber5\3Task.cpp || cmake_object_order_depends_target_3Task
-  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd -std:c++14
   OBJECT_DIR = CMakeFiles\3Task.dir
   OBJECT_FILE_DIR = CMakeFiles\3Task.dir
   TARGET_COMPILE_PDB = CMakeFiles\3Task.dir\
@@ -309,7 +237,7 @@ build 3Task.exe: CXX_EXECUTABLE_LINKER__3Task_Debug CMakeFiles\3Task.dir\3Task.c
 build cmake_object_order_depends_target_4Task: phony || CMakeFiles\4Task.dir
 
 build CMakeFiles\4Task.dir\4Task.cpp.obj: CXX_COMPILER__4Task_Debug F$:\Projects\BoAaP\LabNumber5\4Task.cpp || cmake_object_order_depends_target_4Task
-  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd -std:c++14
   OBJECT_DIR = CMakeFiles\4Task.dir
   OBJECT_FILE_DIR = CMakeFiles\4Task.dir
   TARGET_COMPILE_PDB = CMakeFiles\4Task.dir\
@@ -345,7 +273,7 @@ build 4Task.exe: CXX_EXECUTABLE_LINKER__4Task_Debug CMakeFiles\4Task.dir\4Task.c
 build cmake_object_order_depends_target_5Task: phony || CMakeFiles\5Task.dir
 
 build CMakeFiles\5Task.dir\5Task.cpp.obj: CXX_COMPILER__5Task_Debug F$:\Projects\BoAaP\LabNumber5\5Task.cpp || cmake_object_order_depends_target_5Task
-  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd -std:c++14
   OBJECT_DIR = CMakeFiles\5Task.dir
   OBJECT_FILE_DIR = CMakeFiles\5Task.dir
   TARGET_COMPILE_PDB = CMakeFiles\5Task.dir\
@@ -381,7 +309,7 @@ build 5Task.exe: CXX_EXECUTABLE_LINKER__5Task_Debug CMakeFiles\5Task.dir\5Task.c
 build cmake_object_order_depends_target_6Task: phony || CMakeFiles\6Task.dir
 
 build CMakeFiles\6Task.dir\6Task.cpp.obj: CXX_COMPILER__6Task_Debug F$:\Projects\BoAaP\LabNumber5\6Task.cpp || cmake_object_order_depends_target_6Task
-  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd -std:c++14
   OBJECT_DIR = CMakeFiles\6Task.dir
   OBJECT_FILE_DIR = CMakeFiles\6Task.dir
   TARGET_COMPILE_PDB = CMakeFiles\6Task.dir\
@@ -417,7 +345,7 @@ build 6Task.exe: CXX_EXECUTABLE_LINKER__6Task_Debug CMakeFiles\6Task.dir\6Task.c
 build cmake_object_order_depends_target_7Task: phony || CMakeFiles\7Task.dir
 
 build CMakeFiles\7Task.dir\7Task.cpp.obj: CXX_COMPILER__7Task_Debug F$:\Projects\BoAaP\LabNumber5\7Task.cpp || cmake_object_order_depends_target_7Task
-  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd -std:c++14
   OBJECT_DIR = CMakeFiles\7Task.dir
   OBJECT_FILE_DIR = CMakeFiles\7Task.dir
   TARGET_COMPILE_PDB = CMakeFiles\7Task.dir\
@@ -444,6 +372,42 @@ build 7Task.exe: CXX_EXECUTABLE_LINKER__7Task_Debug CMakeFiles\7Task.dir\7Task.c
   TARGET_PDB = 7Task.pdb
 
 # =============================================================================
+# Object build statements for EXECUTABLE target 8Task
+
+
+#############################################
+# Order-only phony target for 8Task
+
+build cmake_object_order_depends_target_8Task: phony || CMakeFiles\8Task.dir
+
+build CMakeFiles\8Task.dir\8Task.cpp.obj: CXX_COMPILER__8Task_Debug F$:\Projects\BoAaP\LabNumber5\8Task.cpp || cmake_object_order_depends_target_8Task
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd -std:c++14
+  OBJECT_DIR = CMakeFiles\8Task.dir
+  OBJECT_FILE_DIR = CMakeFiles\8Task.dir
+  TARGET_COMPILE_PDB = CMakeFiles\8Task.dir\
+  TARGET_PDB = 8Task.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target 8Task
+
+
+#############################################
+# Link the executable 8Task.exe
+
+build 8Task.exe: CXX_EXECUTABLE_LINKER__8Task_Debug CMakeFiles\8Task.dir\8Task.cpp.obj
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
+  LINK_FLAGS = /machine:X86 /debug /INCREMENTAL /subsystem:console
+  LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  OBJECT_DIR = CMakeFiles\8Task.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\8Task.dir\
+  TARGET_FILE = 8Task.exe
+  TARGET_IMPLIB = 8Task.lib
+  TARGET_PDB = 8Task.pdb
+
+# =============================================================================
 # Object build statements for EXECUTABLE target Test
 
 
@@ -453,7 +417,7 @@ build 7Task.exe: CXX_EXECUTABLE_LINKER__7Task_Debug CMakeFiles\7Task.dir\7Task.c
 build cmake_object_order_depends_target_Test: phony || cmake_object_order_depends_target_gtest cmake_object_order_depends_target_gtest_main
 
 build CMakeFiles\Test.dir\testexample.cpp.obj: CXX_COMPILER__Test_Debug F$:\Projects\BoAaP\LabNumber5\testexample.cpp || cmake_object_order_depends_target_Test
-  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd -std:c++14
   INCLUDES = -external:IF:\Projects\BoAaP\LabNumber5\cmake-build-debug\_deps\googletest-src\googletest\include -external:IF:\Projects\BoAaP\LabNumber5\cmake-build-debug\_deps\googletest-src\googletest -external:W0
   OBJECT_DIR = CMakeFiles\Test.dir
   OBJECT_FILE_DIR = CMakeFiles\Test.dir
@@ -874,8 +838,6 @@ build _deps\googletest-build\googletest\install\local: phony _deps\googletest-bu
 # =============================================================================
 # Target aliases.
 
-build 1Task: phony 1Task.exe
-
 build 1Task_lib: phony 1Task_lib.exe
 
 build 2Task_lib: phony 2Task_lib.exe
@@ -890,9 +852,9 @@ build 6Task: phony 6Task.exe
 
 build 7Task: phony 7Task.exe
 
-build Test: phony Test.exe
+build 8Task: phony 8Task.exe
 
-build Tests: phony Tests.exe
+build Test: phony Test.exe
 
 build gmock: phony lib\gmock.lib
 
@@ -922,7 +884,7 @@ build myLib: phony myLib.lib
 #############################################
 # Folder: F:/Projects/BoAaP/LabNumber5/cmake-build-debug
 
-build all: phony myLib.lib myDynamicLib.dll 1Task.exe 1Task_lib.exe Tests.exe 2Task_lib.exe 3Task.exe 4Task.exe 5Task.exe 6Task.exe 7Task.exe Test.exe _deps\googletest-build\all
+build all: phony myLib.lib myDynamicLib.dll 1Task_lib.exe 2Task_lib.exe 3Task.exe 4Task.exe 5Task.exe 6Task.exe 7Task.exe 8Task.exe Test.exe _deps\googletest-build\all
 
 # =============================================================================
 
@@ -952,14 +914,14 @@ build _deps\googletest-build\googletest\all: phony lib\gtest.lib lib\gtest_main.
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ..\CMakeLists.txt CMakeCache.txt CMakeFiles\3.23.2\CMakeCCompiler.cmake CMakeFiles\3.23.2\CMakeCXXCompiler.cmake CMakeFiles\3.23.2\CMakeRCCompiler.cmake CMakeFiles\3.23.2\CMakeSystem.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\BasicConfigVersion-AnyNewerVersion.cmake.in F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeCInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeCXXInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeDependentOption.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeGenericSystem.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakePackageConfigHelpers.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeRCInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CheckCSourceCompiles.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CheckIncludeFile.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CheckLibraryExists.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Compiler\MSVC-C.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\FetchContent.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\FetchContent\CMakeLists.cmake.in F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\FindPackageHandleStandardArgs.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\FindPackageMessage.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\FindPython.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\FindPython\Support.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\FindThreads.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\GNUInstallDirs.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Internal\CheckSourceCompiles.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Platform\Windows-MSVC-C.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Platform\Windows.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\WriteBasicConfigVersionFile.cmake _deps\googletest-src\CMakeLists.txt _deps\googletest-src\googlemock\CMakeLists.txt _deps\googletest-src\googlemock\cmake\gmock.pc.in _deps\googletest-src\googlemock\cmake\gmock_main.pc.in _deps\googletest-src\googletest\CMakeLists.txt _deps\googletest-src\googletest\cmake\Config.cmake.in _deps\googletest-src\googletest\cmake\gtest.pc.in _deps\googletest-src\googletest\cmake\gtest_main.pc.in _deps\googletest-src\googletest\cmake\internal_utils.cmake
+build build.ninja: RERUN_CMAKE | ..\CMakeLists.txt CMakeCache.txt CMakeFiles\3.23.2\CMakeCCompiler.cmake CMakeFiles\3.23.2\CMakeCXXCompiler.cmake CMakeFiles\3.23.2\CMakeRCCompiler.cmake CMakeFiles\3.23.2\CMakeSystem.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\BasicConfigVersion-AnyNewerVersion.cmake.in F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeCInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeCXXInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeDependentOption.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeGenericSystem.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakePackageConfigHelpers.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeRCInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CheckCCompilerFlag.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CheckCSourceCompiles.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CheckCXXCompilerFlag.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CheckCXXSourceCompiles.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CheckIncludeFile.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CheckLibraryExists.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Compiler\MSVC-C.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\FetchContent.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\FetchContent\CMakeLists.cmake.in F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\FindPackageHandleStandardArgs.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\FindPackageMessage.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\FindPython.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\FindPython\Support.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\FindThreads.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\GNUInstallDirs.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\GenerateExportHeader.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Internal\CheckCompilerFlag.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Internal\CheckFlagCommonConfig.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Internal\CheckSourceCompiles.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Platform\Windows-MSVC-C.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Platform\Windows.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\WriteBasicConfigVersionFile.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\exportheader.cmake.in _deps\googletest-src\CMakeLists.txt _deps\googletest-src\googlemock\CMakeLists.txt _deps\googletest-src\googlemock\cmake\gmock.pc.in _deps\googletest-src\googlemock\cmake\gmock_main.pc.in _deps\googletest-src\googletest\CMakeLists.txt _deps\googletest-src\googletest\cmake\Config.cmake.in _deps\googletest-src\googletest\cmake\gtest.pc.in _deps\googletest-src\googletest\cmake\gtest_main.pc.in _deps\googletest-src\googletest\cmake\internal_utils.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ..\CMakeLists.txt CMakeCache.txt CMakeFiles\3.23.2\CMakeCCompiler.cmake CMakeFiles\3.23.2\CMakeCXXCompiler.cmake CMakeFiles\3.23.2\CMakeRCCompiler.cmake CMakeFiles\3.23.2\CMakeSystem.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\BasicConfigVersion-AnyNewerVersion.cmake.in F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeCInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeCXXInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeDependentOption.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeGenericSystem.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakePackageConfigHelpers.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeRCInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CheckCSourceCompiles.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CheckIncludeFile.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CheckLibraryExists.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Compiler\MSVC-C.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\FetchContent.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\FetchContent\CMakeLists.cmake.in F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\FindPackageHandleStandardArgs.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\FindPackageMessage.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\FindPython.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\FindPython\Support.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\FindThreads.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\GNUInstallDirs.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Internal\CheckSourceCompiles.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Platform\Windows-MSVC-C.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Platform\Windows.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\WriteBasicConfigVersionFile.cmake _deps\googletest-src\CMakeLists.txt _deps\googletest-src\googlemock\CMakeLists.txt _deps\googletest-src\googlemock\cmake\gmock.pc.in _deps\googletest-src\googlemock\cmake\gmock_main.pc.in _deps\googletest-src\googletest\CMakeLists.txt _deps\googletest-src\googletest\cmake\Config.cmake.in _deps\googletest-src\googletest\cmake\gtest.pc.in _deps\googletest-src\googletest\cmake\gtest_main.pc.in _deps\googletest-src\googletest\cmake\internal_utils.cmake: phony
+build ..\CMakeLists.txt CMakeCache.txt CMakeFiles\3.23.2\CMakeCCompiler.cmake CMakeFiles\3.23.2\CMakeCXXCompiler.cmake CMakeFiles\3.23.2\CMakeRCCompiler.cmake CMakeFiles\3.23.2\CMakeSystem.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\BasicConfigVersion-AnyNewerVersion.cmake.in F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeCInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeCXXInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeDependentOption.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeGenericSystem.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakePackageConfigHelpers.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeRCInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CheckCCompilerFlag.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CheckCSourceCompiles.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CheckCXXCompilerFlag.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CheckCXXSourceCompiles.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CheckIncludeFile.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CheckLibraryExists.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Compiler\MSVC-C.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\FetchContent.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\FetchContent\CMakeLists.cmake.in F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\FindPackageHandleStandardArgs.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\FindPackageMessage.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\FindPython.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\FindPython\Support.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\FindThreads.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\GNUInstallDirs.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\GenerateExportHeader.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Internal\CheckCompilerFlag.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Internal\CheckFlagCommonConfig.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Internal\CheckSourceCompiles.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Platform\Windows-MSVC-C.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Platform\Windows.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\WriteBasicConfigVersionFile.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\exportheader.cmake.in _deps\googletest-src\CMakeLists.txt _deps\googletest-src\googlemock\CMakeLists.txt _deps\googletest-src\googlemock\cmake\gmock.pc.in _deps\googletest-src\googlemock\cmake\gmock_main.pc.in _deps\googletest-src\googletest\CMakeLists.txt _deps\googletest-src\googletest\cmake\Config.cmake.in _deps\googletest-src\googletest\cmake\gtest.pc.in _deps\googletest-src\googletest\cmake\gtest_main.pc.in _deps\googletest-src\googletest\cmake\internal_utils.cmake: phony
 
 
 #############################################

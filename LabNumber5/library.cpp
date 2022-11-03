@@ -3,7 +3,7 @@
 #include <Windows.h>
 #include <iomanip>
 
-long double PrintNum(bool IsSizeInput)
+long long PrintNum(bool IsSizeInput)
 {
     while (true) {
         int size = 0;
@@ -74,7 +74,7 @@ long double PrintNum(bool IsSizeInput)
             }
             if(Sign) {
                 if(IsSizeInput) {
-                    if (output < 2 || output > 10000) {
+                    if (output < 1 || output > 10000) {
                         throw INCORRECT_DATA;
                     }
                 }
@@ -83,7 +83,7 @@ long double PrintNum(bool IsSizeInput)
             }
             else{
                 if(IsSizeInput) {
-                    if (-output < 2) {
+                    if (-output < 1) {
                         throw INCORRECT_DATA;
                     }
                 }
@@ -94,6 +94,7 @@ long double PrintNum(bool IsSizeInput)
         {
             char *wrongInput = new char[1000];
             char *temp = new char[1];
+            SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 4);
             switch (err){
                 case (WRONG_TYPE_INPUT):
                     std::cerr << "Expected Int type.\n";
@@ -123,7 +124,7 @@ long double PrintNum(bool IsSizeInput)
                 case (EMPTY_STRING):
                     std::cerr << "Empty string.\n";
                     std::cerr << "Please, input the number one more time.\n";
-                    scanf("%*[\n]", temp);
+                    scanf("%*1[\n]", temp);
                     break;
                 case (WRONG_SPACE_POSITION):
                     std::cerr << "Expect only 1 number(wrong space position).\n";
@@ -133,6 +134,8 @@ long double PrintNum(bool IsSizeInput)
                 default:
                     break;
             }
+            SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 2);
+
             delete[] wrongInput;
         }
     }
@@ -234,5 +237,27 @@ void SizeInput(char* str, int& N)
 {
     std::cout << "Print size of the " << str << " matrix: \n";
     N = PrintNum(true);
+}
+
+
+void SolveTask()
+{
+    while(true) {
+        std::cout << std::fixed;
+        long double **matrixA = nullptr;
+        long double **matrixB = nullptr;
+        int Size;
+        SizeInput("first and second", Size);
+        matrixA = FillMatrix(Size, true);
+        matrixB = FillMatrix(Size, false);
+        showMatrix(matrixA, Size);
+        showMatrix(matrixB, Size);
+        mainDiagonal(matrixA, Size);
+        mainDiagonal(matrixB, Size);
+        sideDiagonal(matrixA, Size);
+        sideDiagonal(matrixB, Size);
+        if (RestartProgram())
+            break;
+    }
 }
 
