@@ -1,0 +1,11 @@
+# ninja log v5
+0	510	6892624431815720	CMakeFiles/static.dir/main.cpp.obj	20cc078dbd5492e0
+1	1310	6892905812524359	CMakeFiles/static.dir/library.cpp.obj	bf243e245158bb6f
+1310	1365	6892905813089647	static.lib	8b3d70928eedeeb1
+1	445	6892907074805326	CMakeFiles/main.dir/main.cpp.obj	b9db62723b30771
+0	74	6892913554495534	build.ninja	6a786c4eb1f7ec25
+0	943	6892913639684447	CMakeFiles/main.dir/library.cpp.obj	98682df7030a5c86
+1	1283	6892913885527439	CMakeFiles/main.dir/library.cpp.obj	98682df7030a5c86
+1283	1652	6892913889157737	main.exe	51cc5a8431fcb942
+0	1447	6892914705962656	CMakeFiles/static.dir/library.cpp.obj	bf243e245158bb6f
+1448	1520	6892914706750562	static.lib	8b3d70928eedeeb1

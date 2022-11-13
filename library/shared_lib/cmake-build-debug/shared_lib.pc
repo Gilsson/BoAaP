@@ -1,0 +1,12 @@
+prefix=C:/Program Files (x86)/shared_lib
+exec_prefix=C:/Program Files (x86)/shared_lib
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: shared
+Description: 
+Version: 1.0.0
+
+Requires:
+Libs: -L${libdir} -lshared_lib
+Cflags: -I${includedir}

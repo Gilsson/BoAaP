@@ -1,0 +1,4 @@
+F:/Projects/BoAaP/LabNumber5/1Task/static/cmake-build-debug/CMakeFiles/main.dir
+F:/Projects/BoAaP/LabNumber5/1Task/static/cmake-build-debug/CMakeFiles/static.dir
+F:/Projects/BoAaP/LabNumber5/1Task/static/cmake-build-debug/CMakeFiles/edit_cache.dir
+F:/Projects/BoAaP/LabNumber5/1Task/static/cmake-build-debug/CMakeFiles/rebuild_cache.dir

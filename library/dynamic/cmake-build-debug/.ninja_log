@@ -1,0 +1,9 @@
+# ninja log v5
+0	65	6893567126467090	build.ninja	552bd12d30e3dd6f
+1	483	6892647156889741	CMakeFiles/dynamic.dir/main.cpp.obj	d8a86fb8c6c7e093
+6	906	6892647161118410	CMakeFiles/dynamic.dir/dynamicLibrary.cpp.obj	3404c210da145e65
+1	740	6893565435492057	CMakeFiles/shared_lib.dir/source/dynamicLibrary.cpp.obj	f762c319d449d188
+740	902	6893565435492057	shared_lib.lib	ffab20bba05fb223
+1	785	6893563750540515	CMakeFiles/shared_lib.dir/src/dynamicLibrary.cpp.obj	6d6d880016e4efe4
+740	902	6893565435492057	shared_lib.dll	ffab20bba05fb223
+0	801	6893487888328482	CMakeFiles/task.dir/main.cpp.obj	7eadb7d1818376a8

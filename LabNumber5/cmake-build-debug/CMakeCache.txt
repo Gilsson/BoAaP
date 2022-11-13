@@ -14,6 +14,24 @@
 # EXTERNAL cache entries
 ########################
 
+//Value Computed by CMake
+1Task_BINARY_DIR:STATIC=F:/Projects/BoAaP/LabNumber5/cmake-build-debug/1Task
+
+//Value Computed by CMake
+1Task_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+1Task_SOURCE_DIR:STATIC=F:/Projects/BoAaP/LabNumber5/1Task
+
+//Value Computed by CMake
+2Task_BINARY_DIR:STATIC=F:/Projects/BoAaP/LabNumber5/cmake-build-debug/2Task
+
+//Value Computed by CMake
+2Task_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+2Task_SOURCE_DIR:STATIC=F:/Projects/BoAaP/LabNumber5/2Task
+
 //Builds the googlemock subproject
 BUILD_GMOCK:BOOL=ON
 
@@ -292,8 +310,26 @@ LabNumber5_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 LabNumber5_SOURCE_DIR:STATIC=F:/Projects/BoAaP/LabNumber5
 
+//Arguments to supply to pkg-config
+PKG_CONFIG_ARGN:STRING=
+
+//pkg-config executable
+PKG_CONFIG_EXECUTABLE:FILEPATH=PKG_CONFIG_EXECUTABLE-NOTFOUND
+
+//Path to a library.
+SHAREDLIB_LIBRARY:FILEPATH=F:/Projects/BoAaP/LabNumber5/cmake-build-debug/shared_lib.lib
+
+//Path to a file.
+STATIC_INCLUDE_DIR:PATH=F:/Projects/BoAaP/library/library/include
+
+//Path to a library.
+STATIC_LIBRARY:FILEPATH=F:/Projects/BoAaP/LabNumber5/cmake-build-debug/static.lib
+
 //Path to a library.
 TEST_LIBRARY:FILEPATH=F:/Projects/BoAaP/LabNumber5/cmake-build-debug/test_library.lib
+
+//The directory containing a CMake configuration file for Tinyxml2.
+Tinyxml2_DIR:PATH=Tinyxml2_DIR-NOTFOUND
 
 //The directory containing a CMake configuration file for dynamicLibrary.h.
 dynamicLibrary.h_DIR:PATH=dynamicLibrary.h_DIR-NOTFOUND
@@ -347,8 +383,26 @@ gtest_hide_internal_symbols:BOOL=OFF
 //Dependencies for the target
 gtest_main_LIB_DEPENDS:STATIC=general;gtest;
 
+//The directory containing a CMake configuration file for shared.
+shared_DIR:PATH=shared_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for shared_lib.
+shared_lib_DIR:PATH=shared_lib_DIR-NOTFOUND
+
 //Path to a library.
 staticLibrary:FILEPATH=F:/Projects/BoAaP/LabNumber5/cmake-build-debug/static.lib
+
+//The directory containing a CMake configuration file for static.
+static_DIR:PATH=static_DIR-NOTFOUND
+
+//Value Computed by CMake
+tests_BINARY_DIR:STATIC=F:/Projects/BoAaP/LabNumber5/cmake-build-debug/Tests
+
+//Value Computed by CMake
+tests_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+tests_SOURCE_DIR:STATIC=F:/Projects/BoAaP/LabNumber5/Tests
 
 
 ########################
@@ -425,7 +479,7 @@ CMAKE_GENERATOR_PLATFORM:INTERNAL=
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
 //Have include pthread.h
 CMAKE_HAVE_PTHREAD_H:INTERNAL=
-//Source directory with the top level CMakeLists.txt file for this
+//Source directory with the top level Findstatic.txt file for this
 // project
 CMAKE_HOME_DIRECTORY:INTERNAL=F:/Projects/BoAaP/LabNumber5
 //ADVANCED property for variable: CMAKE_INSTALL_BINDIR
@@ -475,7 +529,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MT
 CMAKE_MT-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=7
 //Platform information initialized
 CMAKE_PLATFORM_INFO_INITIALIZED:INTERNAL=1
 //noop for ranlib
@@ -529,6 +583,10 @@ COMPILER_HAS_DEPRECATED_ATTR:INTERNAL=
 FIND_PACKAGE_MESSAGE_DETAILS_Python:INTERNAL=[C:/cygwin64/bin/python3.9.exe][cfound components: Interpreter ][v3.9.10()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
+//ADVANCED property for variable: PKG_CONFIG_ARGN
+PKG_CONFIG_ARGN-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
+PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:/Program Files (x86)/LabNumber5
 //Path to a program.

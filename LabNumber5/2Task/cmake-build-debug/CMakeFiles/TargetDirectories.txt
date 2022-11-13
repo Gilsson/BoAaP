@@ -1,0 +1,3 @@
+F:/Projects/BoAaP/LabNumber5/2Task/cmake-build-debug/CMakeFiles/2Task.dir
+F:/Projects/BoAaP/LabNumber5/2Task/cmake-build-debug/CMakeFiles/edit_cache.dir
+F:/Projects/BoAaP/LabNumber5/2Task/cmake-build-debug/CMakeFiles/rebuild_cache.dir

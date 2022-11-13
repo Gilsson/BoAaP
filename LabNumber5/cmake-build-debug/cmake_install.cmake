@@ -34,7 +34,17 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("F:/Projects/BoAaP/LabNumber5/cmake-build-debug/_deps/googletest-build/cmake_install.cmake")
+  include("F:/Projects/BoAaP/LabNumber5/cmake-build-debug/1Task/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("F:/Projects/BoAaP/LabNumber5/cmake-build-debug/2Task/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("F:/Projects/BoAaP/LabNumber5/cmake-build-debug/Tests/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
