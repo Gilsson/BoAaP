@@ -16,7 +16,10 @@
 					"targetIndexes" : 
 					[
 						0,
-						1
+						1,
+						2,
+						3,
+						4
 					]
 				}
 			],
@@ -32,7 +35,10 @@
 					"targetIndexes" : 
 					[
 						0,
-						1
+						1,
+						2,
+						3,
+						4
 					]
 				}
 			],
@@ -50,6 +56,27 @@
 					"id" : "2Task::@6890427a1f51a3e7e1df",
 					"jsonFile" : "target-2Task-Debug-f6502afe7168b58ff942.json",
 					"name" : "2Task",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "3Task::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-3Task-Debug-daec5d4eda91f0c604a7.json",
+					"name" : "3Task",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "4Task::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-4Task-Debug-2bfae7d78380d43487f4.json",
+					"name" : "4Task",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "5Task::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-5Task-Debug-2da2adcecbe2c061879c.json",
+					"name" : "5Task",
 					"projectIndex" : 0
 				}
 			]
