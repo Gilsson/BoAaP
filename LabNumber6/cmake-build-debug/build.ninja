@@ -256,6 +256,42 @@ build 6Task.exe: CXX_EXECUTABLE_LINKER__6Task_Debug CMakeFiles\6Task.dir\6Task.c
   TARGET_IMPLIB = 6Task.lib
   TARGET_PDB = 6Task.pdb
 
+# =============================================================================
+# Object build statements for EXECUTABLE target 7Task
+
+
+#############################################
+# Order-only phony target for 7Task
+
+build cmake_object_order_depends_target_7Task: phony || CMakeFiles\7Task.dir
+
+build CMakeFiles\7Task.dir\7Task.cpp.obj: CXX_COMPILER__7Task_Debug F$:\Projects\BoAaP\LabNumber6\7Task.cpp || cmake_object_order_depends_target_7Task
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
+  OBJECT_DIR = CMakeFiles\7Task.dir
+  OBJECT_FILE_DIR = CMakeFiles\7Task.dir
+  TARGET_COMPILE_PDB = CMakeFiles\7Task.dir\
+  TARGET_PDB = 7Task.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target 7Task
+
+
+#############################################
+# Link the executable 7Task.exe
+
+build 7Task.exe: CXX_EXECUTABLE_LINKER__7Task_Debug CMakeFiles\7Task.dir\7Task.cpp.obj
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
+  LINK_FLAGS = /machine:X86 /debug /INCREMENTAL /subsystem:console
+  LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  OBJECT_DIR = CMakeFiles\7Task.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\7Task.dir\
+  TARGET_FILE = 7Task.exe
+  TARGET_IMPLIB = 7Task.lib
+  TARGET_PDB = 7Task.pdb
+
 
 #############################################
 # Utility command for edit_cache
@@ -294,6 +330,8 @@ build 5Task: phony 5Task.exe
 
 build 6Task: phony 6Task.exe
 
+build 7Task: phony 7Task.exe
+
 # =============================================================================
 # Folder targets.
 
@@ -302,7 +340,7 @@ build 6Task: phony 6Task.exe
 #############################################
 # Folder: F:/Projects/BoAaP/LabNumber6/cmake-build-debug
 
-build all: phony 1Task.exe 2Task.exe 3Task.exe 4Task.exe 5Task.exe 6Task.exe
+build all: phony 1Task.exe 2Task.exe 3Task.exe 4Task.exe 5Task.exe 6Task.exe 7Task.exe
 
 # =============================================================================
 # Built-in targets
