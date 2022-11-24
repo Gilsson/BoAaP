@@ -1,4 +1,0 @@
-F:/Projects/BoAaP/library/shared_lib/build/CMakeFiles/shared_lib.dir
-F:/Projects/BoAaP/library/shared_lib/build/CMakeFiles/INSTALL.dir
-F:/Projects/BoAaP/library/shared_lib/build/CMakeFiles/ALL_BUILD.dir
-F:/Projects/BoAaP/library/shared_lib/build/CMakeFiles/ZERO_CHECK.dir

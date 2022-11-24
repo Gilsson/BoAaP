@@ -14,14 +14,18 @@ enum Exceptions
     TOO_BIG_VALUE,
 };
 
-char* PrintString(bool IsSizeInput) {
+char* PrintString(char* output) {
     while (true) {
         int size = 0;
         long long PointIndex = -1;
         int SignIndex = -1;
         int StartIndex = -1;                // The start of the fixed-point number
         long long buff = 80;
-        char *output = new char[buff];
+        int point_count = 0;
+        int returned_size = 0;
+        int returned_last_element = 0;
+        char* returned = new char[buff];
+        //char *output = new char[buff];
         bool WrongSign = false;
         bool Sign = true;                   // true = +, false = -
         char *input = new char[buff]{0};
@@ -31,13 +35,40 @@ char* PrintString(bool IsSizeInput) {
             }*/
             for (int i = 0; i < buff; ++i) {
                 input[i] = getchar();
-                if (input[i] == '\\') {
-                    char temp = getchar();
-                    if (temp != int('0'))
-                        throw WRONG_SIGN_POSITION;
+                if (i == 79 && input[i] != '\n') {
+                    throw TOO_BIG_VALUE;
+                }
+                if (input[i] == '\n') {
+                    if (SignIndex != -1 && StartIndex != -1 && StartIndex < PointIndex) {
+                        for (int j = 0; j < size; ++j) {
+                            output[j] = input[SignIndex + j];
+                            returned[returned_last_element] = output[j];
+                            ++returned_last_element;
+                        }
+                    } else if (StartIndex != -1 && StartIndex < PointIndex) {
+                        for (int j = 0; j < size; ++j) {
+                            output[j] = input[StartIndex + j];
+                            returned[returned_last_element] = output[j];
+                            ++returned_last_element;
+                        }
+                    } else if (StartIndex != -1) {
+                        /*for (int j = 0; j < size; ++j) {
+                            output[j] = input[StartIndex + j];
+                            returned[returned_last_element] = output[j];
+                            ++returned_last_element;
+                        }*/
+                        returned_size -= size;
+                    }
+                    returned[returned_last_element] = int(' ');
+                    ++returned_last_element;
+                    ++returned_size;
+                    output[size] = '\0';
+                    returned[returned_size] = '\0';
+                    if (returned_size != 0)
+                        return returned;
                     else {
-                        return output;
-                        break;
+                        output[0] = '\0';
+                        throw EMPTY_STRING;
                     }
                 }
                 if (input[i] == int('-') || input[i] == int('+')) {
@@ -50,6 +81,7 @@ char* PrintString(bool IsSizeInput) {
                         StartIndex = i;
                     }
                     ++size;
+                    ++returned_size;
                 }
                 /*if(input[i] == int('0'))
                 {
@@ -64,14 +96,17 @@ char* PrintString(bool IsSizeInput) {
                 }
                 if (input[i] == int('.') || input[i] == int(',')) {
                     if (PointIndex != -1) {
-
+                        throw WRONG_POINT_POSITION;
                     } else if (StartIndex != -1) {
                         ++size;
+                        ++returned_size;
                         PointIndex = i;
                     } else {
                         ++size;
+                        ++returned_size;
                         continue;
                     }
+                    ++point_count;
                 }
                 if ((input[i] < int('0') || input[i] > int('9')) && input[i] != int('.') && input[i] != int(',')
                     && (input[i] < int('a') || input[i] > int('z')) && ((input[i] < int('A') || input[i] > int('Z')))) {
@@ -80,14 +115,27 @@ char* PrintString(bool IsSizeInput) {
                 if ((input[i] >= int('a') && input[i] <= int('z')) ||
                     ((input[i] >= int('A') && input[i] <= int('Z')))) {
                     if (SignIndex != -1 && StartIndex != -1 && StartIndex < PointIndex) {
-                        for (int j = 0; i < size; ++i) {
+                        for (int j = 0; j < size; ++j) {
                             output[j] = input[SignIndex + j];
+                            returned[returned_last_element] = output[j];
+                            ++returned_last_element;
                         }
+                        returned[returned_last_element] = int(' ');
+                        ++returned_last_element;
+                        ++returned_size;
                     } else if (StartIndex != -1 && StartIndex < PointIndex) {
-                        for (int j = 0; i < size; ++i) {
+                        for (int j = 0; j < size; ++j) {
                             output[j] = input[StartIndex + j];
+                            returned[returned_last_element] = output[j];
+                            ++returned_last_element;
                         }
+                        returned[returned_last_element] = int(' ');
+                        ++returned_last_element;
+                        ++returned_size;
+                    }else{
+                        returned_size -= size;
                     }
+
                     SignIndex = -1;
                     StartIndex = -1;
                     PointIndex = -1;
@@ -101,27 +149,22 @@ char* PrintString(bool IsSizeInput) {
             switch (err) {
                 case (WRONG_TYPE_INPUT):
                     std::cerr << "Expected Int type.\n";
-                    std::cerr << "Please, input the number one more time.\n";
                     scanf("%*[\n]", wrongInput);
                     break;
                 case (INCORRECT_DATA):
                     std::cerr << "Incorrect size.\n";
-                    std::cerr << "Please, input the number one more time.\n";
                     scanf("%*[\n]", wrongInput);
                     break;
                 case (WRONG_POINT_POSITION):
                     std::cerr << "Incorrect point position.\n";
-                    std::cerr << "Please, input the number one more time.\n";
                     scanf("%*[\n]", wrongInput);
                     break;
                 case (WRONG_SIGN_POSITION):
                     std::cerr << "Incorrect sign position.\n";
-                    std::cerr << "Please, input the number one more time.\n";
                     scanf("%*[\n]", wrongInput);
                     break;
                 case (LETTER_INPUT):
                     std::cerr << "Not expected symbol was founded.\n";
-                    std::cerr << "Please, input the number one more time.\n";
                     scanf("%*[\n]", wrongInput);
                     break;
                 case (EMPTY_STRING):
@@ -131,28 +174,52 @@ char* PrintString(bool IsSizeInput) {
                     break;
                 case (WRONG_SPACE_POSITION):
                     std::cerr << "Expect only 1 number(wrong space position).\n";
-                    std::cerr << "Please, input the number one more time.\n";
                     scanf("%*[\n]", wrongInput);
                     break;
                 case (TOO_BIG_VALUE):
-                    std::cerr << "The value is too large.\n";
-                    std::cerr << "Please, input the number one more time.\n";
+                    std::cerr << "The stroke is to large.\n";
                     scanf("%*[\n]", wrongInput);
+                    delete[] output;
                     break;
                 default:
                     break;
             }
-            SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 2);
+
+            SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 1);
 
             delete[] wrongInput;
         }
     }
 }
 
+bool RestartProgram(){
+    char* temp = new char[1];
+    std::cout << "To repeat the program, type";
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 4);
+    std::cout << " Y:\n" ;
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 2);
+    std::cin >> temp;
+    char* temp2 = new char[1];
+    scanf("%*1[\n]", temp2);
+    if(*temp != 'y' && *temp != 'Y')
+    {
+        system("cls");
+        return true;
+    }
+    return false;
+}
 
 
 int main() {
-
-    PrintString(true);
+    while(true) {
+        std::cout << "Exercise number 1:\n" << "Made by student of group 253502 Anton Hulis\n"
+                  << "Number in the list is 7\n" << "TASK: find a fixed-point value in string\n";
+        char* output = new char[80];
+        std::cout << PrintString(output) << "\n";
+        if(RestartProgram())
+        {
+            break;
+        }
+    }
     return 0;
 }

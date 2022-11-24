@@ -1,0 +1,3 @@
+F:/Projects/BoAaP/FinalShared/cmake-build-debug/CMakeFiles/FinalShared.dir
+F:/Projects/BoAaP/FinalShared/cmake-build-debug/CMakeFiles/edit_cache.dir
+F:/Projects/BoAaP/FinalShared/cmake-build-debug/CMakeFiles/rebuild_cache.dir

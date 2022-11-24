@@ -1,0 +1,78 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.23"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "LabNumber7",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "1Task::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-1Task-Debug-d548ce862868d195505a.json",
+					"name" : "1Task",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "2Task::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-2Task-Debug-f6502afe7168b58ff942.json",
+					"name" : "2Task",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "9Task::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-9Task-Debug-3ee48a6fb67fe976f046.json",
+					"name" : "9Task",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "F:/Projects/BoAaP/LabNumber7/cmake-build-debug",
+		"source" : "F:/Projects/BoAaP/LabNumber7"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

@@ -13,14 +13,16 @@ int main() {
     std::cin >> count;
     while(count != 0)
     {
-        std::cout << "\n\tPrint x: ";
+        std::cout << "\n\tPrint x: [less then 1]";
         std::cin >> x;
         ans = (1 + powl(x, 2)) / 2.0 * atanl(x) - x / 2.0;
         std::cout << "\tY(x) : " << ans << '\n';
         ans = 0;
-        for(int i = 1; i <= n; ++i)
+        long double temp_count = x;
+        for(long long i = 0, counter = 1; i <= n; ++i, counter+=2)
         {
-            ans += powl(-1, i + 1) * powl(x, 2 * i + 1) / (4 * powl(i, 2) - 1);
+            temp_count *= (-1.0 * x * x * (4 * i * i - 1))/ (4 * i * i + 8 * i + 3) ;
+            ans += temp_count;
         }
         std::cout << "\t S(x) : " << ans;
         --count;

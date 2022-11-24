@@ -21,6 +21,12 @@ F:/Projects/BoAaP/LabNumber5/cmake-build-debug/2Task/CMakeFiles/rebuild_cache.di
 F:/Projects/BoAaP/LabNumber5/cmake-build-debug/2Task/CMakeFiles/list_install_components.dir
 F:/Projects/BoAaP/LabNumber5/cmake-build-debug/2Task/CMakeFiles/install.dir
 F:/Projects/BoAaP/LabNumber5/cmake-build-debug/2Task/CMakeFiles/install/local.dir
+F:/Projects/BoAaP/LabNumber5/cmake-build-debug/2TaskNew/CMakeFiles/2TaskNew.dir
+F:/Projects/BoAaP/LabNumber5/cmake-build-debug/2TaskNew/CMakeFiles/edit_cache.dir
+F:/Projects/BoAaP/LabNumber5/cmake-build-debug/2TaskNew/CMakeFiles/rebuild_cache.dir
+F:/Projects/BoAaP/LabNumber5/cmake-build-debug/2TaskNew/CMakeFiles/list_install_components.dir
+F:/Projects/BoAaP/LabNumber5/cmake-build-debug/2TaskNew/CMakeFiles/install.dir
+F:/Projects/BoAaP/LabNumber5/cmake-build-debug/2TaskNew/CMakeFiles/install/local.dir
 F:/Projects/BoAaP/LabNumber5/cmake-build-debug/Tests/CMakeFiles/Test.dir
 F:/Projects/BoAaP/LabNumber5/cmake-build-debug/Tests/CMakeFiles/edit_cache.dir
 F:/Projects/BoAaP/LabNumber5/cmake-build-debug/Tests/CMakeFiles/rebuild_cache.dir

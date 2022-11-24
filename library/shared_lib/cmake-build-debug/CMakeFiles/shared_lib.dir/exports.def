@@ -32,6 +32,13 @@ EXPORTS
 	??Bsentry@?$basic_istream@DU?$char_traits@D@std@@@std@@QBE_NXZ
 	??Bsentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QBE_NXZ
 	??R?$default_delete@V_Facet_base@std@@@std@@QBEXPAV_Facet_base@1@@Z
+	?FillElements@@YAXPAOH@Z
+	?PrintInfo@@YAXXZ
+	?PrintNum@@YAO_N@Z
+	?RecursionOutput@@YAX_N@Z
+	?RestartProgram@@YA_NXZ
+	?SizeInput@@YAXPADAAH@Z
+	?TaskSolve@@YAXXZ
 	?_Get_first@?$_Compressed_pair@U?$default_delete@V_Facet_base@std@@@std@@PAV_Facet_base@2@$00@std@@QAEAAU?$default_delete@V_Facet_base@std@@@2@XZ
 	?_Getfacet@locale@std@@QBEPBVfacet@12@I@Z
 	?_Throw_bad_cast@std@@YAXXZ
@@ -42,18 +49,11 @@ EXPORTS
 	?eq_int_type@?$_Narrow_char_traits@DH@std@@SA_NABH0@Z
 	?length@?$_Narrow_char_traits@DH@std@@SAIQBD@Z
 	?pow@@YAOOO@Z
+	?recursionCheck@@YA_NPAOHH@Z
 	?release@?$unique_ptr@V_Facet_base@std@@U?$default_delete@V_Facet_base@std@@@2@@std@@QAEPAV_Facet_base@2@XZ
 	?to_char_type@?$_Narrow_char_traits@DH@std@@SADABH@Z
 	?what@exception@std@@UBEPBDXZ
-	FillElements
-	PrintInfo
-	PrintNum
-	RecursionOutput
-	RestartProgram
-	SizeInput
-	TaskSolve
 	__local_stdio_scanf_options
 	_vfscanf_l
 	powl
-	recursionCheck
 	scanf

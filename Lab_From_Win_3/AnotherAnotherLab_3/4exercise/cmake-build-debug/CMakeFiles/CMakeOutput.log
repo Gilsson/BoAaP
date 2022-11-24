@@ -1,4 +1,4 @@
-The system is: Windows - 10.0.19044 - AMD64
+The system is: Windows - 10.0.19045 - AMD64
 Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
 Compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.33.31629/bin/Hostx86/x86/cl.exe 
 Build flags: 
@@ -21,7 +21,7 @@ Compilation of the C compiler identification source "CMakeCCompilerId.c" produce
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.obj"
 
-The C compiler identification is MSVC, found in "F:/AnotherAnotherLab_3/4exercise/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdC/CMakeCCompilerId.exe"
+The C compiler identification is MSVC, found in "F:/Projects/BoAaP/Lab_From_Win_3/AnotherAnotherLab_3/4exercise/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdC/CMakeCCompilerId.exe"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.33.31629/bin/Hostx86/x86/cl.exe 
@@ -45,21 +45,29 @@ Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" p
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.obj"
 
-The CXX compiler identification is MSVC, found in "F:/AnotherAnotherLab_3/4exercise/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdCXX/CMakeCXXCompilerId.exe"
+The CXX compiler identification is MSVC, found in "F:/Projects/BoAaP/Lab_From_Win_3/AnotherAnotherLab_3/4exercise/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdCXX/CMakeCXXCompilerId.exe"
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: F:/AnotherAnotherLab_3/4exercise/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: F:/Projects/BoAaP/Lab_From_Win_3/AnotherAnotherLab_3/4exercise/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):F:/CLion 2022.2.1/bin/ninja/win/ninja.exe cmTC_b67d5 && [1/2] Building C object CMakeFiles\cmTC_b67d5.dir\CMakeCCompilerABI.c.obj
-[2/2] Linking C executable cmTC_b67d5.exe
+Run Build Command(s):nmake -f Makefile /nologo cmTC_14736\fast && 	"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX86\x86\nmake.exe"  -f CMakeFiles\cmTC_14736.dir\build.make /nologo -L                  CMakeFiles\cmTC_14736.dir\build
+Building C object CMakeFiles/cmTC_14736.dir/CMakeCCompilerABI.c.obj
+	"F:\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" -E cmake_cl_compile_depends --dep-file=CMakeFiles\cmTC_14736.dir\CMakeCCompilerABI.c.obj.d --working-dir=F:\Projects\BoAaP\Lab_From_Win_3\AnotherAnotherLab_3\4exercise\cmake-build-debug\CMakeFiles\CMakeTmp --filter-prefix="Note: including file: " -- C:\PROGRA~1\MICROS~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\Hostx86\x86\cl.exe @C:\Users\Gilsson\AppData\Local\Temp\nmB505.tmp
+CMakeCCompilerABI.c
+Linking C executable cmTC_14736.exe
+	"F:\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_14736.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100203~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100203~1.0\x86\mt.exe --manifests -- C:\PROGRA~1\MICROS~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_14736.dir\objects1.rsp @C:\Users\Gilsson\AppData\Local\Temp\nmB564.tmp
 
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: F:/AnotherAnotherLab_3/4exercise/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: F:/Projects/BoAaP/Lab_From_Win_3/AnotherAnotherLab_3/4exercise/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):F:/CLion 2022.2.1/bin/ninja/win/ninja.exe cmTC_c2edc && [1/2] Building CXX object CMakeFiles\cmTC_c2edc.dir\CMakeCXXCompilerABI.cpp.obj
-[2/2] Linking CXX executable cmTC_c2edc.exe
+Run Build Command(s):nmake -f Makefile /nologo cmTC_e0572\fast && 	"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX86\x86\nmake.exe"  -f CMakeFiles\cmTC_e0572.dir\build.make /nologo -L                  CMakeFiles\cmTC_e0572.dir\build
+Building CXX object CMakeFiles/cmTC_e0572.dir/CMakeCXXCompilerABI.cpp.obj
+	"F:\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" -E cmake_cl_compile_depends --dep-file=CMakeFiles\cmTC_e0572.dir\CMakeCXXCompilerABI.cpp.obj.d --working-dir=F:\Projects\BoAaP\Lab_From_Win_3\AnotherAnotherLab_3\4exercise\cmake-build-debug\CMakeFiles\CMakeTmp --filter-prefix="Note: including file: " -- C:\PROGRA~1\MICROS~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\Hostx86\x86\cl.exe @C:\Users\Gilsson\AppData\Local\Temp\nmB6E9.tmp
+CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_e0572.exe
+	"F:\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_e0572.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100203~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100203~1.0\x86\mt.exe --manifests -- C:\PROGRA~1\MICROS~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_e0572.dir\objects1.rsp @C:\Users\Gilsson\AppData\Local\Temp\nmB748.tmp
 
 
 

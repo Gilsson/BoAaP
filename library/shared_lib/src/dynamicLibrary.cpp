@@ -1,9 +1,8 @@
-
 #include <Windows.h>
 
 #include <iostream>
 
-#define MYLIBAPI extern "C" __declspec(dllexport)
+#define MYLIBAPI extern __declspec(dllexport)
 
 #include "dynamicLibrary.h"
 
@@ -15,7 +14,7 @@ long double PrintNum(bool IsSizeInput = false)
         long long PointIndex = -1;
         long long buff = 10132;
         long double output = 0;
-        bool Sign = true;// true = +, false = -
+        bool Sign = true;        // true = +, false = -
         bool WrongSign = false;
         char *input = new char[buff]{0};
         scanf("%[^\n]%*c", input);
@@ -95,23 +94,27 @@ long double PrintNum(bool IsSizeInput = false)
                     output += (input[i] - '0') * powl(10, size - i - 1);
                 }
             }
-            if(Sign) {
-                if(IsSizeInput) {
+            if (Sign) {
+                if (IsSizeInput) {
                     if (output < 1 || output > 10000) {
                         throw INCORRECT_DATA;
                     }
                 }
-                if(output < 2e18 || output > -2e18)
+                if (size < 300 || output < 1e300)
                     return output;
-            }
-            else{
-                if(IsSizeInput) {
+                else{
+                    throw TOO_BIG_VALUE;
+                }
+            } else {
+                if (IsSizeInput) {
                     if (-output < 1) {
                         throw INCORRECT_DATA;
                     }
                 }
-                if(output < 2e18 || output > -2e18)
+                if (size < 300 || output < 1e300)
                     return -output;
+                else
+                    throw TOO_BIG_VALUE;
             }
         }catch(Exceptions err)
         {
@@ -153,10 +156,14 @@ long double PrintNum(bool IsSizeInput = false)
                     std::cerr << "Please, input the number one more time.\n";
                     scanf("%*[\n]", wrongInput);
                     break;
+                case(TOO_BIG_VALUE):
+                    std::cerr << "The value is too large.\n";
+                    std::cerr << "Please, input the number one more time.\n";
+                    scanf("%*[\n]", wrongInput);
+                    break;
                 default:
                     break;
             }
-            delete[] temp;
             delete[] wrongInput;
         }
     }
@@ -195,7 +202,8 @@ void PrintInfo()
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 3);
     std::cout << "SECOND EXERCISE(number 7 in the list):\n"
                  "For given array with size N\n"
-                 "Fill array, according to the formula\n"
+                 "Check if there has at least one element a, which suit the equation\n"
+                 "(a^2 + 2)^(1/3) < 10\n"
                  "Was created by: ";
     std::cout << "Anton Gulis\n";
     std::cout << "To start the program, type ";

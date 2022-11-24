@@ -24,6 +24,15 @@
 1Task_SOURCE_DIR:STATIC=F:/Projects/BoAaP/LabNumber5/1Task
 
 //Value Computed by CMake
+2TaskNew_BINARY_DIR:STATIC=F:/Projects/BoAaP/LabNumber5/cmake-build-debug/2TaskNew
+
+//Value Computed by CMake
+2TaskNew_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+2TaskNew_SOURCE_DIR:STATIC=F:/Projects/BoAaP/LabNumber5/2TaskNew
+
+//Value Computed by CMake
 2Task_BINARY_DIR:STATIC=F:/Projects/BoAaP/LabNumber5/cmake-build-debug/2Task
 
 //Value Computed by CMake
@@ -529,7 +538,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MT
 CMAKE_MT-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=7
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
 //Platform information initialized
 CMAKE_PLATFORM_INFO_INITIALIZED:INTERNAL=1
 //noop for ranlib

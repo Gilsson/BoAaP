@@ -13,8 +13,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 #include(FindPkgConfig)
 #find_package(shared_lib REQUIRED)
-link_directories("F:/Projects/BoAaP/Library/shared_lib/build/Debug")
 add_executable(${PROJECT_NAME} 2Task.cpp)
-#target_link_libraries(${PROJECT_NAME} F:/Projects/BoAap/LabNumber5/cmake-build-debug/2Task/shared_lib.dll)
+target_link_libraries(${PROJECT_NAME} "F:\\Projects\\BoAaP\\LabNumber5\\Debug\\shared_lib.dll")
 #add_executable(2Task 2Task.cpp)
 

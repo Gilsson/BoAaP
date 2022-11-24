@@ -52,7 +52,6 @@ build cmake_object_order_depends_target_shared_lib: phony || CMakeFiles\shared_l
 build CMakeFiles\shared_lib.dir\src\dynamicLibrary.cpp.obj: CXX_COMPILER__shared_lib_Debug F$:\Projects\BoAaP\library\shared_lib\src\dynamicLibrary.cpp || cmake_object_order_depends_target_shared_lib
   DEFINES = -Dshared_lib_EXPORTS
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
-  INCLUDES = -IF:\Projects\BoAaP\library\shared_lib\include -IF:\Projects\BoAaP\library\shared_lib\src
   OBJECT_DIR = CMakeFiles\shared_lib.dir
   OBJECT_FILE_DIR = CMakeFiles\shared_lib.dir\src
   TARGET_COMPILE_PDB = CMakeFiles\shared_lib.dir\
@@ -102,36 +101,6 @@ build CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
 
 build rebuild_cache: phony CMakeFiles\rebuild_cache.util
 
-
-#############################################
-# Utility command for list_install_components
-
-build list_install_components: phony
-
-
-#############################################
-# Utility command for install
-
-build CMakeFiles\install.util: CUSTOM_COMMAND all
-  COMMAND = cmd.exe /C "cd /D F:\Projects\BoAaP\library\shared_lib\cmake-build-debug && "F:\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" -P cmake_install.cmake"
-  DESC = Install the project...
-  pool = console
-  restat = 1
-
-build install: phony CMakeFiles\install.util
-
-
-#############################################
-# Utility command for install/local
-
-build CMakeFiles\install\local.util: CUSTOM_COMMAND all
-  COMMAND = cmd.exe /C "cd /D F:\Projects\BoAaP\library\shared_lib\cmake-build-debug && "F:\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
-  DESC = Installing only the local directory...
-  pool = console
-  restat = 1
-
-build install\local: phony CMakeFiles\install\local.util
-
 # =============================================================================
 # Target aliases.
 
@@ -154,14 +123,14 @@ build all: phony shared_lib.dll
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ..\CMakeLists.txt ..\shared_lib.pc.in CMakeCache.txt CMakeFiles\3.23.2\CMakeCXXCompiler.cmake CMakeFiles\3.23.2\CMakeRCCompiler.cmake CMakeFiles\3.23.2\CMakeSystem.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeCXXInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeGenericSystem.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeRCInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CheckCCompilerFlag.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CheckCSourceCompiles.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CheckCXXCompilerFlag.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CheckCXXSourceCompiles.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\GNUInstallDirs.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\GenerateExportHeader.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Internal\CheckCompilerFlag.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Internal\CheckFlagCommonConfig.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Internal\CheckSourceCompiles.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Platform\Windows.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\exportheader.cmake.in
+build build.ninja: RERUN_CMAKE | ..\CMakeLists.txt CMakeCache.txt CMakeFiles\3.23.2\CMakeCXXCompiler.cmake CMakeFiles\3.23.2\CMakeRCCompiler.cmake CMakeFiles\3.23.2\CMakeSystem.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeCXXInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeGenericSystem.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeRCInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Platform\Windows.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ..\CMakeLists.txt ..\shared_lib.pc.in CMakeCache.txt CMakeFiles\3.23.2\CMakeCXXCompiler.cmake CMakeFiles\3.23.2\CMakeRCCompiler.cmake CMakeFiles\3.23.2\CMakeSystem.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeCXXInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeGenericSystem.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeRCInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CheckCCompilerFlag.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CheckCSourceCompiles.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CheckCXXCompilerFlag.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CheckCXXSourceCompiles.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\GNUInstallDirs.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\GenerateExportHeader.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Internal\CheckCompilerFlag.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Internal\CheckFlagCommonConfig.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Internal\CheckSourceCompiles.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Platform\Windows.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\exportheader.cmake.in: phony
+build ..\CMakeLists.txt CMakeCache.txt CMakeFiles\3.23.2\CMakeCXXCompiler.cmake CMakeFiles\3.23.2\CMakeRCCompiler.cmake CMakeFiles\3.23.2\CMakeSystem.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeCXXInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeGenericSystem.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeRCInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Platform\Windows.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake: phony
 
 
 #############################################

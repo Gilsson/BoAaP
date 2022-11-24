@@ -8,7 +8,7 @@ int main()
     HINSTANCE hinstLib;
     MYPROC ProcPrint, ProcSolve;
 
-    hinstLib = LoadLibrary(TEXT("shared_lib.dll"));
+    hinstLib = LoadLibrary("shared_lib.dll");
 
     if(hinstLib != nullptr)
     {

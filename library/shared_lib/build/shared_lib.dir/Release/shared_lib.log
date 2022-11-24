@@ -1,5 +1,0 @@
-﻿  Building Custom Rule F:/Projects/BoAaP/library/shared_lib/CMakeLists.txt
-  dynamicLibrary.cpp
-  Auto build dll exports
-     Creating library F:/Projects/BoAaP/library/shared_lib/build/Release/shared_lib.lib and object F:/Projects/BoAaP/library/shared_lib/build/Release/shared_lib.exp
-  shared_lib.vcxproj -> F:\Projects\BoAaP\library\shared_lib\build\Release\shared_lib.dll

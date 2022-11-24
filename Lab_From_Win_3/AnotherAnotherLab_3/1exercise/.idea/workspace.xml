@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="CMakePresetLoader">{
   &quot;useNewFormat&quot;: true
 }</component>
@@ -17,7 +20,237 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b4d5054-e4da-4d6a-a63c-c757aa5219db" name="Changes" comment="" />
+    <list default="true" id="1b4d5054-e4da-4d6a-a63c-c757aa5219db" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../FinalShared/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../FinalShared/dynamicLibrary.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../FinalShared/dynamicLibrary.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../LabNumber5/2TaskNew/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../LabNumber5/2TaskNew/FinalShared.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../LabNumber6/5Task.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../LabNumber6/8Task.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../LabNumber6/tests/test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber5/1Task/cmake-build-debug/.cmake/api/v1/reply/index-2022-11-10T16-39-39-0695.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber5/1Task/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LabNumber5/1Task/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber5/1Task/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LabNumber5/1Task/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber5/1Task/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LabNumber5/1Task/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber5/1Task/cmake/FindStatic.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LabNumber5/1Task/cmake/FindStatic.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber5/2Task/2Task.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LabNumber5/2Task/2Task.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber5/2Task/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LabNumber5/2Task/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber5/2Task/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-3a291cc0eb80641155d3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber5/2Task/cmake-build-debug/.cmake/api/v1/reply/index-2022-11-11T18-55-42-0400.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber5/2Task/cmake-build-debug/.cmake/api/v1/reply/target-2Task-Debug-02768ec82f9a210e5f3e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber5/2Task/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LabNumber5/2Task/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber5/2Task/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LabNumber5/2Task/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber5/2Task/cmake-build-debug/2Task.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber5/2Task/cmake-build-debug/2Task.ilk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber5/2Task/cmake-build-debug/2Task.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LabNumber5/2Task/cmake-build-debug/2Task.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber5/2Task/cmake-build-debug/CMakeFiles/2Task.dir/2Task.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LabNumber5/2Task/cmake-build-debug/CMakeFiles/2Task.dir/2Task.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber5/2Task/cmake-build-debug/CMakeFiles/2Task.dir/vc140.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LabNumber5/2Task/cmake-build-debug/CMakeFiles/2Task.dir/vc140.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber5/2Task/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LabNumber5/2Task/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber5/2Task/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LabNumber5/2Task/cmake-build-debug/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber5/2Task/cmake-build-debug/shared_lib.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber5/2Task/cmake-build-debug/shared_lib.exp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber5/2Task/cmake-build-debug/shared_lib.lib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber5/2Task/cmake-build-debug/shared_lib.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber5/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LabNumber5/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber5/cmake-build-debug/.cmake/api/v1/reply/cache-v2-fb4ef879cb571599d401.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber5/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-f6df45b7f379ad4c9cc3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber5/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-b04133b1aae43951f6d0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber5/cmake-build-debug/.cmake/api/v1/reply/directory-_deps.googletest-build.googlemock-Debug-7fab9a28522ac222e3bd.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber5/cmake-build-debug/.cmake/api/v1/reply/directory-_deps.googletest-build.googletest-Debug-90ca0003a7a51db94b60.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber5/cmake-build-debug/.cmake/api/v1/reply/index-2022-11-11T18-58-59-0416.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber5/cmake-build-debug/.cmake/api/v1/reply/target-2Task-Debug-c7f513738507ce2adc45.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber5/cmake-build-debug/.cmake/api/v1/reply/target-3Task-Debug-f07d98c71465bdb4e3fb.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber5/cmake-build-debug/.cmake/api/v1/reply/target-4Task-Debug-6a78fd5080c2de84f433.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber5/cmake-build-debug/.cmake/api/v1/reply/target-5Task-Debug-4919377a8d69556e9866.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber5/cmake-build-debug/.cmake/api/v1/reply/target-6Task-Debug-7bb51e45d94f8ef6e382.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber5/cmake-build-debug/.cmake/api/v1/reply/target-7Task-Debug-7e79e6eccce4a813d173.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber5/cmake-build-debug/.cmake/api/v1/reply/target-8Task-Debug-459fa8f5bcf65d55ad5a.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber5/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LabNumber5/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber5/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LabNumber5/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber5/cmake-build-debug/2Task/2Task.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber5/cmake-build-debug/2Task/2Task.ilk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber5/cmake-build-debug/2Task/CMakeFiles/2Task.dir/2Task.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LabNumber5/cmake-build-debug/2Task/CMakeFiles/2Task.dir/2Task.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber5/cmake-build-debug/2Task/CMakeFiles/2Task.dir/vc140.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LabNumber5/cmake-build-debug/2Task/CMakeFiles/2Task.dir/vc140.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber5/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LabNumber5/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber5/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LabNumber5/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber5/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LabNumber5/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber5/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LabNumber5/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber5/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LabNumber5/cmake-build-debug/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber5/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LabNumber5/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber6/5Task.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LabNumber6/5Task.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber6/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LabNumber6/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber6/cmake-build-debug/.cmake/api/v1/reply/cache-v2-90208dd6fe7b5c33a153.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber6/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-b70cf73f1fb57844cbcc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber6/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-15bb70ce2a25fc677574.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber6/cmake-build-debug/.cmake/api/v1/reply/index-2022-11-14T23-38-53-0271.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber6/cmake-build-debug/.cmake/api/v1/reply/target-5Task-Debug-2da2adcecbe2c061879c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber6/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LabNumber6/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber6/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LabNumber6/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber6/cmake-build-debug/5Task.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LabNumber6/cmake-build-debug/5Task.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber6/cmake-build-debug/5Task.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LabNumber6/cmake-build-debug/5Task.ilk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber6/cmake-build-debug/5Task.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LabNumber6/cmake-build-debug/5Task.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber6/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LabNumber6/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber6/cmake-build-debug/CMakeFiles/5Task.dir/5Task.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LabNumber6/cmake-build-debug/CMakeFiles/5Task.dir/5Task.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber6/cmake-build-debug/CMakeFiles/5Task.dir/vc140.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LabNumber6/cmake-build-debug/CMakeFiles/5Task.dir/vc140.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber6/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LabNumber6/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber6/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LabNumber6/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber6/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LabNumber6/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber6/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LabNumber6/cmake-build-debug/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LabNumber6/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LabNumber6/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../../library/shared_lib.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../library/shared_lib/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/.vs/cmake.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/.vs/shared/FileContentIndex/3692d86a-a814-4037-a8f4-ced43c1498df.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/.vs/shared/FileContentIndex/read.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../LabNumber6/tests/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/.vs/shared/v17/.suo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/.vs/shared/v17/Browse.VC.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/.vs/shared/v17/Solution.VC.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/.vs/shared/v17/ipch/AutoPCH/74fe64c1e4752c74/DYNAMICLIBRARY.ipch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/.vs/shared/v17/ipch/AutoPCH/c0c9adc7fa5047ea/DYNAMICLIBRARY.ipch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/ALL_BUILD.vcxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/ALL_BUILD.vcxproj.filters" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/ALL_BUILD.vcxproj.user" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/CMakeFiles/3.23.0/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/CMakeFiles/3.23.0/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/CMakeFiles/3.23.0/CMakeRCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/CMakeFiles/3.23.0/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/CMakeFiles/3.23.0/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/CMakeFiles/3.23.0/CompilerIdCXX/CompilerIdCXX.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/CMakeFiles/3.23.0/CompilerIdCXX/CompilerIdCXX.vcxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/CMakeFiles/3.23.0/CompilerIdCXX/Debug/CMakeCXXCompilerId.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/CMakeFiles/3.23.0/CompilerIdCXX/Debug/CompilerIdCXX.exe.recipe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/CMakeFiles/3.23.0/CompilerIdCXX/Debug/CompilerIdCXX.tlog/CL.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/CMakeFiles/3.23.0/CompilerIdCXX/Debug/CompilerIdCXX.tlog/CL.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/CMakeFiles/3.23.0/CompilerIdCXX/Debug/CompilerIdCXX.tlog/CL.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/CMakeFiles/3.23.0/CompilerIdCXX/Debug/CompilerIdCXX.tlog/CompilerIdCXX.lastbuildstate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/CMakeFiles/3.23.0/CompilerIdCXX/Debug/CompilerIdCXX.tlog/link.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/CMakeFiles/3.23.0/CompilerIdCXX/Debug/CompilerIdCXX.tlog/link.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/CMakeFiles/3.23.0/CompilerIdCXX/Debug/CompilerIdCXX.tlog/link.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/CMakeFiles/3.23.0/VCTargetsPath.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/CMakeFiles/3.23.0/VCTargetsPath.vcxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/CMakeFiles/3.23.0/x64/Debug/VCTargetsPath.recipe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/CMakeFiles/3.23.0/x64/Debug/VCTargetsPath.tlog/VCTargetsPath.lastbuildstate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/CMakeFiles/CMakeError.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/CMakeFiles/CMakeOutput.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/CMakeFiles/b8e7e92e5f524352f0c145356eb4db8a/INSTALL_force.rule" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/CMakeFiles/b8e7e92e5f524352f0c145356eb4db8a/generate.stamp.rule" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/CMakeFiles/generate.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/CMakeFiles/generate.stamp.depend" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/CMakeFiles/generate.stamp.list" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/Debug/shared_lib.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/Debug/shared_lib.exp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/Debug/shared_lib.lib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/Debug/shared_lib.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/INSTALL.vcxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/INSTALL.vcxproj.filters" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/Release/shared_lib.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/Release/shared_lib.exp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/Release/shared_lib.lib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/ZERO_CHECK.vcxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/ZERO_CHECK.vcxproj.filters" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/shared.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/shared_lib.dir/Debug/dynamicLibrary.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/shared_lib.dir/Debug/exports.def" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/shared_lib.dir/Debug/objects.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/shared_lib.dir/Debug/shared_lib.dll.recipe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/shared_lib.dir/Debug/shared_lib.ilk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/shared_lib.dir/Debug/shared_lib.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/shared_lib.dir/Debug/shared_lib.tlog/CL.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/shared_lib.dir/Debug/shared_lib.tlog/CL.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/shared_lib.dir/Debug/shared_lib.tlog/CL.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/shared_lib.dir/Debug/shared_lib.tlog/CustomBuild.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/shared_lib.dir/Debug/shared_lib.tlog/CustomBuild.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/shared_lib.dir/Debug/shared_lib.tlog/CustomBuild.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/shared_lib.dir/Debug/shared_lib.tlog/link.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/shared_lib.dir/Debug/shared_lib.tlog/link.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/shared_lib.dir/Debug/shared_lib.tlog/link.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/shared_lib.dir/Debug/shared_lib.tlog/shared_lib.lastbuildstate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/shared_lib.dir/Debug/shared_lib.tlog/shared_lib.write.1u.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/shared_lib.dir/Debug/vc143.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/shared_lib.dir/MinSizeRel/objects.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/shared_lib.dir/RelWithDebInfo/objects.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/shared_lib.dir/Release/dynamicLibrary.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/shared_lib.dir/Release/exports.def" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/shared_lib.dir/Release/objects.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/shared_lib.dir/Release/shared_lib.dll.recipe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/shared_lib.dir/Release/shared_lib.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/shared_lib.dir/Release/shared_lib.tlog/CL.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/shared_lib.dir/Release/shared_lib.tlog/CL.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/shared_lib.dir/Release/shared_lib.tlog/CL.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/shared_lib.dir/Release/shared_lib.tlog/CustomBuild.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/shared_lib.dir/Release/shared_lib.tlog/CustomBuild.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/shared_lib.dir/Release/shared_lib.tlog/CustomBuild.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/shared_lib.dir/Release/shared_lib.tlog/link.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/shared_lib.dir/Release/shared_lib.tlog/link.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/shared_lib.dir/Release/shared_lib.tlog/link.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/shared_lib.dir/Release/shared_lib.tlog/shared_lib.lastbuildstate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/shared_lib.dir/Release/shared_lib.tlog/shared_lib.write.1u.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/shared_lib.pc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/shared_lib.vcxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/shared_lib.vcxproj.filters" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/shared_lib_export.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/x64/Debug/ALL_BUILD.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/x64/Debug/ALL_BUILD/ALL_BUILD.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/x64/Debug/ALL_BUILD/ALL_BUILD.recipe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/x64/Debug/ALL_BUILD/ALL_BUILD.tlog/ALL_BUILD.lastbuildstate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/x64/Debug/ALL_BUILD/ALL_BUILD.tlog/CustomBuild.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/x64/Debug/ALL_BUILD/ALL_BUILD.tlog/CustomBuild.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/x64/Debug/ALL_BUILD/ALL_BUILD.tlog/CustomBuild.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/x64/Debug/ALL_BUILD/ALL_BUILD.tlog/link-cvtres.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/x64/Debug/ALL_BUILD/ALL_BUILD.tlog/link-cvtres.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/x64/Debug/ALL_BUILD/ALL_BUILD.tlog/link-rc.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/x64/Debug/ALL_BUILD/ALL_BUILD.tlog/link-rc.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/x64/Debug/ALL_BUILD/ALL_BUILD.tlog/link.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/x64/Debug/ALL_BUILD/ALL_BUILD.tlog/link.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/x64/Debug/ALL_BUILD/ALL_BUILD.tlog/link.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/x64/Debug/ZERO_CHECK/ZERO_CHECK.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/x64/Debug/ZERO_CHECK/ZERO_CHECK.recipe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/x64/Debug/ZERO_CHECK/ZERO_CHECK.tlog/CustomBuild.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/x64/Debug/ZERO_CHECK/ZERO_CHECK.tlog/CustomBuild.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/x64/Debug/ZERO_CHECK/ZERO_CHECK.tlog/CustomBuild.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/x64/Debug/ZERO_CHECK/ZERO_CHECK.tlog/ZERO_CHECK.lastbuildstate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/x64/Release/ALL_BUILD/ALL_BUILD.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/x64/Release/ALL_BUILD/ALL_BUILD.recipe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/x64/Release/ALL_BUILD/ALL_BUILD.tlog/ALL_BUILD.lastbuildstate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/x64/Release/ALL_BUILD/ALL_BUILD.tlog/CustomBuild.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/x64/Release/ALL_BUILD/ALL_BUILD.tlog/CustomBuild.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/x64/Release/ALL_BUILD/ALL_BUILD.tlog/CustomBuild.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/x64/Release/ZERO_CHECK/ZERO_CHECK.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/x64/Release/ZERO_CHECK/ZERO_CHECK.recipe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/x64/Release/ZERO_CHECK/ZERO_CHECK.tlog/CustomBuild.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/x64/Release/ZERO_CHECK/ZERO_CHECK.tlog/CustomBuild.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/x64/Release/ZERO_CHECK/ZERO_CHECK.tlog/CustomBuild.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/build/x64/Release/ZERO_CHECK/ZERO_CHECK.tlog/ZERO_CHECK.lastbuildstate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-24e604d2d5e1c738824d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-3636eaba8c488d8857a8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-62b5c7e61f4fb480d6de.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/cmake-build-debug/.cmake/api/v1/reply/index-2022-11-05T13-45-09-0919.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/cmake-build-debug/.cmake/api/v1/reply/target-shared_lib-Debug-6d852401a7fd81495b16.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/../../../library/shared_lib/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../library/shared_lib/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../library/shared_lib/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../../../library/shared_lib/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/cmake-build-debug/CMakeFiles/shared_lib.dir/exports.def" beforeDir="false" afterPath="$PROJECT_DIR$/../../../library/shared_lib/cmake-build-debug/CMakeFiles/shared_lib.dir/exports.def" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/cmake-build-debug/CMakeFiles/shared_lib.dir/src/dynamicLibrary.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../../library/shared_lib/cmake-build-debug/CMakeFiles/shared_lib.dir/src/dynamicLibrary.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/cmake-build-debug/CMakeFiles/shared_lib.dir/vc140.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../library/shared_lib/cmake-build-debug/CMakeFiles/shared_lib.dir/vc140.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../library/shared_lib/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../../../library/shared_lib/cmake-build-debug/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../../../library/shared_lib/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/cmake-build-debug/shared_lib.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../../../library/shared_lib/cmake-build-debug/shared_lib.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/cmake-build-debug/shared_lib.exp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../library/shared_lib/cmake-build-debug/shared_lib.exp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/cmake-build-debug/shared_lib.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/../../../library/shared_lib/cmake-build-debug/shared_lib.ilk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/cmake-build-debug/shared_lib.lib" beforeDir="false" afterPath="$PROJECT_DIR$/../../../library/shared_lib/cmake-build-debug/shared_lib.lib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/cmake-build-debug/shared_lib.pc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/cmake-build-debug/shared_lib.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../library/shared_lib/cmake-build-debug/shared_lib.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/cmake-build-debug/shared_lib_export.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/include/dynamicLibrary.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../../library/shared_lib/src/dynamicLibrary.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../library/shared_lib/src/dynamicLibrary.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../library/shared_lib/src/dynamicLibrary.cpp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,7 +261,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -53,11 +286,16 @@
     "cf.advertisement.text.overridden": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "last_opened_file_path": "F:/AnotherAnotherLab_3/2exercise",
+    "last_opened_file_path": "F:/Projects/BoAaP/Lab_From_Win_3/AnotherAnotherLab_3/6exercise",
     "settings.editor.selected.configurable": "preferences.sourceCode.C/C++"
   }
 }]]></component>
   <component name="RunManager">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="1exercise" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="1exercise" TARGET_NAME="1exercise" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="1exercise" RUN_TARGET_NAME="1exercise">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -75,6 +313,7 @@
       <workItem from="1663757043496" duration="62000" />
       <workItem from="1663770482421" duration="711000" />
       <workItem from="1663868359735" duration="948000" />
+      <workItem from="1668690355916" duration="18000" />
     </task>
     <servers />
   </component>

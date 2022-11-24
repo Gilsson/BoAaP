@@ -64,11 +64,10 @@ build CMakeFiles\2Task.dir\2Task.cpp.obj: CXX_COMPILER__2Task_Debug F$:\Projects
 #############################################
 # Link the executable 2Task.exe
 
-build 2Task.exe: CXX_EXECUTABLE_LINKER__2Task_Debug CMakeFiles\2Task.dir\2Task.cpp.obj
+build 2Task.exe: CXX_EXECUTABLE_LINKER__2Task_Debug CMakeFiles\2Task.dir\2Task.cpp.obj | F$:\Projects\BoAaP\LabNumber5\Debug\shared_lib.dll
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
   LINK_FLAGS = /machine:X86 /debug /INCREMENTAL /subsystem:console
-  LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
-  LINK_PATH = -LIBPATH:F:\Projects\BoAaP\Library\shared_lib\build\Debug
+  LINK_LIBRARIES = F:\Projects\BoAaP\LabNumber5\Debug\shared_lib.dll  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = CMakeFiles\2Task.dir
   POST_BUILD = cd .
   PRE_LINK = cd .

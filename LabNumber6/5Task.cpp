@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include "5Task.h"
 
 unsigned long long fast_pow(unsigned long long k, unsigned long long n, unsigned long long t)
 {
@@ -29,16 +30,57 @@ int find_number(const std::string& where, const std::string& founded)
     return find;
 }
 
+void SolveTask5(int number_of_iter, std::string& suff, std::string& pref) {
+    while (number_of_iter != 0) {
+        int stroke_size, modulo;
+        //std::cin >> stroke_size >> modulo;
+        std::cin >> stroke_size >> modulo;
+     //   std::string suff, pref;
+        std::cin >> pref >> suff;
+        if (suff.length() + pref.length() == stroke_size) {
+            std::cout << 1 << '\n';
+        } else if (suff.length() + pref.length() >= stroke_size) {
+            int find1 = find_number(pref, suff);
+            int find2 = find_number(suff, pref);
+            int find = find1 > find2 ? find1 : find2;
+            if (find != 0) {
+                int size = suff.length() - find + pref.length();
+                if (size == stroke_size) {
+                    std::cout << 1 << '\n';
+                } else if (size > stroke_size) {
+                    std::cout << 0 << '\n';
+                } else {
+                    if (suff != pref)
+                        std::cout << (fast_pow(26, stroke_size - size, modulo) * 2 % modulo) % modulo << '\n';
+                    else
+                        std::cout << fast_pow(26, stroke_size - size, modulo) << '\n';
+                }
+            } else {
+                std::cout << 0 << '\n';
+            }
+        } else {
+            if (suff != pref)
+                std::cout << (fast_pow(26, stroke_size - suff.length() - pref.length(), modulo) * 2 % modulo) % modulo
+                          << '\n';
+            else
+                std::cout << (fast_pow(26, stroke_size - suff.length() - pref.length(), modulo)) << '\n';
+        }
+        --number_of_iter;
+    }
+}
+
+
 int main()
 {
     int t;
     std::cin >> t;
-    while(t != 0)
-    {
+    //while(t != 0)
+    //{
         int stroke_size, modulo;
-        std::cin >> stroke_size >> modulo;
+ //       std::cin >> stroke_size >> modulo;
         std::string suff, pref;
-        std::cin >> pref >> suff;
+        SolveTask5(t, suff, pref);
+       /* //std::cin >> pref >> suff;
         if(suff.length() + pref.length() == stroke_size)
         {
             std::cout << 1 << '\n';
@@ -75,6 +117,6 @@ int main()
             else
                 std::cout << (fast_pow(26, stroke_size - suff.length() - pref.length(), modulo)) << '\n';
         }
-        --t;
-    }
+        --t;*/
+    //}
 }
