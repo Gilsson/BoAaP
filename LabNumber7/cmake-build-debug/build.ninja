@@ -113,6 +113,42 @@ build 2Task.exe: CXX_EXECUTABLE_LINKER__2Task_Debug CMakeFiles\2Task.dir\2Task.c
   TARGET_PDB = 2Task.pdb
 
 # =============================================================================
+# Object build statements for EXECUTABLE target 3Task
+
+
+#############################################
+# Order-only phony target for 3Task
+
+build cmake_object_order_depends_target_3Task: phony || CMakeFiles\3Task.dir
+
+build CMakeFiles\3Task.dir\3Task.cpp.obj: CXX_COMPILER__3Task_Debug F$:\Projects\BoAaP\LabNumber7\3Task.cpp || cmake_object_order_depends_target_3Task
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
+  OBJECT_DIR = CMakeFiles\3Task.dir
+  OBJECT_FILE_DIR = CMakeFiles\3Task.dir
+  TARGET_COMPILE_PDB = CMakeFiles\3Task.dir\
+  TARGET_PDB = 3Task.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target 3Task
+
+
+#############################################
+# Link the executable 3Task.exe
+
+build 3Task.exe: CXX_EXECUTABLE_LINKER__3Task_Debug CMakeFiles\3Task.dir\3Task.cpp.obj
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
+  LINK_FLAGS = /machine:X86 /debug /INCREMENTAL /subsystem:console
+  LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  OBJECT_DIR = CMakeFiles\3Task.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\3Task.dir\
+  TARGET_FILE = 3Task.exe
+  TARGET_IMPLIB = 3Task.lib
+  TARGET_PDB = 3Task.pdb
+
+# =============================================================================
 # Object build statements for EXECUTABLE target 9Task
 
 
@@ -178,6 +214,8 @@ build 1Task: phony 1Task.exe
 
 build 2Task: phony 2Task.exe
 
+build 3Task: phony 3Task.exe
+
 build 9Task: phony 9Task.exe
 
 # =============================================================================
@@ -188,7 +226,7 @@ build 9Task: phony 9Task.exe
 #############################################
 # Folder: F:/Projects/BoAaP/LabNumber7/cmake-build-debug
 
-build all: phony 1Task.exe 2Task.exe 9Task.exe
+build all: phony 1Task.exe 2Task.exe 3Task.exe 9Task.exe
 
 # =============================================================================
 # Built-in targets

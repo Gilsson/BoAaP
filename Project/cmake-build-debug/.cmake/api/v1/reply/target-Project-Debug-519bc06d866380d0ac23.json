@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "9Task.exe"
+			"path" : "Project.exe"
 		},
 		{
-			"path" : "9Task.pdb"
+			"path" : "Project.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -27,7 +27,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 8,
+				"line" : 6,
 				"parent" : 0
 			}
 		]
@@ -52,11 +52,12 @@
 			},
 			"sourceIndexes" : 
 			[
-				0
+				0,
+				3
 			]
 		}
 	],
-	"id" : "9Task::@6890427a1f51a3e7e1df",
+	"id" : "Project::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -76,8 +77,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "9Task",
-	"nameOnDisk" : "9Task.exe",
+	"name" : "Project",
+	"nameOnDisk" : "Project.exe",
 	"paths" : 
 	{
 		"build" : ".",
@@ -89,7 +90,16 @@
 			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
-				0
+				0,
+				3
+			]
+		},
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				1,
+				2
 			]
 		}
 	],
@@ -98,7 +108,23 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "9Task.cpp",
+			"path" : "GameOfLife.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "FieldOfLife.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "SlotMachine.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "FieldOfLife.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

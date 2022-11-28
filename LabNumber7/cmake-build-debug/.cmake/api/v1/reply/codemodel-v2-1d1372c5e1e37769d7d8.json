@@ -17,7 +17,8 @@
 					[
 						0,
 						1,
-						2
+						2,
+						3
 					]
 				}
 			],
@@ -34,7 +35,8 @@
 					[
 						0,
 						1,
-						2
+						2,
+						3
 					]
 				}
 			],
@@ -56,8 +58,15 @@
 				},
 				{
 					"directoryIndex" : 0,
+					"id" : "3Task::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-3Task-Debug-ab019ac61868f5c74ed7.json",
+					"name" : "3Task",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
 					"id" : "9Task::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-9Task-Debug-3ee48a6fb67fe976f046.json",
+					"jsonFile" : "target-9Task-Debug-fa45cbceb7fc13fa4446.json",
 					"name" : "9Task",
 					"projectIndex" : 0
 				}
