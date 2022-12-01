@@ -18,7 +18,12 @@
 						0,
 						1,
 						2,
-						3
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
 					]
 				}
 			],
@@ -36,7 +41,12 @@
 						0,
 						1,
 						2,
-						3
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
 					]
 				}
 			],
@@ -65,9 +75,44 @@
 				},
 				{
 					"directoryIndex" : 0,
+					"id" : "4Task::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-4Task-Debug-dd3839145f6a2ae1a790.json",
+					"name" : "4Task",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "6Task::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-6Task-Debug-387e1e380be957333289.json",
+					"name" : "6Task",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "7Task::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-7Task-Debug-251a489090eec7284e0d.json",
+					"name" : "7Task",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "8Task::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-8Task-Debug-0ceedc6bb6a66a2db6b1.json",
+					"name" : "8Task",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
 					"id" : "9Task::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-9Task-Debug-fa45cbceb7fc13fa4446.json",
+					"jsonFile" : "target-9Task-Debug-4b6c79da09e920ce13a3.json",
 					"name" : "9Task",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "main::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-main-Debug-f5475844edba7ac6d537.json",
+					"name" : "main",
 					"projectIndex" : 0
 				}
 			]

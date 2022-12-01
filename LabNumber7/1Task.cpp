@@ -21,7 +21,11 @@ std::string& minus(std::string& code, int end)
 
 std::string& add_to_reverse(std::string& code)
 {
-    minus(code, code.size() - 1);
+    if(code[0] == '-')
+    {
+        minus(code, code.size() - 1);
+    }
+
     return code;
 }
 
