@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <iomanip>
+#include <windows.h>
 
 /*long long BinPow(long long a, long long n, long long p)
 {
@@ -49,6 +50,34 @@ void quicksort(int* arr,int start, int end)
 
 int main()
 {
+    SetConsoleOutputCP(CP_UTF8);
+    char proceed, clear;
+    std::cout << "Лабораторная работа 6\n\nВыполнил Станислав Бекарев\n\n";
+    std::cout << "Задача 3.5:\n\nВ массиве строк найти среднее значение длины строки. \n";
+    std::cout << "Строки, длина которых больше среднего, - обрезать, меньше - добавить '#'.\n";
+    while (true)
+    {
+        std::cout << "\n---------------------------------------------------------------------------------------------------------------------------------------";
+        std::cout << "Ввведите массив:\n";
+        std::cout << "\nСредняя длина строки: ";
+        std::cout << "\n***************************************************************************************************************************************";
+        std::cout << "\nЖелаете продолжить?\n\nВведите '1', чтобы продолжить\n\nНажмите на любую клавишу, чтобы закончить\n";
+        proceed = getchar();
+        if (proceed != '1')
+        {
+            std::cout << "\nУдачи!\n";
+            break;
+        }
+        else
+        {
+            clear = getchar();
+            if (clear != '\n')
+            {
+                std::cout << "\nУдачи!\n";
+                break;
+            }
+        }
+    }
     int n;
     srand(time(NULL));
     std::cin >> n;

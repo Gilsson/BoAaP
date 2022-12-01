@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <windows.h>
 
 const int BIT_SIZE = 16;
 
@@ -17,7 +18,7 @@ std::string to_binary_code(int number)
     return code;
 }
 
-void forward_reverse(std::string& code)
+void forward_add(std::string& code)
 {
     for(auto &it : code)
     {
@@ -52,8 +53,8 @@ std::string sum(std::string& string1, std::string& string2)
 {
     std::string result;
 
-    forward_reverse(string1);
-    forward_reverse(string2);
+    forward_add(string1);
+    forward_add(string2);
     int size = string1.size() > string2.size() ? string1.size() : string2.size();
     //FillZero(string1, size);
    //FillZero(string2, size);
@@ -71,8 +72,51 @@ std::string sum(std::string& string1, std::string& string2)
     //result[15] += result[0] - '0';
     //RepairNumber(result);
 
-    forward_reverse(result);
+    forward_add(result);
     return result;
+}
+
+void PrintInfo()
+{
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 3);
+    std::cout << "Лабораторная работа номер 7:\n"
+                 "Номер 1:\n"
+                 "--------------------------------------------------------------------------------------------\n"
+                 "\nВводить только числа.\n"
+                 "Задание: перевести число из дополнительного кода в обратный.\n"
+                 "Работу подготовил:\n";
+    std::cout << "Гулис Антон\n";
+    std::cout << "Чтобы запустить решение, нажмите ";
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 4);
+    std::cout << "Enter.\n";
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 2);
+    while(true)
+    {
+        char *temp = new char[1]{0};
+        scanf("%[^\n]%*c", temp);
+        if(strlen(temp) == 0) {
+            char* temp2 = new char[1];
+            scanf("%*1[\n]", temp2);
+            return;
+        }
+    }
+}
+
+bool RestartProgram(){
+    char* temp = new char[1];
+    std::cout << "To repeat the program, type";
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 4);
+    std::cout << " Y:\n" ;
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 2);
+    std::cin >> temp;
+    char* temp2 = new char[1];
+    scanf("%*1[\n]", temp2);
+    if(*temp != 'y' && *temp != 'Y')
+    {
+        system("cls");
+        return true;
+    }
+    return false;
 }
 
 int main()
@@ -83,6 +127,6 @@ int main()
     std::cout << b << '\n';
     std::string c = to_binary_code(f);
     std::cout << sum(b, c) << '\n';
-    //forward_reverse(b);
+    //forward_add(b);
     //std::cout << b;
 }
