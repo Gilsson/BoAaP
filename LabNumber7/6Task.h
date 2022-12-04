@@ -78,11 +78,57 @@
 //    return number;
 //}
 
-
-
-bool CheckFor79(int number) {
-
-    return true;
+bool CheckFor151(int number) {
+    bool b;
+    int temp = 76, back_num = number;
+    if(number & 1)
+    {
+        number >>= 1;
+        number += temp;
+    }else
+        number >>= 1;
+    if(back_num < number)
+    {
+        return 0;
+    }if (back_num == number)
+        return 1;
+    b = CheckFor151(number);
+    return b;
 }
 
+bool CheckFor79(int number) {
+    bool b;
+    int temp = 40, back_num = number;
+    if(number & 1)
+    {
+        number >>= 1;
+        number += temp;
+    }else
+        number >>= 1;
+    if(back_num < number)
+    {
+        return 0;
+    }if (back_num == number)
+        return 1;
+    b = CheckFor79(number);
+    return b;
+}
+
+bool CheckFor3(int number) {
+    bool b;
+    int temp = 2, back_num = number;
+    if(number & 1)
+    {
+        number >>= 1;
+        number += temp;
+    }else
+        number >>= 1;
+    if(back_num < number)
+    {
+        return 0;
+    }if (back_num == number)
+        return 1;
+    b = CheckFor3(number);
+    return b;
+}
 #endif //LABNUMBER7_6TASK_H

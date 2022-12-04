@@ -221,11 +221,11 @@ int** separate_slaves(int** slaves, int number, int* unchecked_barrels, int day)
                 }
         }
     }
-    std::cout << "Unchecked barrels: \n";
+    /*std::cout << "Unchecked barrels: \n";
     for(int i = 0; i < size; ++i)
     {
         std::cout << std::setw(4) << unchecked_barrels[i] << " ";
-    }
+    }*/
     std::cout << '\n';
     return slaves;
 }
@@ -358,7 +358,7 @@ int second(int* merging, int slaves_alive, int* barrels)
         }
         std::cout << '\n';
     }
-    for(int i = last_barrels[0], count = 1; i < pow(3, 5) && count < pow(2, slaves_alive); ++count)
+    for(int i = last_barrels[0], count = 1; i < pow(3, 5) && count < pow(2, slaves_alive);)
     {
         if(barrels[i] == 1)
         {

@@ -52,7 +52,7 @@ std::string& forward_add(std::string& code)
             {
                 if(code[i] >= '2')
                 {
-                    code[i] = '0';
+                    code[i] = '0' + (code[i] - '0') % 2;
                     code[i - 1] += 1;
                 }else
                 {
@@ -61,8 +61,6 @@ std::string& forward_add(std::string& code)
             }
         }
     }
-
-
     return code;
 }
 
@@ -79,9 +77,9 @@ std::string to_binary_code(std::string& str)
         }
         for(int i = code.size(); i < BIT_SIZE; ++i) // O(K)
             code.push_back(int('0'));
-        std::reverse(code.begin(), code.end());
+        std::reverse(code.begin(), code.end()); // O(K)
         code[0] = '1';
-        forward_add(code);
+        forward_add(code);          // O(K)
     }
     else {
         int number = stoi(str); // O(K)
@@ -101,7 +99,7 @@ void PrintInfo()
 {
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 3);
     std::cout << "Лабораторная работа номер 7:\n"
-                 "Номер 1:\n"
+                 "Задание 1:\n"
                  "--------------------------------------------------------------------------------------------\n"
                  "\nВводить только числа.\n"
                  "Задание: перевести число из дополнительного кода в обратный.\n"

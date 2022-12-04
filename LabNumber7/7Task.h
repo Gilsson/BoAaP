@@ -6,6 +6,8 @@
 #define LABNUMBER7_7TASK_H
 
 #include <iostream>
+#include <algorithm>
+#include <string>
 
 int CharToInt(char str)
 {
@@ -250,10 +252,23 @@ char* Substract(char* str_first, long long size_first)
     return temp_first;
 }
 
+std::string to_binary_code(std::string& str)
+{
+    std::string code;
+        int number = stoi(str); // O(K)
+        while (number > 0) { // O(K)
+            code.push_back((number % 2) + int('0'));
+            number >>= 1;
+        }
+        std::reverse(code.begin(), code.end()); // O(K)
+    str = code; // O(K)
+    return str;
+}
+
 long long DoubleTen(long long base)
 {
     std::string num;
-    std::cin >> num;
+    std::cout << to_binary_code(num);
     return 0;
 }
 

@@ -16,7 +16,12 @@ std::string* ConvertToRim(int num)
         temp/=10;
         ++size;
     }
+
     auto Rom = new std::string ();
+    if(num <= 0)
+    {
+        return Rom;
+    }
     int count = 0;
         while(num >= 1000)
         {

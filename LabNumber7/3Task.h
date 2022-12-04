@@ -15,14 +15,14 @@ void resize(std::string & notation1, std::string& notation2)
     {
         for(int i = notation2.size(); i < notation1.size(); ++i)
         {
-            notation2.insert(0, 1, 0);
+            notation2.insert(0, 1, 0);  // O(K)
         }
     }
     else
     {
         for(int i = notation1.size(); i < notation2.size(); ++i)
         {
-            notation1.insert(0, 1, 0);
+            notation1.insert(0, 1, 0);  // O(K)
         }
     }
 }
@@ -31,12 +31,12 @@ void normalize_number(std::string* notation, int sys)
 {
     while(notation[0][0] == '0') {
         std::string temp = *notation;
-        notation[0].resize(notation[0].size() - 1, '0');
-        for (int i = 0; i < notation[0].size(); ++i) {
+        notation[0].resize(notation[0].size() - 1, '0');  // O(K)
+        for (int i = 0; i < notation[0].size(); ++i) {  // O(K)
             notation[0][i] = temp[i + 1];
         }
     }
-        for(int i = 0; i < notation[0].size(); ++i)
+        for(int i = 0; i < notation[0].size(); ++i)  // O(K)
         {
             if(notation[0][i] > int('9'))
             {
@@ -47,7 +47,7 @@ void normalize_number(std::string* notation, int sys)
 
 void digitize(std::string & notation, int sys)
 {
-    for(auto &i : notation)
+    for(auto &i : notation)  // O(K)
     {
         if(i > int('9'))
         {
@@ -148,8 +148,8 @@ std::string* addition(std::string notation1, std::string notation2, int sys, boo
         //int temp = result[i + 1];
         int temp = result[0][i + 1];
         result[0][i + 1] = (result[0][i + 1] + notation2[i] + notation1[i]) % (sys);
-        if(i == 0 && (temp + notation1[i] + notation2[i]) / sys > 0)
-            overflow = true;
+        //if(i == 0 && (temp + notation1[i] + notation2[i]) / sys > 0)
+        //    overflow = true;
         result[0][i] = (temp + notation1[i] + notation2[i]) / sys;
     }
     //result[0][!overflow] = (sys - 1 + result[0][!overflow]) % sys;
