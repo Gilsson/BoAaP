@@ -2,7 +2,8 @@
 
 int main()
 {
-   // std::cout << ConverToThird(30);
-    std::cout << ToUnrealForm(ConverToThird(30));
+    int num;
+    std::cin >> num;
+    std::cout << ToUnrealForm(ConverToThird(num)); // O(N)
     return 0;
 }

@@ -1,59 +1,64 @@
 #include "7Task.h"
-#include <vector>
-#include <algorithm>
-#include <iostream>
 
 
 int main()
 {
-    int number = 0;
-    std::cin >> number;
-
-    /*std::vector<std::vector<std::string>> first(2);
-    std::vector<std::vector<std::string>> second(2);
-    first[0].push_back("1");
-    second[0].push_back("0");
-    int count = 1;
-    int j = 0;
-    while(count < number)
+    int num;
+    std::cin >> num;
+    std::string* a = new std::string[10000];
+    std::string* b = new std::string[10000];
+    a[0] = "0";
+    int counta = 0;
+    int countb = 0;
+    int sizea = 1;
+    int tempsize = 0;
+    int sizeb = 0;
+    int k = 1;
+    int find = num;
+    std::string *tempa = new std::string[20000];
+    while(find != 0)// O(N)
     {
-        ++j;
-        for(int i = 0; i < second[0].size();++i)
+        for(int i = 0; i < sizea; ++i)// O(N)
         {
-            std::string temp = to_binary_code(second[0][i]);
-            second[0][i].insert(0, "0");
-            if(temp.size() < j || temp[temp.length() - j] == '0')
-            {
-                second[1].push_back(second[0][i]);
+            b[i] = a[i];
+            b[i][0] = '1';
+            //std::cout << b[i] << "b\n";
+            ++sizeb;
+            --find;
+            if(find == 0) {
+                std::cout << b[i];
+                break;
             }
         }
-        for(int i = 0; i < first[0].size();++i)
+        ++k;
+
+        for(int i = 0; i < sizea; ++i)// O(N)
         {
-            std::string temp = to_binary_code(first[0][i]);
-            first[0][i].insert(0, "0");
-            if(temp.size() < j || temp[temp.length() - j] == '0')
-            {
-                second[1].push_back(first[0][i]);
+            a[i] = '0' + a[i];
+        }
+        tempsize = 0;
+        for(int i = 0; i < sizea; ++i) // O(N)
+        {
+            auto temp = to_binary_code(a[i], k); // O(NlogN)
+            if(temp[0] == '0') {
+                tempa[counta] = temp;
+                ++tempsize;
+                ++counta;
             }
         }
-        for(int i = 0; i < second[0].size();++i)
+        for(int i = 0; i < sizeb; ++i) // O(N)
         {
-            std::string temp = to_binary_code(second[0][i]);
-            //second[0][i].insert(0, "0");
-            if(temp.size() < j + 1 || temp[temp.length() - j + 1] == '0')
-            {
-                second[0][i][0] = '1';
-                first[1].push_back(second[0][i]);
+            auto temp = to_binary_code(b[i], k); // O(NlogN)
+            if(temp[0] == '0') {
+                tempa[counta] = temp;
+                ++tempsize;
+                ++counta;
             }
         }
-        std::swap(first[0], first[1]);
-        std::swap(second[0], second[1]);
-        first[1].clear();
-        second[1].clear();
-        count += first[0].size();
+        counta = 0;
+        sizea = tempsize;
+        a = tempa;
+        sizeb = 0;
     }
-    int diff = count - number;
-    std::cout << first[0][first[0].size() - 1 - diff];
-    //DoubleTen(1);*/
     return 0;
 }

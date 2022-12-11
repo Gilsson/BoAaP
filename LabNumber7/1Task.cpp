@@ -4,8 +4,6 @@
 
 #define BIT_SIZE 64
 
-
-
 std::string& minus(std::string& code, int end) // O(K) в худшем случае
 {
     if(end == 0)

@@ -29,7 +29,7 @@ long double PrintNum(bool IsSizeInput = false)
             if(strlen(input) == 0) {
                 throw EMPTY_STRING;
             }
-            for (int i = 0; i < buff; ++i) {
+            for (int i = 0; i < buff; ++i) { // O(N)
                 if (input[i] == 0) {
                     break;
                 }
@@ -103,7 +103,7 @@ long double PrintNum(bool IsSizeInput = false)
             }
             if (Sign) {
                 if (IsSizeInput) {
-                    if (output < 1 || output > 10000) {
+                    if (output < 1 || output > 243) {
                         throw INCORRECT_DATA;
                     }
                 }
@@ -187,10 +187,10 @@ int** separate_slaves(int** slaves, int number, int* unchecked_barrels, int day)
         size = pow(2, number);
     }
     unchecked_barrels = new int[size];
-    for (int i = 0; i < number; ++i) {
+    for (int i = 0; i < number; ++i) {// O(N^3)
         slaves[i] = new int[size];
     }
-    for(int i = 0; i < number; ++i)
+    for(int i = 0; i < number; ++i)// O(N^3)
     {
         for(int j = 0; j < size; ++j)
         {
@@ -199,7 +199,7 @@ int** separate_slaves(int** slaves, int number, int* unchecked_barrels, int day)
         }
     }
     if(day == 1) {
-        for (int i = 0; i < number; ++i) {
+        for (int i = 0; i < number; ++i) { // O(N^3)
             for (int j = 0; j < size; ++j) {
                 if (j % int(pow(3, i + 1)) == 0) {
                     for (int k = j; k < j + pow(3, i); ++k) {
@@ -210,7 +210,7 @@ int** separate_slaves(int** slaves, int number, int* unchecked_barrels, int day)
             }
         }
     }else{
-        for (int i = 0; i < number; ++i) {
+        for (int i = 0; i < number; ++i) { // O(N^3)
                 for (int j = 0; j < size; ++j) {
                     if (j % int(pow(2, i + 1)) == 0) {
                         for (int k = j; k < j + pow(2, i); ++k) {
@@ -234,7 +234,7 @@ int* check_barrels(int** slaves, const int barrels[], int& slaves_alive, int* sl
 {
     int temp_slaves = slaves_alive;
     slaves_lasts = new int[slaves_alive];
-    for(int i = 0; i < pow(3, slaves_alive); ++i)
+    for(int i = 0; i < pow(3, slaves_alive); ++i)// O(N^2)
     {
         if(barrels[i] == 1)
         {
@@ -260,11 +260,11 @@ int* another_day(int** slaves, int barrels[], int* slaves_lasts, int* second_par
 {
     int size = pow(3, 5);
     int* new_array = new int[243];
-    for(int f = 0; f < 243; ++f)
+    for(int f = 0; f < 243; ++f)// O(N)
     {
         new_array[f] = 0;
     }
-    for(int i = 0, count = 0; i < number; ++i)
+    for(int i = 0, count = 0; i < number; ++i)// O(N^3)
     {
 
             for(int j = 0; j < size; ++j)
@@ -293,7 +293,7 @@ int* another_day(int** slaves, int barrels[], int* slaves_lasts, int* second_par
 
     }
     std::cout << "\nВыпитые бочки на пересечении\n";
-    for(int f = 0; f < 243; ++f)
+    for(int f = 0; f < 243; ++f)// O(N)
     {
         std::cout << std::setw(4) <<  new_array[f] << " ";
     }
@@ -305,7 +305,7 @@ int second(int* merging, int slaves_alive, int* barrels)
 {
     int size = pow(2, slaves_alive);
     int* last_barrels = new int[size + 1];
-    for(int i = 0, count = 0; i < pow(3, 5); ++i)
+    for(int i = 0, count = 0; i < pow(3, 5); ++i)// O(N)
     {
         if(merging[i] == 5 - slaves_alive)
         {
@@ -314,13 +314,13 @@ int second(int* merging, int slaves_alive, int* barrels)
         }
     }
     std::cout << "\nНомера бочек на подозрении:\n";
-    for(int i = 0; i < size; ++i)
+    for(int i = 0; i < size; ++i) // O(N)
     {
         std::cout << last_barrels[i] << " ";
     }
     std::cout << '\n';
     int** last_partition = new int*[slaves_alive];
-    for(int i = 0; i < slaves_alive; ++i)
+    for(int i = 0; i < slaves_alive; ++i) // O(N ^ 2)
     {
         last_partition[i] = new int[size];
         for(int j = 0; j < size; ++j)
@@ -329,7 +329,7 @@ int second(int* merging, int slaves_alive, int* barrels)
         }
     }
     bool drinked = false;
-    for(int i = last_barrels[0], count = 0; i <= pow(3, 5) && count < slaves_alive; ++count)
+    for(int i = last_barrels[0], count = 0; i <= pow(3, 5) && count < slaves_alive; ++count) // O(N ^ 3)
     {
 
         for (int k = 0, barrel = 0; k < pow(2, slaves_alive), barrel < size; ++k) {
@@ -350,7 +350,7 @@ int second(int* merging, int slaves_alive, int* barrels)
         }
         i = last_barrels[0];
     }
-    for(int i = 0; i < slaves_alive; ++i)
+    for(int i = 0; i < slaves_alive; ++i) // O(N^2)
     {
         for(int j = 0; j < pow(2, slaves_alive); ++j)
         {
@@ -358,7 +358,7 @@ int second(int* merging, int slaves_alive, int* barrels)
         }
         std::cout << '\n';
     }
-    for(int i = last_barrels[0], count = 1; i < pow(3, 5) && count < pow(2, slaves_alive);)
+    for(int i = last_barrels[0], count = 1; i < pow(3, 5) && count < pow(2, slaves_alive);)// O(N * M)
     {
         if(barrels[i] == 1)
         {
@@ -395,42 +395,89 @@ int second(int* merging, int slaves_alive, int* barrels)
     return 0;
 }
 
+void PrintInfo()
+{
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 3);
+    std::cout << "Лабораторная работа номер 7:\n"
+                 "Задание 9:\n"
+                 "--------------------------------------------------------------------------------------------\n"
+                 "\n"
+                 "Помочь Патрицио найти одну из 243 отравленных бочек.\n"
+                 "Работу подготовил:\n";
+    std::cout << "Гулис Антон\n";
+    std::cout << "Чтобы запустить решение, нажмите ";
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 4);
+    std::cout << "Enter.\n";
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 2);
+    while(true)
+    {
+        char *temp = new char[1]{0};
+        scanf("%[^\n]%*c", temp);
+        if(strlen(temp) == 0) {
+            char* temp2 = new char[1];
+            scanf("%*1[\n]", temp2);
+            return;
+        }
+    }
+}
+
+bool RestartProgram(){
+    char* temp = new char[1];
+    std::cout << "Чтобы повторить выполнение программы, нажмите ";
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 4);
+    std::cout << " Y(y):\n" ;
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 2);
+    std::cin >> temp;
+    char* temp2 = new char[1];
+    scanf("%*1[\n]", temp2);
+    if(*temp != 'y' && *temp != 'Y')
+    {
+        system("cls");
+        return true;
+    }
+    return false;
+}
+
 int main()
 {
     SetConsoleOutputCP(CP_UTF8);
-    int barrels[242]{};
-    int num_of_slaves = 5;
-    int poison = 0;
-    int number_of_alive = num_of_slaves;
-    int** slaves = nullptr;
-    int* unchecked_barrels = nullptr;
-    slaves = separate_slaves(slaves, num_of_slaves, unchecked_barrels, 1);
-    poison = PrintNum(true);
-    barrels[poison] = 1;
-    for(int i = 0; i < 5; ++i)
-    {
-        std::cout << i + 1 << " выпьет из: \n";
-        for(int j = 0; j < 243; ++j)
-        {
-            std::cout << std::setw(4) << slaves[i][j] << " ";
+    PrintInfo();
+    while(true) {
+        int barrels[242]{};
+        int num_of_slaves = 5;
+        int poison = 0;
+        int number_of_alive = num_of_slaves;
+        int **slaves = nullptr;
+        int *unchecked_barrels = nullptr;
+        slaves = separate_slaves(slaves, num_of_slaves, unchecked_barrels, 1);
+        std::cout << "Введите номер отравленной бочки:\n";
+        poison = PrintNum(true);
+        barrels[poison] = 1;
+        for (int i = 0; i < 5; ++i) { // O(N^2)
+            std::cout << i + 1 << " выпьет из: \n";
+            for (int j = 0; j < 243; ++j) {
+                std::cout << std::setw(4) << slaves[i][j] << " ";
+            }
+            std::cout << '\n';
         }
-        std::cout << '\n';
+        int *slaves_lasts = new int[num_of_slaves];
+        slaves_lasts = check_barrels(slaves, barrels, number_of_alive, slaves_lasts); // O(N^2 + N)
+        int *second_day = new int[(int) pow(3, 5)];
+        for (int i = 0; i < pow(3, 5); ++i) { //O(N)
+            second_day[i] = 0;
+        }
+        second_day = another_day(slaves, barrels, slaves_lasts, second_day, num_of_slaves, number_of_alive); // O(N^2)
+        std::cout << "На второй день: \n";
+        for (int i = 0; i < pow(3, 5); ++i) { // O(N)
+            std::cout << std::setw(4) << second_day[i] << " ";
+        }
+        second(second_day, number_of_alive, barrels); // O(N^2)
+        //separate_slaves(slaves, 3, unchecked_barrels, 2);
+        if(RestartProgram())
+        {
+            break;
+        }
     }
-    int* slaves_lasts = new int[num_of_slaves];
-    slaves_lasts = check_barrels(slaves, barrels, number_of_alive, slaves_lasts);
-    int* second_day = new int[(int)pow(3, 5)];
-    for(int i = 0; i < pow(3, 5); ++i)
-    {
-        second_day[i] = 0;
-    }
-    second_day = another_day(slaves, barrels, slaves_lasts, second_day, num_of_slaves, number_of_alive);
-    std::cout << "На второй день: \n";
-    for(int i = 0; i < pow(3, 5); ++i)
-    {
-        std::cout << std::setw(4) << second_day[i] << " ";
-    }
-    second(second_day, number_of_alive, barrels);
-    //separate_slaves(slaves, 3, unchecked_barrels, 2);
-    system("pause");
+        system("pause");
     return 0;
 }
