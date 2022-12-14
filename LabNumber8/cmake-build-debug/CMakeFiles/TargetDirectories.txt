@@ -1,4 +1,11 @@
-F:/Projects/BoAaP/LabNumber8/cmake-build-debug/CMakeFiles/Task1.dir
-F:/Projects/BoAaP/LabNumber8/cmake-build-debug/CMakeFiles/Task2.dir
 F:/Projects/BoAaP/LabNumber8/cmake-build-debug/CMakeFiles/edit_cache.dir
 F:/Projects/BoAaP/LabNumber8/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+F:/Projects/BoAaP/LabNumber8/cmake-build-debug/Task1/CMakeFiles/Task1.dir
+F:/Projects/BoAaP/LabNumber8/cmake-build-debug/Task1/CMakeFiles/edit_cache.dir
+F:/Projects/BoAaP/LabNumber8/cmake-build-debug/Task1/CMakeFiles/rebuild_cache.dir
+F:/Projects/BoAaP/LabNumber8/cmake-build-debug/Task2/CMakeFiles/Task2.dir
+F:/Projects/BoAaP/LabNumber8/cmake-build-debug/Task2/CMakeFiles/edit_cache.dir
+F:/Projects/BoAaP/LabNumber8/cmake-build-debug/Task2/CMakeFiles/rebuild_cache.dir
+F:/Projects/BoAaP/LabNumber8/cmake-build-debug/Task3/CMakeFiles/Task3.dir
+F:/Projects/BoAaP/LabNumber8/cmake-build-debug/Task3/CMakeFiles/edit_cache.dir
+F:/Projects/BoAaP/LabNumber8/cmake-build-debug/Task3/CMakeFiles/rebuild_cache.dir

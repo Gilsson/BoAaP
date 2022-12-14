@@ -40,78 +40,6 @@ include CMakeFiles\rules.ninja
 # Logical path to working directory; prefix for absolute paths.
 
 cmake_ninja_workdir = F$:\Projects\BoAaP\LabNumber8\cmake-build-debug\
-# =============================================================================
-# Object build statements for EXECUTABLE target Task1
-
-
-#############################################
-# Order-only phony target for Task1
-
-build cmake_object_order_depends_target_Task1: phony || CMakeFiles\Task1.dir
-
-build CMakeFiles\Task1.dir\Task1.cpp.obj: CXX_COMPILER__Task1_Debug F$:\Projects\BoAaP\LabNumber8\Task1.cpp || cmake_object_order_depends_target_Task1
-  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd -std:c++17
-  OBJECT_DIR = CMakeFiles\Task1.dir
-  OBJECT_FILE_DIR = CMakeFiles\Task1.dir
-  TARGET_COMPILE_PDB = CMakeFiles\Task1.dir\
-  TARGET_PDB = Task1.pdb
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target Task1
-
-
-#############################################
-# Link the executable Task1.exe
-
-build Task1.exe: CXX_EXECUTABLE_LINKER__Task1_Debug CMakeFiles\Task1.dir\Task1.cpp.obj
-  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
-  LINK_FLAGS = /machine:X86 /debug /INCREMENTAL /subsystem:console
-  LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
-  OBJECT_DIR = CMakeFiles\Task1.dir
-  POST_BUILD = cd .
-  PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\Task1.dir\
-  TARGET_FILE = Task1.exe
-  TARGET_IMPLIB = Task1.lib
-  TARGET_PDB = Task1.pdb
-
-# =============================================================================
-# Object build statements for EXECUTABLE target Task2
-
-
-#############################################
-# Order-only phony target for Task2
-
-build cmake_object_order_depends_target_Task2: phony || CMakeFiles\Task2.dir
-
-build CMakeFiles\Task2.dir\Task2.cpp.obj: CXX_COMPILER__Task2_Debug F$:\Projects\BoAaP\LabNumber8\Task2.cpp || cmake_object_order_depends_target_Task2
-  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd -std:c++17
-  OBJECT_DIR = CMakeFiles\Task2.dir
-  OBJECT_FILE_DIR = CMakeFiles\Task2.dir
-  TARGET_COMPILE_PDB = CMakeFiles\Task2.dir\
-  TARGET_PDB = Task2.pdb
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target Task2
-
-
-#############################################
-# Link the executable Task2.exe
-
-build Task2.exe: CXX_EXECUTABLE_LINKER__Task2_Debug CMakeFiles\Task2.dir\Task2.cpp.obj
-  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
-  LINK_FLAGS = /machine:X86 /debug /INCREMENTAL /subsystem:console
-  LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
-  OBJECT_DIR = CMakeFiles\Task2.dir
-  POST_BUILD = cd .
-  PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\Task2.dir\
-  TARGET_FILE = Task2.exe
-  TARGET_IMPLIB = Task2.lib
-  TARGET_PDB = Task2.pdb
-
 
 #############################################
 # Utility command for edit_cache
@@ -136,11 +64,267 @@ build CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
 build rebuild_cache: phony CMakeFiles\rebuild_cache.util
 
 # =============================================================================
+# Write statements declared in CMakeLists.txt:
+# F:/Projects/BoAaP/LabNumber8/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target Task1
+
+
+#############################################
+# Order-only phony target for Task1
+
+build cmake_object_order_depends_target_Task1: phony || Task1\CMakeFiles\Task1.dir
+
+build Task1\CMakeFiles\Task1.dir\Task1.cpp.obj: CXX_COMPILER__Task1_Debug F$:\Projects\BoAaP\LabNumber8\Task1\Task1.cpp || cmake_object_order_depends_target_Task1
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd -std:c++17
+  OBJECT_DIR = Task1\CMakeFiles\Task1.dir
+  OBJECT_FILE_DIR = Task1\CMakeFiles\Task1.dir
+  TARGET_COMPILE_PDB = Task1\CMakeFiles\Task1.dir\
+  TARGET_PDB = Task1\Task1.pdb
+
+build Task1\CMakeFiles\Task1.dir\SportPlayer.cpp.obj: CXX_COMPILER__Task1_Debug F$:\Projects\BoAaP\LabNumber8\Task1\SportPlayer.cpp || cmake_object_order_depends_target_Task1
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd -std:c++17
+  OBJECT_DIR = Task1\CMakeFiles\Task1.dir
+  OBJECT_FILE_DIR = Task1\CMakeFiles\Task1.dir
+  TARGET_COMPILE_PDB = Task1\CMakeFiles\Task1.dir\
+  TARGET_PDB = Task1\Task1.pdb
+
+build Task1\CMakeFiles\Task1.dir\Implementation.cpp.obj: CXX_COMPILER__Task1_Debug F$:\Projects\BoAaP\LabNumber8\Task1\Implementation.cpp || cmake_object_order_depends_target_Task1
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd -std:c++17
+  OBJECT_DIR = Task1\CMakeFiles\Task1.dir
+  OBJECT_FILE_DIR = Task1\CMakeFiles\Task1.dir
+  TARGET_COMPILE_PDB = Task1\CMakeFiles\Task1.dir\
+  TARGET_PDB = Task1\Task1.pdb
+
+build Task1\CMakeFiles\Task1.dir\Menu.cpp.obj: CXX_COMPILER__Task1_Debug F$:\Projects\BoAaP\LabNumber8\Task1\Menu.cpp || cmake_object_order_depends_target_Task1
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd -std:c++17
+  OBJECT_DIR = Task1\CMakeFiles\Task1.dir
+  OBJECT_FILE_DIR = Task1\CMakeFiles\Task1.dir
+  TARGET_COMPILE_PDB = Task1\CMakeFiles\Task1.dir\
+  TARGET_PDB = Task1\Task1.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Task1
+
+
+#############################################
+# Link the executable Task1\Task1.exe
+
+build Task1\Task1.exe: CXX_EXECUTABLE_LINKER__Task1_Debug Task1\CMakeFiles\Task1.dir\Task1.cpp.obj Task1\CMakeFiles\Task1.dir\SportPlayer.cpp.obj Task1\CMakeFiles\Task1.dir\Implementation.cpp.obj Task1\CMakeFiles\Task1.dir\Menu.cpp.obj
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
+  LINK_FLAGS = /machine:X86 /debug /INCREMENTAL /subsystem:console
+  LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  OBJECT_DIR = Task1\CMakeFiles\Task1.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = Task1\CMakeFiles\Task1.dir\
+  TARGET_FILE = Task1\Task1.exe
+  TARGET_IMPLIB = Task1\Task1.lib
+  TARGET_PDB = Task1\Task1.pdb
+
+
+#############################################
+# Utility command for edit_cache
+
+build Task1\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D F:\Projects\BoAaP\LabNumber8\cmake-build-debug\Task1 && "F:\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build Task1\edit_cache: phony Task1\CMakeFiles\edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build Task1\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D F:\Projects\BoAaP\LabNumber8\cmake-build-debug\Task1 && "F:\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SF:\Projects\BoAaP\LabNumber8 -BF:\Projects\BoAaP\LabNumber8\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build Task1\rebuild_cache: phony Task1\CMakeFiles\rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# F:/Projects/BoAaP/LabNumber8/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target Task2
+
+
+#############################################
+# Order-only phony target for Task2
+
+build cmake_object_order_depends_target_Task2: phony || Task2\CMakeFiles\Task2.dir
+
+build Task2\CMakeFiles\Task2.dir\Task2.cpp.obj: CXX_COMPILER__Task2_Debug F$:\Projects\BoAaP\LabNumber8\Task2\Task2.cpp || cmake_object_order_depends_target_Task2
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd -std:c++17
+  OBJECT_DIR = Task2\CMakeFiles\Task2.dir
+  OBJECT_FILE_DIR = Task2\CMakeFiles\Task2.dir
+  TARGET_COMPILE_PDB = Task2\CMakeFiles\Task2.dir\
+  TARGET_PDB = Task2\Task2.pdb
+
+build Task2\CMakeFiles\Task2.dir\Rabotyaga.cpp.obj: CXX_COMPILER__Task2_Debug F$:\Projects\BoAaP\LabNumber8\Task2\Rabotyaga.cpp || cmake_object_order_depends_target_Task2
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd -std:c++17
+  OBJECT_DIR = Task2\CMakeFiles\Task2.dir
+  OBJECT_FILE_DIR = Task2\CMakeFiles\Task2.dir
+  TARGET_COMPILE_PDB = Task2\CMakeFiles\Task2.dir\
+  TARGET_PDB = Task2\Task2.pdb
+
+build Task2\CMakeFiles\Task2.dir\Implementations.cpp.obj: CXX_COMPILER__Task2_Debug F$:\Projects\BoAaP\LabNumber8\Task2\Implementations.cpp || cmake_object_order_depends_target_Task2
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd -std:c++17
+  OBJECT_DIR = Task2\CMakeFiles\Task2.dir
+  OBJECT_FILE_DIR = Task2\CMakeFiles\Task2.dir
+  TARGET_COMPILE_PDB = Task2\CMakeFiles\Task2.dir\
+  TARGET_PDB = Task2\Task2.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Task2
+
+
+#############################################
+# Link the executable Task2\Task2.exe
+
+build Task2\Task2.exe: CXX_EXECUTABLE_LINKER__Task2_Debug Task2\CMakeFiles\Task2.dir\Task2.cpp.obj Task2\CMakeFiles\Task2.dir\Rabotyaga.cpp.obj Task2\CMakeFiles\Task2.dir\Implementations.cpp.obj
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
+  LINK_FLAGS = /machine:X86 /debug /INCREMENTAL /subsystem:console
+  LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  OBJECT_DIR = Task2\CMakeFiles\Task2.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = Task2\CMakeFiles\Task2.dir\
+  TARGET_FILE = Task2\Task2.exe
+  TARGET_IMPLIB = Task2\Task2.lib
+  TARGET_PDB = Task2\Task2.pdb
+
+
+#############################################
+# Utility command for edit_cache
+
+build Task2\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D F:\Projects\BoAaP\LabNumber8\cmake-build-debug\Task2 && "F:\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build Task2\edit_cache: phony Task2\CMakeFiles\edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build Task2\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D F:\Projects\BoAaP\LabNumber8\cmake-build-debug\Task2 && "F:\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SF:\Projects\BoAaP\LabNumber8 -BF:\Projects\BoAaP\LabNumber8\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build Task2\rebuild_cache: phony Task2\CMakeFiles\rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# F:/Projects/BoAaP/LabNumber8/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target Task3
+
+
+#############################################
+# Order-only phony target for Task3
+
+build cmake_object_order_depends_target_Task3: phony || Task3\CMakeFiles\Task3.dir
+
+build Task3\CMakeFiles\Task3.dir\Task3.cpp.obj: CXX_COMPILER__Task3_Debug F$:\Projects\BoAaP\LabNumber8\Task3\Task3.cpp || cmake_object_order_depends_target_Task3
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd -std:c++17
+  OBJECT_DIR = Task3\CMakeFiles\Task3.dir
+  OBJECT_FILE_DIR = Task3\CMakeFiles\Task3.dir
+  TARGET_COMPILE_PDB = Task3\CMakeFiles\Task3.dir\
+  TARGET_PDB = Task3\Task3.pdb
+
+build Task3\CMakeFiles\Task3.dir\Books.cpp.obj: CXX_COMPILER__Task3_Debug F$:\Projects\BoAaP\LabNumber8\Task3\Books.cpp || cmake_object_order_depends_target_Task3
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd -std:c++17
+  OBJECT_DIR = Task3\CMakeFiles\Task3.dir
+  OBJECT_FILE_DIR = Task3\CMakeFiles\Task3.dir
+  TARGET_COMPILE_PDB = Task3\CMakeFiles\Task3.dir\
+  TARGET_PDB = Task3\Task3.pdb
+
+build Task3\CMakeFiles\Task3.dir\Implementation.cpp.obj: CXX_COMPILER__Task3_Debug F$:\Projects\BoAaP\LabNumber8\Task3\Implementation.cpp || cmake_object_order_depends_target_Task3
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd -std:c++17
+  OBJECT_DIR = Task3\CMakeFiles\Task3.dir
+  OBJECT_FILE_DIR = Task3\CMakeFiles\Task3.dir
+  TARGET_COMPILE_PDB = Task3\CMakeFiles\Task3.dir\
+  TARGET_PDB = Task3\Task3.pdb
+
+build Task3\CMakeFiles\Task3.dir\Menu.cpp.obj: CXX_COMPILER__Task3_Debug F$:\Projects\BoAaP\LabNumber8\Task3\Menu.cpp || cmake_object_order_depends_target_Task3
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd -std:c++17
+  OBJECT_DIR = Task3\CMakeFiles\Task3.dir
+  OBJECT_FILE_DIR = Task3\CMakeFiles\Task3.dir
+  TARGET_COMPILE_PDB = Task3\CMakeFiles\Task3.dir\
+  TARGET_PDB = Task3\Task3.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Task3
+
+
+#############################################
+# Link the executable Task3\Task3.exe
+
+build Task3\Task3.exe: CXX_EXECUTABLE_LINKER__Task3_Debug Task3\CMakeFiles\Task3.dir\Task3.cpp.obj Task3\CMakeFiles\Task3.dir\Books.cpp.obj Task3\CMakeFiles\Task3.dir\Implementation.cpp.obj Task3\CMakeFiles\Task3.dir\Menu.cpp.obj
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
+  LINK_FLAGS = /machine:X86 /debug /INCREMENTAL /subsystem:console
+  LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  OBJECT_DIR = Task3\CMakeFiles\Task3.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = Task3\CMakeFiles\Task3.dir\
+  TARGET_FILE = Task3\Task3.exe
+  TARGET_IMPLIB = Task3\Task3.lib
+  TARGET_PDB = Task3\Task3.pdb
+
+
+#############################################
+# Utility command for edit_cache
+
+build Task3\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D F:\Projects\BoAaP\LabNumber8\cmake-build-debug\Task3 && "F:\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build Task3\edit_cache: phony Task3\CMakeFiles\edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build Task3\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D F:\Projects\BoAaP\LabNumber8\cmake-build-debug\Task3 && "F:\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SF:\Projects\BoAaP\LabNumber8 -BF:\Projects\BoAaP\LabNumber8\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build Task3\rebuild_cache: phony Task3\CMakeFiles\rebuild_cache.util
+
+# =============================================================================
 # Target aliases.
 
-build Task1: phony Task1.exe
+build Task1: phony Task1\Task1.exe
 
-build Task2: phony Task2.exe
+build Task1.exe: phony Task1\Task1.exe
+
+build Task2: phony Task2\Task2.exe
+
+build Task2.exe: phony Task2\Task2.exe
+
+build Task3: phony Task3\Task3.exe
+
+build Task3.exe: phony Task3\Task3.exe
 
 # =============================================================================
 # Folder targets.
@@ -150,7 +334,28 @@ build Task2: phony Task2.exe
 #############################################
 # Folder: F:/Projects/BoAaP/LabNumber8/cmake-build-debug
 
-build all: phony Task1.exe Task2.exe
+build all: phony Task1\all Task2\all Task3\all
+
+# =============================================================================
+
+#############################################
+# Folder: F:/Projects/BoAaP/LabNumber8/cmake-build-debug/Task1
+
+build Task1\all: phony Task1\Task1.exe
+
+# =============================================================================
+
+#############################################
+# Folder: F:/Projects/BoAaP/LabNumber8/cmake-build-debug/Task2
+
+build Task2\all: phony Task2\Task2.exe
+
+# =============================================================================
+
+#############################################
+# Folder: F:/Projects/BoAaP/LabNumber8/cmake-build-debug/Task3
+
+build Task3\all: phony Task3\Task3.exe
 
 # =============================================================================
 # Built-in targets
@@ -159,14 +364,14 @@ build all: phony Task1.exe Task2.exe
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | CMakeCache.txt CMakeFiles\3.24.2\CMakeCCompiler.cmake CMakeFiles\3.24.2\CMakeCXXCompiler.cmake CMakeFiles\3.24.2\CMakeRCCompiler.cmake CMakeFiles\3.24.2\CMakeSystem.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\CMakeCInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\CMakeCXXInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\CMakeGenericSystem.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\CMakeRCInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\Compiler\MSVC-C.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\Compiler\MSVC.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\Platform\Windows-MSVC-C.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\Platform\Windows.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake F$:\Projects\BoAaP\LabNumber8\CMakeLists.txt
+build build.ninja: RERUN_CMAKE | CMakeCache.txt CMakeFiles\3.24.2\CMakeCCompiler.cmake CMakeFiles\3.24.2\CMakeCXXCompiler.cmake CMakeFiles\3.24.2\CMakeRCCompiler.cmake CMakeFiles\3.24.2\CMakeSystem.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\CMakeCInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\CMakeCXXInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\CMakeGenericSystem.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\CMakeRCInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\Compiler\MSVC-C.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\Compiler\MSVC.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\Platform\Windows-MSVC-C.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\Platform\Windows.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake F$:\Projects\BoAaP\LabNumber8\CMakeLists.txt F$:\Projects\BoAaP\LabNumber8\Task1\CMakeLists.txt F$:\Projects\BoAaP\LabNumber8\Task2\CMakeLists.txt F$:\Projects\BoAaP\LabNumber8\Task3\CMakeLists.txt
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build CMakeCache.txt CMakeFiles\3.24.2\CMakeCCompiler.cmake CMakeFiles\3.24.2\CMakeCXXCompiler.cmake CMakeFiles\3.24.2\CMakeRCCompiler.cmake CMakeFiles\3.24.2\CMakeSystem.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\CMakeCInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\CMakeCXXInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\CMakeGenericSystem.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\CMakeRCInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\Compiler\MSVC-C.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\Compiler\MSVC.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\Platform\Windows-MSVC-C.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\Platform\Windows.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake F$:\Projects\BoAaP\LabNumber8\CMakeLists.txt: phony
+build CMakeCache.txt CMakeFiles\3.24.2\CMakeCCompiler.cmake CMakeFiles\3.24.2\CMakeCXXCompiler.cmake CMakeFiles\3.24.2\CMakeRCCompiler.cmake CMakeFiles\3.24.2\CMakeSystem.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\CMakeCInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\CMakeCXXInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\CMakeGenericSystem.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\CMakeRCInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\Compiler\MSVC-C.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\Compiler\MSVC.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\Platform\Windows-MSVC-C.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\Platform\Windows.cmake F$:\CLion$ 2022.2.1\bin\cmake\win\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake F$:\Projects\BoAaP\LabNumber8\CMakeLists.txt F$:\Projects\BoAaP\LabNumber8\Task1\CMakeLists.txt F$:\Projects\BoAaP\LabNumber8\Task2\CMakeLists.txt F$:\Projects\BoAaP\LabNumber8\Task3\CMakeLists.txt: phony
 
 
 #############################################
