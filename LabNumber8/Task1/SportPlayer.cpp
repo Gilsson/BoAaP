@@ -21,9 +21,9 @@ SportPlayer* FillStruct(int &size)
            "1) Ввод размера массива структур\n"
            "2) Ввод структур, пока не появится структура с заданным признаком\n");
     int n = 0;
-    scanf("%i", &n);
+    n = PrintNum(true, 2);
     char* fix = new char[1];
-    scanf("%*1[\n]", fix);
+    //scanf("%*1[\n]", fix);
     switch (n) {
         case 1: {
             int f = 0;
@@ -51,6 +51,7 @@ SportPlayer* FillStruct(int &size)
                 scanf("%[^\n]%*c", structures[i].country.c_str());
                 ToNormal(structures[i].country);
             }
+            delete[] fix;
             return structures;
             break;
         }
@@ -65,17 +66,22 @@ SportPlayer* FillStruct(int &size)
             auto controlstruct = new std::string[6];
             size = 0;
             std::string fields;
-            fields.resize(6);
-            scanf("%[^\n]%*c", fields.c_str());
-            int size_str = 0;
-            for(auto i : fields)
-            {
-                if(i != 0)
-                {
-                    ++size_str;
+            char exit = 0;
+            char* fix = new char[1];
+            int counter = 0;
+            while (exit != 'N' && exit != 'n' && counter != 6) {
+                int choose = PrintNum(true, 6);
+                if (fields.find(choose + '0') == std::string::npos) {
+                    fields.push_back(choose + '0');
+                    ++counter;
+                } else {
+                    printf("Данное поле уже было введено\n");
                 }
+                printf("Желаете выбрать еще поле?(y / n)\n");
+                scanf("%c", &exit);
+                scanf("%*1[\n]", fix);
             }
-
+            int size_str = fields.size();
             for(int i = 0; i < 6; ++i)
             {
                 controlstruct[i] = "0";
@@ -114,7 +120,6 @@ SportPlayer* FillStruct(int &size)
             }
             auto structures = new SportPlayer[100];
             int count = 0;
-            char *fix = new char[1];
             for(int i = 0; ; ++i)
             {
                 printf("Введите игровой номер игрока\n");
@@ -167,7 +172,7 @@ SportPlayer* FillStruct(int &size)
                     count = 0;
                 }
             }
-            delete fix;
+            delete[] fix;
             return structures;
             break;
         }
@@ -346,6 +351,12 @@ SportPlayer* AddNewElements(SportPlayer* structures, int& size)
             delete[] fix;
             ++size;
             return temp_st;
+        }
+        default:
+        {
+            printf("Неправильный ввод.\n");
+            return nullptr;
+            break;
         }
     }
 }
@@ -543,14 +554,13 @@ void DeleteOrChangeElementInArray(SportPlayer*& structures, int &size)
         }
         if(count == size_str)
         {
-            char flag;
+            int flag;
             printf("Выберите, что хотите сделать с данным элементом массива:\n"
                    "1) Изменить\n"
                    "2) Удалить\n");
-            scanf(" %c", &flag);
-            scanf("%*1[\n]", fix);
+            flag = PrintNum(true, 2);
             switch (flag) {
-                case '1':
+                case 1:
                 {
                     printf("Выберите поля структуры, значения которых хотим изменить:\n"
                            "1) Игровой номер\n"
@@ -561,17 +571,22 @@ void DeleteOrChangeElementInArray(SportPlayer*& structures, int &size)
                            "6) Страна\n");
                     auto controlstruct1 = new std::string[6];
                     std::string fields1;
-                    fields1.resize(6);
-                    scanf("%[^\n]%*c", fields1.c_str());
-                    int size_str1 = 0;
-                    for(auto it : fields1)
-                    {
-                        if(it != 0)
-                        {
-                            ++size_str1;
+                    char exit = 0;
+                    char* fix = new char[1];
+                    int counter = 0;
+                    while (exit != 'N' && exit != 'n' && counter != 6) {
+                        int choose = PrintNum(true, 6);
+                        if (fields1.find(choose + '0') == std::string::npos) {
+                            fields1.push_back(choose + '0');
+                            ++counter;
+                        } else {
+                            printf("Данное поле уже было введено\n");
                         }
+                        printf("Желаете выбрать еще поле?(y / n)\n");
+                        scanf("%c", &exit);
+                        scanf("%*1[\n]", fix);
                     }
-
+                    int size_str1 = fields1.size();
                     for(int f = 0; f < 6; ++f)
                     {
                         controlstruct1[f] = "-10";
@@ -591,6 +606,7 @@ void DeleteOrChangeElementInArray(SportPlayer*& structures, int &size)
                             controlstruct1[2].resize(100);
 
                             scanf("%[^\n]%*c", controlstruct1[2].c_str());
+                            ToNormal(controlstruct1[2]);
                         }
                         else if(it == '4'){
                             printf("Введите вес игрока\n");
@@ -606,6 +622,7 @@ void DeleteOrChangeElementInArray(SportPlayer*& structures, int &size)
                             controlstruct1[5].resize(100);
                             printf("Введите страну игрока\n");
                             scanf("%[^\n]%*c", controlstruct1[5].c_str());
+                            ToNormal(controlstruct1[2]);
                         }else{
                             --size_str1;
                         }
@@ -632,7 +649,7 @@ void DeleteOrChangeElementInArray(SportPlayer*& structures, int &size)
                     }
                     break;
                 }
-                case '2':
+                case 2:
                 {
                     SportPlayer* temp_elements = new SportPlayer[size - 1];
                     for(int j = 0, counter = 0; counter < size; ++counter)
@@ -648,6 +665,7 @@ void DeleteOrChangeElementInArray(SportPlayer*& structures, int &size)
                     break;
                 }
             }
+            count = 0;
         }
     }
     delete[] fix;

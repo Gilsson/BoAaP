@@ -107,7 +107,8 @@
 			[
 				2,
 				4,
-				6
+				6,
+				7
 			]
 		}
 	],
@@ -150,6 +151,11 @@
 		{
 			"backtrace" : 1,
 			"path" : "Task1/Menu.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Task1/Header.h",
 			"sourceGroupIndex" : 1
 		}
 	],
