@@ -2,50 +2,83 @@
 // Created by Gilsson on 12/14/2022.
 //
 #include "Rabotyaga.h"
-void FillDate(Rabotyaga& element, std::istream& in, std::ostream& out)
+void FillDate(Rabotyaga& element, std::istream& in, std::ostream& out, bool IsFromFile = true)
 {
-    out << "Введите год\n";
-    char* year = new char[100];
-    in >> year;
-    out << year;
-    std::cout << year;
+    std::cout << "Формат даты: 16/12/2022(день/месяц/год)\n";
+    out << "Введите число\n";
+    std::cout << "Введите число\n";
+    std::string day;
+    if(!IsFromFile) {
+        ToDateType(day, PrintNum(true,31));
+    }
+    else
+        std::getline(in, day);
+    out << day;
+    std::cout << day;
     out << "\nВведите месяц\n";
     std::cout << "\nВведите месяц\n";
-    char* month = new char[100];
-    in >> month;
+    std::string month;
+    if(!IsFromFile) {
+        ToDateType(month, PrintNum(true,12));
+    }
+    else
+        std::getline(in, month);
     out << month;
     std::cout << month;
-    out << "\nВведите день\n";
-    char* day = new char[100];
-    in >> day;
-    out << day << '\n';
-    std::cout << day << '\n';
-    element.date_hiring = year;
+    out << "\nВведите год\n";
+    std::cout << "\nВведите год\n";
+    std::string year;
+    if(!IsFromFile) {
+        ToDateType(year, PrintNum(true, 2023));
+    }
+    else
+        std::getline(in, year);
+    out << year << '\n';
+    std::cout << year << '\n';
+    element.date_hiring = day;
     element.date_hiring += "/";
     element.date_hiring += month;
     element.date_hiring += "/";
-    element.date_hiring += day;
+    element.date_hiring += year;
     out << element.date_hiring << '\n';
     std::cout << element.date_hiring << '\n';
 }
 
-void FillElements(Rabotyaga* array, int start, int end, std::istream& in, std::ostream& out)
+void FillElements(Rabotyaga* array, int start, int end, std::istream& in, std::ostream& out, bool IsFromFile = true)
 {
     for(int i = start; i < end; ++i){
         out << "\nВведите номер департамента сотрудника\n";
-        in >> array[i].dep_number;
+        std::cout << "\nВведите номер департамента сотрудника\n";
+        if(!IsFromFile)
+            array[i].dep_number = PrintNum(true, 123456);
+        else
+            in >> array[i].dep_number;
         out << array[i].dep_number;
+        std::cout << array[i].dep_number;
         out << "\nВведите возраст сотрудника\n";
-        in >> array[i].age;
+        std::cout << "\nВведите возраст сотрудника\n";
+        if(!IsFromFile)
+            array[i].age = PrintNum(true, 130);
+        else
+            in >> array[i].age;
         out << array[i].age;
         out << "\nВведите полное имя сотрудника\n";
-        std::getline(in, array[i].fullname);
+        std::cout << "\nВведите полное имя сотрудника\n";
+        if(!IsFromFile)
+            std::getline(std::cin, array[i].fullname);
+        else
+            std::getline(in, array[i].fullname);
         out << array[i].fullname;
         out << "\nВведите должность сотрудника\n";
-        std::getline(in, array[i].position);
+        std::cout << "\nВведите должность сотрудника\n";
+        if(!IsFromFile)
+            std::getline(std::cin, array[i].position);
+        else
+            std::getline(in, array[i].position);
         out << array[i].position;
         out << "\nВведите дату начала работы сотрудника\n";
-        FillDate(array[i], in, out);
+        std::cout << "\nВведите дату начала работы сотрудника\n";
+        FillDate(array[i], in, out, IsFromFile);
     }
 }
 
@@ -98,7 +131,7 @@ void ChangeStruct(Rabotyaga& element, std::istream& in, std::ostream& out)
                  "5)Дата начала работы сотрудника\n";
     while(true) {
         int flag;
-        in >> flag;
+        flag = PrintNum(true, 5);
         switch (flag) {
             case 1:
             {
@@ -106,7 +139,7 @@ void ChangeStruct(Rabotyaga& element, std::istream& in, std::ostream& out)
                 out << "Текущее значение поля:" << element.dep_number <<'\n';
                 std::cout << "Введите новое значение: \n";
                 out << "Введите новое значение: \n";
-                in >> element.dep_number;
+                element.dep_number = PrintNum(true, 12345678);
                 out << element.dep_number;
                 std::cout << element.dep_number;
                 break;
@@ -117,7 +150,7 @@ void ChangeStruct(Rabotyaga& element, std::istream& in, std::ostream& out)
                 out << "Текущее значение поля:" << element.age <<'\n';
                 std::cout << "Введите новое значение: \n";
                 out << "Введите новое значение: \n";
-                in >> element.age;
+                element.age = PrintNum(true, 130);
                 out << element.age;
                 std::cout << element.age;
                 break;
@@ -128,7 +161,7 @@ void ChangeStruct(Rabotyaga& element, std::istream& in, std::ostream& out)
                 out << "Текущее значение поля:" << element.fullname <<'\n';
                 std::cout << "Введите новое значение: \n";
                 out << "Введите новое значение: \n";
-                in >> element.fullname;
+                std::getline(std::cin, element.fullname);
                 out << element.fullname;
                 std::cout << element.fullname;
                 break;
@@ -139,7 +172,7 @@ void ChangeStruct(Rabotyaga& element, std::istream& in, std::ostream& out)
                 out << "Текущее значение поля:" << element.position <<'\n';
                 std::cout << "Введите новое значение: \n";
                 out << "Введите новое значение: \n";
-                in >> element.position;
+                std::getline(std::cin, element.position);
                 out << element.position;
                 std::cout << element.position;
                 break;
@@ -149,7 +182,7 @@ void ChangeStruct(Rabotyaga& element, std::istream& in, std::ostream& out)
                 out << "Текущее значение поля:" << element.date_hiring << '\n';
                 std::cout << "Введите новое значение: \n";
                 out << "Введите новое значение: \n";
-                FillDate(element, in, out);
+                FillDate(element, in, out, false);
                 std::cout << element.date_hiring;
                 out << element.date_hiring;
                 break;

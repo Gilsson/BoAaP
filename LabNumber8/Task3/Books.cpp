@@ -29,7 +29,7 @@ void SortBooksByName(Books *books, int size, FILE* file, std::ofstream& out) {
 }
 
 void Books::ShowFields(FILE* file, std::ofstream& out) {
-    //fwrite(this, sizeof(this), sizeof(this), file);
+    //fwrite(this, sizeof(this), sizeof(this), file)
     Books temp;
     fread(&reg_number_, sizeof(reg_number_), 1, file);
     fread(&author_, sizeof(author_), 1, file);
@@ -74,15 +74,17 @@ void Books::ChangeField(FILE *&file, int position) {
                  "6) Количество страниц\n";
     int flag;
     flag = PrintNum(true, 6);
+    fclose(file);
+    *&file = fopen("F:\\Projects\\BoAaP\\LabNumber8\\Task3\\test.bin", "wb+");
     fseek(file, 0, SEEK_SET);
     --position;
-    fseek(file, sizeof(std::string), SEEK_SET);
+    //fseek(file, sizeof(std::string), SEEK_SET);
     switch (flag) {
         case 1:{
             std::cout << "Текущее значение поля:" << reg_number_ <<'\n';
             std::cout << "Введите новое значение: \n";
             int new_val;
-            std::cin >> new_val;
+            new_val = PrintNum(true, 12345678);
             int temp;
             fseek(file, 0, SEEK_SET);
             while(position != 0) {
@@ -97,6 +99,8 @@ void Books::ChangeField(FILE *&file, int position) {
             long pos = ftell(file);
             fread(&a, sizeof(int), 1, file);
             //std::cout << a << '\n';
+            fclose(file);
+            *&file = fopen("F:\\Projects\\BoAaP\\LabNumber8\\Task3\\test.bin", "wb+");
             fseek(file, pos, SEEK_SET);
             fwrite(&new_val, sizeof(reg_number_), 1, file);
             fseek(file, pos, SEEK_SET);
@@ -125,6 +129,8 @@ void Books::ChangeField(FILE *&file, int position) {
             //std::cout << a;
             long pos = ftell(file);
             std::string temp_val = new_val;
+            fclose(file);
+            *&file = fopen("F:\\Projects\\BoAaP\\LabNumber8\\Task3\\test.bin", "wb+");
             //fread(&a, author_.size(), 1, file);
             //std::cout << a << '\n';
             fseek(file, pos, SEEK_SET);
@@ -143,23 +149,29 @@ void Books::ChangeField(FILE *&file, int position) {
             std::string new_val;
             std::getline(std::cin, new_val);
             //std::getline(std::wcin, new_val);
+
             fseek(file, 0, SEEK_SET);
             int temp = 0;
             while(position != 0) {
-                fseek(file, offsetof(Books, pages_), SEEK_CUR);
-                fread(&temp, sizeof(int), 1, file);
+                fseek(file, offsetof(Books, pages_.page_count_), SEEK_CUR);
+                fseek(file, sizeof(int), SEEK_CUR);
                 //fread(&temp, sizeof(int), 1, file);
                 --position;
             }
+            long pos = ftell(file);
             fseek(file, offsetof(Books, name_), SEEK_CUR);
             std::string a;
             //fread(&a, name_.size(), 1, file);
             //std::cout << a;
-            long pos = ftell(file);
+            pos = ftell(file);
             //fread(&a, name_.size(), 1, file);
             //std::cout << a << '\n';
+            fclose(file);
+            *&file = fopen("F:\\Projects\\BoAaP\\LabNumber8\\Task3\\test.bin", "wb+");
+            fseek(file, 0, SEEK_SET);
             fseek(file, pos, SEEK_SET);
             fwrite(&new_val, sizeof(new_val), 1, file);
+
             fseek(file, pos, SEEK_SET);
             if(name_.size() < new_val.size())
             name_.resize(new_val.size());
@@ -171,7 +183,7 @@ void Books::ChangeField(FILE *&file, int position) {
             std::cout << "Текущее значение поля:" << year_ <<'\n';
             std::cout << "Введите новое значение: \n";
             int new_val;
-            std::cin >> new_val;
+            new_val = PrintNum(true, 2023);
             int temp;
             fseek(file, 0, SEEK_SET);
             while(position != 0) {
@@ -184,6 +196,8 @@ void Books::ChangeField(FILE *&file, int position) {
             int a = 0;
             //fread(&a, sizeof(int), 1, file);
             long pos = ftell(file);
+            fclose(file);
+            *&file = fopen("F:\\Projects\\BoAaP\\LabNumber8\\Task3\\test.bin", "wb+");
             //fread(&a, sizeof(int), 1, file);
             //std::cout << a << '\n';
             fseek(file, pos, SEEK_SET);
@@ -213,6 +227,8 @@ void Books::ChangeField(FILE *&file, int position) {
             //fread(&a, name_.size(), 1, file);
             //std::cout << a;
             long pos = ftell(file);
+            fclose(file);
+            *&file = fopen("F:\\Projects\\BoAaP\\LabNumber8\\Task3\\test.bin", "wb+");
             //fread(&a, publisher_.size(), 1, file);
             //std::cout << a << '\n';
             fseek(file, pos, SEEK_SET);
@@ -228,7 +244,7 @@ void Books::ChangeField(FILE *&file, int position) {
             std::cout << "Текущее значение поля:" << pages_.page_count_ <<'\n';
             std::cout << "Введите новое значение: \n";
             int new_val;
-            std::cin >> new_val;
+            new_val = PrintNum(true, 35000);
             int temp;
             fseek(file, 0, SEEK_SET);
             while(position != 0) {
@@ -241,6 +257,8 @@ void Books::ChangeField(FILE *&file, int position) {
             int a = 0;
             //fread(&a, sizeof(int), 1, file);
             long pos = ftell(file);
+            fclose(file);
+            *&file = fopen("F:\\Projects\\BoAaP\\LabNumber8\\Task3\\test.bin", "wb+");
             //fread(&a, sizeof(int), 1, file);
             //std::cout << a << '\n';
             fseek(file, pos, SEEK_SET);
@@ -299,12 +317,12 @@ void Books::DeleteElement(FILE *&file, int position) {
     fseek(file, offsetof(Books, reg_number_), SEEK_CUR);
     //fread(&temp_buf, sizeof(temp_buf), 1, file);
     int reg;
-    //_pos = ftell(file);
+    _pos = ftell(file);
     fread(&reg, sizeof(int), 1, file);
     fclose(file);
-    fopen("F:\\Projects\\BoAaP\\LabNumber8\\Task3\\test.bin", "wb+");
+    file = fopen("F:\\Projects\\BoAaP\\LabNumber8\\Task3\\test.bin", "wb+");
     //last_pose = ftell(file);
-    fseek(file, 0, SEEK_SET);
+    fseek(file, _pos, SEEK_SET);
     count = temp_buf.size();
     while(count != 0) {
         fwrite(&temp_buf, sizeof(Books), 1, file);
@@ -318,14 +336,12 @@ void Books::DeleteElement(FILE *&file, int position) {
     file = fopen("F:\\Projects\\BoAaP\\LabNumber8\\Task3\\test.bin", "wb+");
 }
 
-void AppendArray(Books* books, int size, FILE*& file)
+void AppendArray(Books* books, int size, FILE* file)
 {
     fseek(file, 0, SEEK_END);
     books[size - 1].CreateElement();
     fwrite(&books[size - 1], sizeof(Books), 1, file);
     fseek(file, 0, SEEK_SET);
-    fclose(file);
-    file = fopen("F:\\Projects\\BoAaP\\LabNumber8\\Task3\\test.bin", "wb+");
 }
 
 void Books::CreateElement() {

@@ -79,8 +79,7 @@ int main()
                 books = new Books[size + 1];
                 for (int j = 0; j < size; ++j) {
                         books[j] = temp[j];
-                        ++j;
-                    }
+                }
                 ++size;
                 AppendArray(books, size, file);
                 break;

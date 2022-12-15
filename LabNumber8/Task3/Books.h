@@ -59,7 +59,7 @@ public: friend std::istream &operator>>(std::istream &in, Books &books) {
         return out;
     }
     friend void SortBooksByName(Books *books, int size, FILE* file, std::ofstream& out);
-    friend void AppendArray(Books* books, int size, FILE*& file);
+    friend void AppendArray(Books* books, int size, FILE* file);
     //void SortBooksByName(Books* books, int size, std::fstream& out);
     //friend void ChangeField(Books*& book, FILE *file, int position);
     void DeleteElement(FILE*& file, int position);
@@ -68,6 +68,6 @@ public: friend std::istream &operator>>(std::istream &in, Books &books) {
 private:
     void ShowFields(FILE* file, std::ofstream& out);
 };
-void AppendArray(Books* books, int size, FILE*& file);
+void AppendArray(Books* books, int size, FILE* file);
 void ShowArray(Books*& book, int size, FILE* file, std::ofstream& out);
 #endif //LABNUMBER8_BOOKS_H

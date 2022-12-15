@@ -4,6 +4,8 @@
 #include "Implementation.h"
 
 void ShowArray(Books*& book, int size, FILE* file, std::ofstream& out){
+    fclose(file);
+    file = fopen("F:\\Projects\\BoAaP\\LabNumber8\\Task3\\test.bin", "wb+");
     fseek(file, 0, SEEK_SET);
     if(size == 0)
     {
